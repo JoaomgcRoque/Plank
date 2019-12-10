@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
-    public Collider SwordTrigger;
+    public Collider SwordCollider;
 
     private bool Attacking = false;
     private float AttackTimer = 0f;
@@ -12,7 +12,7 @@ public class SwordAttack : MonoBehaviour
 
     void Awake()
     {
-        SwordTrigger.enabled = false;
+        SwordCollider.enabled = false;
     }
 
     private void Update()
@@ -22,7 +22,7 @@ public class SwordAttack : MonoBehaviour
             Attacking = true;
             AttackTimer = AttackCooldown;
 
-            SwordTrigger.enabled = true;
+            SwordCollider.enabled = true;
         }
         if (Attacking)
         {
@@ -33,7 +33,7 @@ public class SwordAttack : MonoBehaviour
             else
             {
                 Attacking = false;
-                SwordTrigger.enabled = false;
+                SwordCollider.enabled = false;
             }
         }
     }
