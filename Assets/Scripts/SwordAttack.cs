@@ -5,20 +5,23 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     public Collider SwordCollider;
+    public Animator Anim;
 
-    private bool Attacking = false;
-    private float AttackTimer = 0f;
-    private float AttackCooldown = 1f;
+    public bool Attacking = false;
+    public float AttackTimer = 0f;
+    public float AttackCooldown = 1f;
 
     void Awake()
     {
+        Anim = gameObject.GetComponent<Animator>();
         SwordCollider.enabled = false;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(Input.GetKeyDown(KeyCode.Mouse0) && !Attacking)
         {
+            Anim.SetBool("Attacking", true);
             Attacking = true;
             AttackTimer = AttackCooldown;
 
@@ -26,12 +29,14 @@ public class SwordAttack : MonoBehaviour
         }
         if (Attacking)
         {
-            if (AttackTimer > 0)
+            if (AttackTimer > 0f)
             {
                 AttackTimer -= Time.deltaTime;
             }
             else
             {
+                AttackTimer = 0f;
+                Anim.SetBool("Attacking", false);
                 Attacking = false;
                 SwordCollider.enabled = false;
             }
