@@ -19,7 +19,7 @@ public class SwordAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0) && !Attacking)
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             Anim.SetBool("Attacking", true);
             Attacking = true;
