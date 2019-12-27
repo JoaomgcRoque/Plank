@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
@@ -11,16 +12,28 @@ public class PlayerController : MonoBehaviour
     public Animator Anim;
     public SwordAttack SwordAtt;
     public TextMeshPro Text;
+    public Slider HealthBar;
 
     public float MoveSpeed = 10;
     public float Gravity = 20;
-    public float Health = 10f;
+    public float MaxHealth = 10f;
+    public float Health;
     public float AttackDamage = 1f;
+
+    void Start()
+    {
+        Health = MaxHealth;
+        HealthBar.value = CalculateHealth();
+    }
 
     private void Update()
     {
         Text.text = Health.ToString();
         Text.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.position);
+
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position + new Vector3(0f, 3f, 0f));
+
+        HealthBar.transform.position = screenPosition;
 
         if ((Input.GetAxis("Horizontal") > 0f || Input.GetAxis("Horizontal") < 0f ||
             Input.GetAxis("Vertical") < 0f || Input.GetAxis("Vertical") > 0f) && SwordAtt.AttackTimer == 0)
@@ -39,5 +52,10 @@ public class PlayerController : MonoBehaviour
         }
         else
             Anim.SetBool("Moving", false);
+    }
+
+    float CalculateHealth()
+    {
+        return Health / MaxHealth;
     }
 }

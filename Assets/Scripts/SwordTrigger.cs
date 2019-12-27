@@ -14,6 +14,9 @@ public class SwordTrigger : MonoBehaviour
             if (other.GetComponent<EnemyController>().HitCooldown == false)
             {
                 other.GetComponent<EnemyController>().Health -= PlayerCont.AttackDamage;
+                other.GetComponent<EnemyController>().theHealthBar.value =
+                    other.GetComponent<EnemyController>().Health /
+                    other.GetComponent<EnemyController>().MaxHealth;
                 other.GetComponent<EnemyController>().HitCooldown = true;
             }
         }
