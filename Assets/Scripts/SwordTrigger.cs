@@ -5,16 +5,17 @@ using UnityEngine.AI;
 
 public class SwordTrigger : MonoBehaviour
 {
+    public PlayerController PlayerCont;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
         {
-            other.gameObject.GetComponent<Animator>().SetBool("Dead", true);
-            Destroy(other.gameObject.GetComponent<NavMeshAgent>());
-            Destroy(other.gameObject.GetComponent<CapsuleCollider>());
-            Destroy(other.gameObject.GetComponent<Rigidbody>());
-            Destroy(other.gameObject.GetComponent<BoxCollider>());
+            if (other.GetComponent<EnemyController>().HitCooldown == false)
+            {
+                other.GetComponent<EnemyController>().Health -= PlayerCont.AttackDamage;
+                other.GetComponent<EnemyController>().HitCooldown = true;
+            }
         }
     }
 }

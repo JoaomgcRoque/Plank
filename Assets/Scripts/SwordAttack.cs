@@ -13,13 +13,12 @@ public class SwordAttack : MonoBehaviour
 
     void Awake()
     {
-        Anim = gameObject.GetComponent<Animator>();
         SwordCollider.enabled = false;
     }
 
     private void FixedUpdate()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Anim.SetBool("Attacking", true);
             Attacking = true;
