@@ -12,11 +12,13 @@ public class EnemyController : MonoBehaviour
     public SwordAttack SwordAtt;
     public Slider HealthBar;
     public Slider theHealthBar;
+    public GameObject AttackRange;
     private Vector2 ScreenPosition;
 
-    public float lookRadius = 10f;
     public float MaxHealth = 2f;
     public float Health;
+    public float AttackDamage = 0.5f;
+    public bool Attacking = false;
     public bool HitCooldown = false;
 
     Transform target;
@@ -26,6 +28,7 @@ public class EnemyController : MonoBehaviour
     {
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
+        AttackRange.SetActive(false);
         Health = MaxHealth;
         ScreenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position + new Vector3(0f, 3f, 0f));
         theHealthBar = Instantiate(HealthBar, ScreenPosition, Quaternion.identity,
@@ -45,14 +48,16 @@ public class EnemyController : MonoBehaviour
 
         float distance = Vector3.Distance(target.position, transform.position);
 
-        if (distance <= lookRadius && agent)
-        {
-            agent.SetDestination(target.position);
-        }
+        agent.SetDestination(target.position);
 
         if (HitCooldown)
             if (SwordAtt.AttackTimer <= 0)
                 HitCooldown = false;
+
+        if (Attacking)
+            AttackRange.SetActive(true);
+        else
+            AttackRange.SetActive(false);
 
         if (Health <= 0f)
         {
@@ -67,14 +72,23 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
-    }
-
     float CalculateHealth()
     {
         return Health / MaxHealth;
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if (other.GetComponent<PlayerController>().HitCooldown == false)
+            {
+                other.GetComponent<PlayerController>().Health -= AttackDamage;
+                other.GetComponent<PlayerController>().HealthBar.value =
+                    other.GetComponent<PlayerController>().Health /
+                    other.GetComponent<PlayerController>().MaxHealth;
+                other.GetComponent<PlayerController>().HitCooldown = true;
+            }
+        }
     }
 }

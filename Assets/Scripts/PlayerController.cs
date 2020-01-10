@@ -19,11 +19,15 @@ public class PlayerController : MonoBehaviour
     public float MaxHealth = 10f;
     public float Health;
     public float AttackDamage = 1f;
+    public bool HitCooldown = false;
+    public float InvisibleFrames = 1.5f;
+    public float Timer;
 
     void Start()
     {
         Health = MaxHealth;
         HealthBar.value = CalculateHealth();
+        Timer = InvisibleFrames;
     }
 
     private void Update()
@@ -34,6 +38,16 @@ public class PlayerController : MonoBehaviour
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position + new Vector3(0f, 3f, 0f));
 
         HealthBar.transform.position = screenPosition;
+
+        if (HitCooldown)
+        {
+            Timer -= Time.deltaTime;
+            if (Timer <= 0)
+            {
+                HitCooldown = false;
+                Timer = InvisibleFrames;
+            }
+        }
 
         if ((Input.GetAxis("Horizontal") > 0f || Input.GetAxis("Horizontal") < 0f ||
             Input.GetAxis("Vertical") < 0f || Input.GetAxis("Vertical") > 0f) && SwordAtt.AttackTimer == 0)
