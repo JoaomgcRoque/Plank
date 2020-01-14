@@ -13,8 +13,7 @@ public class EnemyController : MonoBehaviour
     public Slider HealthBar;
     public Slider theHealthBar;
     private Vector2 ScreenPosition;
-
-    public float lookRadius = 10f;
+    
     public float MaxHealth = 2f;
     public float Health;
     public bool HitCooldown = false;
@@ -44,11 +43,8 @@ public class EnemyController : MonoBehaviour
             theHealthBar.transform.position = ScreenPosition;
 
         float distance = Vector3.Distance(target.position, transform.position);
-
-        if (distance <= lookRadius && agent)
-        {
+        
             agent.SetDestination(target.position);
-        }
 
         if (HitCooldown)
             if (SwordAtt.AttackTimer <= 0)
@@ -65,12 +61,6 @@ public class EnemyController : MonoBehaviour
             if (theHealthBar != null)
                 Destroy(theHealthBar.gameObject);
         }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 
     float CalculateHealth()
