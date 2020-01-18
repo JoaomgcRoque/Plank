@@ -12,13 +12,18 @@ public class EnemyController : MonoBehaviour
     public SwordAttack SwordAtt;
     public Slider HealthBar;
     public Slider theHealthBar;
+    public GameObject LookRange;
     public GameObject AttackRange;
+    public Material White;
+    public Material Orange;
+    public Material Red;
     private Vector2 ScreenPosition;
 
     public float MaxHealth = 2f;
     public float Health;
     public float AttackDamage = 0.5f;
     public bool Attacking = false;
+    public bool Attacked = false;
     public bool HitCooldown = false;
 
     Transform target;
@@ -77,18 +82,40 @@ public class EnemyController : MonoBehaviour
         return Health / MaxHealth;
     }
 
+    private IEnumerator OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            gameObject.GetComponent<EnemyController>().Attacking = true;
+            gameObject.GetComponentInChildren<MeshRenderer>().material = Orange;
+            yield return StartCoroutine("WaitAndPrint");
+            gameObject.GetComponent<EnemyController>().Attacked = true;
+            gameObject.GetComponent<EnemyController>().Attacking = false;
+            yield return StartCoroutine("WaitAndPrint");
+            gameObject.GetComponent<EnemyController>().Attacked = false;
+            gameObject.GetComponentInChildren<MeshRenderer>().material = White;
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (other.GetComponent<PlayerController>().HitCooldown == false)
+            if (other.GetComponent<PlayerController>().HitCooldown == false && gameObject.GetComponent<EnemyController>().Attacked == true)
             {
+                gameObject.GetComponentInChildren<MeshRenderer>().material = Red;
                 other.GetComponent<PlayerController>().Health -= AttackDamage;
                 other.GetComponent<PlayerController>().HealthBar.value =
                     other.GetComponent<PlayerController>().Health /
                     other.GetComponent<PlayerController>().MaxHealth;
                 other.GetComponent<PlayerController>().HitCooldown = true;
+                gameObject.GetComponent<EnemyController>().Attacked = false;
             }
         }
+    }
+
+    IEnumerator WaitAndPrint()
+    {
+        yield return new WaitForSeconds(1);
     }
 }
