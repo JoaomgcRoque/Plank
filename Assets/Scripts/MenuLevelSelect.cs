@@ -7,6 +7,7 @@ public class MenuLevelSelect : MonoBehaviour
 {
     public void SceneLoader(int SceneIndex)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneIndex);
     }
 }

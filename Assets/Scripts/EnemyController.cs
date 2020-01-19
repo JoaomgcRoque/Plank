@@ -88,16 +88,13 @@ public class EnemyController : MonoBehaviour
         {
             gameObject.GetComponent<EnemyController>().Attacking = true;
             gameObject.GetComponentInChildren<MeshRenderer>().material = Orange;
-            yield return StartCoroutine("WaitAndPrint");
+            yield return StartCoroutine("Wait");
             gameObject.GetComponent<EnemyController>().Attacked = true;
             gameObject.GetComponent<EnemyController>().Attacking = false;
-            yield return StartCoroutine("WaitAndPrint");
-            gameObject.GetComponent<EnemyController>().Attacked = false;
-            gameObject.GetComponentInChildren<MeshRenderer>().material = White;
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private IEnumerator OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
@@ -111,10 +108,29 @@ public class EnemyController : MonoBehaviour
                 other.GetComponent<PlayerController>().HitCooldown = true;
                 gameObject.GetComponent<EnemyController>().Attacked = false;
             }
+            else
+            {
+                gameObject.GetComponent<EnemyController>().Attacking = true;
+                gameObject.GetComponentInChildren<MeshRenderer>().material = Orange;
+                yield return StartCoroutine("Wait");
+                gameObject.GetComponent<EnemyController>().Attacked = true;
+                gameObject.GetComponent<EnemyController>().Attacking = false;
+            }
         }
     }
 
-    IEnumerator WaitAndPrint()
+    private IEnumerator OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            yield return StartCoroutine("Wait");
+            gameObject.GetComponent<EnemyController>().Attacked = false;
+            gameObject.GetComponent<EnemyController>().Attacking = false;
+            gameObject.GetComponentInChildren<MeshRenderer>().material = White;
+        }
+    }
+
+    IEnumerator Wait()
     {
         yield return new WaitForSeconds(1);
     }

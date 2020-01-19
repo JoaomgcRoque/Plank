@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public SwordAttack SwordAtt;
     public TextMeshPro Text;
     public Slider HealthBar;
+    public GameObject DeathCanvas;
+    public GameObject PauseCanvas;
 
     public float MoveSpeed = 10;
     public float Gravity = 20;
@@ -22,12 +24,14 @@ public class PlayerController : MonoBehaviour
     public bool HitCooldown = false;
     public float InvisibleFrames = 1.5f;
     public float Timer;
+    public bool Paused;
 
     void Start()
     {
         Health = MaxHealth;
         HealthBar.value = CalculateHealth();
         Timer = InvisibleFrames;
+        Paused = false;
     }
 
     private void Update()
@@ -66,10 +70,45 @@ public class PlayerController : MonoBehaviour
         }
         else
             Anim.SetBool("Moving", false);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Paused)
+                Resume();
+            else
+                Pause();
+        }
+
+        if (Health <= 0)
+        {
+            GetComponent<Animator>().SetBool("Dead", true);
+            Destroy(GetComponent<CapsuleCollider>());
+            Destroy(GetComponent<Rigidbody>());
+            Destroy(GetComponent<BoxCollider>());
+            Destroy(GetComponent<SwordAttack>());
+            Destroy(GetComponentInChildren<TextMeshPro>());
+            if (HealthBar != null)
+                Destroy(HealthBar.gameObject);
+            DeathCanvas.SetActive(true);
+        }
     }
 
     float CalculateHealth()
     {
         return Health / MaxHealth;
+    }
+
+    public void Resume ()
+    {
+        PauseCanvas.SetActive(false);
+        Time.timeScale = 1f;
+        Paused = false;
+    }
+
+    public void Pause ()
+    {
+        PauseCanvas.SetActive(true);
+        Time.timeScale = 0f;
+        Paused = true;
     }
 }
