@@ -8,7 +8,8 @@ using TMPro;
 public class EnemyController : MonoBehaviour
 {
     public Transform MainCamera;
-    public TextMeshPro Text;
+    public TextMeshPro NameText;
+    public TextMeshPro HealthText;
     public SwordAttack SwordAtt;
     public Slider HealthBar;
     public Slider theHealthBar;
@@ -25,6 +26,9 @@ public class EnemyController : MonoBehaviour
     public bool Attacking = false;
     public bool Attacked = false;
     public bool HitCooldown = false;
+    public bool AttackCooldown = false;
+    public float InvisibleFrames = 1.5f;
+    public float Timer;
 
     Transform target;
     NavMeshAgent agent;
@@ -39,12 +43,16 @@ public class EnemyController : MonoBehaviour
         theHealthBar = Instantiate(HealthBar, ScreenPosition, Quaternion.identity,
             GameObject.Find("Canvas").transform);
         theHealthBar.value = CalculateHealth();
+        Timer = InvisibleFrames;
     }
 
     void Update()
     {
-        Text.text = Health.ToString();
-        Text.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.position);
+        // Enemy Health UI
+        HealthText.text = Health.ToString();
+        HealthText.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.position);
+        // Enemy Name UI
+        NameText.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.position);
 
         ScreenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position + new Vector3(0f, 3f, 0f));
 
@@ -64,6 +72,17 @@ public class EnemyController : MonoBehaviour
         else
             AttackRange.SetActive(false);
 
+        if (AttackCooldown)
+        {
+            Timer -= Time.deltaTime;
+            if (Timer <= 0)
+            {
+                AttackCooldown = false;
+                Timer = InvisibleFrames;
+            }
+        }
+
+        // Enemy Death
         if (Health <= 0f)
         {
             GetComponent<Animator>().SetBool("Dead", true);
@@ -96,16 +115,16 @@ public class EnemyController : MonoBehaviour
 
     private IEnumerator OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if (AttackCooldown == false && other.tag == "Player")
         {
-            if (other.GetComponent<PlayerController>().HitCooldown == false && gameObject.GetComponent<EnemyController>().Attacked == true)
+            if (gameObject.GetComponent<EnemyController>().Attacked == true)
             {
                 gameObject.GetComponentInChildren<MeshRenderer>().material = Red;
                 other.GetComponent<PlayerController>().Health -= AttackDamage;
                 other.GetComponent<PlayerController>().HealthBar.value =
                     other.GetComponent<PlayerController>().Health /
                     other.GetComponent<PlayerController>().MaxHealth;
-                other.GetComponent<PlayerController>().HitCooldown = true;
+                gameObject.GetComponent<EnemyController>().AttackCooldown = true;
                 gameObject.GetComponent<EnemyController>().Attacked = false;
             }
             else

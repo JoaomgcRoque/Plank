@@ -5,9 +5,15 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject theEnemy;
-    public int xPos;
-    public int zPos;
     public int enemyCount;
+
+    public int xPos;
+    public int xPosLesserLimit;
+    public int xPosBiggerLimit;
+
+    public int zPos;
+    public int zPosLesserLimit;
+    public int zPosBiggerLimit;
 
     void Start()
     {
@@ -16,13 +22,13 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator EnemyDrop()
     {
-        while (enemyCount < 50)
+        while (enemyCount > 0)
         {
-            xPos = Random.Range(-90, 90);
-            zPos = Random.Range(-55, -75);
+            xPos = Random.Range(xPosLesserLimit, xPosBiggerLimit);
+            zPos = Random.Range(zPosLesserLimit, zPosBiggerLimit);
             Instantiate(theEnemy, new Vector3(xPos, 0.6f, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(10);
-            enemyCount += 1;
+            yield return new WaitForSeconds(5);
+            enemyCount -= 1;
         }
     }
 }
