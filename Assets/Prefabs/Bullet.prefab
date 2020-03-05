@@ -13,14 +13,14 @@ GameObject:
   - component: {fileID: 2056070051005514059}
   - component: {fileID: 2056070051005514058}
   - component: {fileID: 2056070051005514069}
-  - component: {fileID: 493004466311575851}
+  - component: {fileID: 4810807219944632271}
   m_Layer: 0
-  m_Name: Throwable1
+  m_Name: Bullet
   m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2056070051005514057
 Transform:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8c2ce52f2cc208940a151e192643401c, type: 2}
+  - {fileID: 2100000, guid: f7c7451502548d24fbc4058b1a56861e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -89,7 +89,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056070051005514068}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &493004466311575851
+--- !u!114 &4810807219944632271
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,11 +119,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2056070051005514068}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aa4a0527a066e5408ab8024a5655abe, type: 3}
+  m_Script: {fileID: 11500000, guid: 28db1d0cb5be4f34b8d84ced0888a089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerCont: {fileID: 0}
   rigidbody: {fileID: 2056070051005514069}
-  lefthand: {fileID: 0}
+  pistol: {fileID: 0}
   force: 0.1
-  throwable: {fileID: 2056070051005514068}
+  bullet: {fileID: 2056070051005514068}
