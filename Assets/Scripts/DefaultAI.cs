@@ -1,23 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class CorruptPirateAI : MonoBehaviour
+public class DefaultAI : MonoBehaviour
 {
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private Transform gun;
-    [SerializeField] private float time;
-    [SerializeField] private bool cooldown = false;
-
-    private void FixedUpdate()
-    {
-        if (cooldown == false)
-        {
-            Throw();
-        }
-    }
-
     private IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -64,27 +50,5 @@ public class CorruptPirateAI : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1);
-    }
-
-    public void Throw()
-    {
-        Instantiate(bullet, gun.transform.position, gun.transform.rotation);
-        cooldown = true;
-        StartCoroutine(CooldDown(time));
-    }
-
-    public void DestroyBullet()
-    {
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Bullet"))
-        {
-            Destroy(go);
-        }
-    }
-
-    IEnumerator CooldDown(float time)
-    {
-        yield return new WaitForSeconds(time);
-        DestroyBullet();
-        cooldown = false;
     }
 }

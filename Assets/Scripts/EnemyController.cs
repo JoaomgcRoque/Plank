@@ -14,7 +14,6 @@ public class EnemyController : MonoBehaviour
     public Slider HealthBar;
     public Slider theHealthBar;
     public GameObject LookRange;
-    public GameObject AttackRange;
     public Material White;
     public Material Orange;
     public Material Red;
@@ -23,7 +22,6 @@ public class EnemyController : MonoBehaviour
     public float MaxHealth = 2f;
     public float Health;
     public float AttackDamage = 0.5f;
-    public bool Attacking = false;
     public bool Attacked = false;
     public bool HitCooldown = false;
     public bool AttackCooldown = false;
@@ -37,7 +35,6 @@ public class EnemyController : MonoBehaviour
     {
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
-        AttackRange.SetActive(false);
         Health = MaxHealth;
         ScreenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position + new Vector3(0f, 3f, 0f));
         theHealthBar = Instantiate(HealthBar, ScreenPosition, Quaternion.identity,
@@ -67,11 +64,6 @@ public class EnemyController : MonoBehaviour
             if (SwordAtt.AttackTimer <= 0)
                 HitCooldown = false;
 
-        if (Attacking)
-            AttackRange.SetActive(true);
-        else
-            AttackRange.SetActive(false);
-
         if (AttackCooldown)
         {
             Timer -= Time.deltaTime;
@@ -99,58 +91,5 @@ public class EnemyController : MonoBehaviour
     float CalculateHealth()
     {
         return Health / MaxHealth;
-    }
-
-    private IEnumerator OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            gameObject.GetComponent<EnemyController>().Attacking = true;
-            gameObject.GetComponentInChildren<MeshRenderer>().material = Orange;
-            yield return StartCoroutine("Wait");
-            gameObject.GetComponent<EnemyController>().Attacked = true;
-            gameObject.GetComponent<EnemyController>().Attacking = false;
-        }
-    }
-
-    private IEnumerator OnTriggerStay(Collider other)
-    {
-        if (AttackCooldown == false && other.tag == "Player")
-        {
-            if (gameObject.GetComponent<EnemyController>().Attacked == true)
-            {
-                gameObject.GetComponentInChildren<MeshRenderer>().material = Red;
-                other.GetComponent<PlayerController>().Health -= AttackDamage;
-                other.GetComponent<PlayerController>().HealthBar.value =
-                    other.GetComponent<PlayerController>().Health /
-                    other.GetComponent<PlayerController>().MaxHealth;
-                gameObject.GetComponent<EnemyController>().AttackCooldown = true;
-                gameObject.GetComponent<EnemyController>().Attacked = false;
-            }
-            else
-            {
-                gameObject.GetComponent<EnemyController>().Attacking = true;
-                gameObject.GetComponentInChildren<MeshRenderer>().material = Orange;
-                yield return StartCoroutine("Wait");
-                gameObject.GetComponent<EnemyController>().Attacked = true;
-                gameObject.GetComponent<EnemyController>().Attacking = false;
-            }
-        }
-    }
-
-    private IEnumerator OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            yield return StartCoroutine("Wait");
-            gameObject.GetComponent<EnemyController>().Attacked = false;
-            gameObject.GetComponent<EnemyController>().Attacking = false;
-            gameObject.GetComponentInChildren<MeshRenderer>().material = White;
-        }
-    }
-
-    IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(1);
     }
 }
