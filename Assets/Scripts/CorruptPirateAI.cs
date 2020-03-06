@@ -10,14 +10,6 @@ public class CorruptPirateAI : MonoBehaviour
     [SerializeField] private float time;
     [SerializeField] private bool cooldown = false;
 
-    private void FixedUpdate()
-    {
-        if (cooldown == false)
-        {
-            Throw();
-        }
-    }
-
     private IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -30,10 +22,11 @@ public class CorruptPirateAI : MonoBehaviour
 
     private IEnumerator OnTriggerStay(Collider other)
     {
-        if (gameObject.GetComponent<EnemyController>().AttackCooldown == false && other.tag == "Player")
+        if (gameObject.GetComponent<EnemyController>().AttackCooldown == false && other.tag == "Player" && cooldown == false)
         {
             if (gameObject.GetComponent<EnemyController>().Attacked == true)
             {
+                Throw();
                 gameObject.GetComponentInChildren<MeshRenderer>().material = gameObject.GetComponent<EnemyController>().Red;
                 other.GetComponent<PlayerController>().Health -= gameObject.GetComponent<EnemyController>().AttackDamage;
                 other.GetComponent<PlayerController>().HealthBar.value =

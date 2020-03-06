@@ -7244,7 +7244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814995167}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 1.57, z: 1.06}
+  m_LocalPosition: {x: -0.545, y: 1.57, z: 1.296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1503446305}
@@ -14298,7 +14298,7 @@ MonoBehaviour:
   Attacked: 0
   HitCooldown: 0
   AttackCooldown: 0
-  InvisibleFrames: 1.5
+  InvisibleFrames: 0.5
   Timer: 0
 --- !u!54 &1503446302
 Rigidbody:
@@ -14432,7 +14432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6ab7e760f550de41b71ff6cf5578b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
+  bullet: {fileID: 2056070051005514068, guid: f03539ba58d31354d9c5b845c661a8ae, type: 3}
   gun: {fileID: 814995168}
   time: 1
   cooldown: 0
