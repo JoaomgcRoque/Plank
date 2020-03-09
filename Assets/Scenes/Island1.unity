@@ -3893,7 +3893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skills: 0
-  cooldown: 0
+  cooldown: 10
   canClick: 1
   isSkill1: 1
   isSkill2: 1
@@ -3965,6 +3965,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8700e517807f47458873af343e171d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinstance: {fileID: 415265507}
+  newSpeed: 20
+  skillTime: 3
+  stminstance: {fileID: 415265508}
 --- !u!1 &424084522
 GameObject:
   m_ObjectHideFlags: 0
