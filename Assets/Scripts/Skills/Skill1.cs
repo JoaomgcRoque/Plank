@@ -15,26 +15,21 @@ public class Skill1 : MonoBehaviour
         stminstance.GetComponent<SkillsSTM>();
     }
     public void Skill1method() {
-        Debug.Log("skill1");
         StartCoroutine(SkillTime());
-        //playerinstance.MoveSpeed = newSpeed;
+        playerinstance.MoveSpeed = newSpeed;
     }
-
 
     IEnumerator SkillTime() {
-        // stminstance.skills = SkillsSTM.Skills.noskill;
-
-        float timePassed = 0; 
-        while(timePassed < skilltime)
-        {
-            playerinstance.MoveSpeed = newSpeed;
+       float timePassed = 0; 
+       while(timePassed < skilltime)
+       {
             timePassed += Time.deltaTime;
-            //yield return stminstance.skills = SkillsSTM.Skills.noskill;
             yield return null;
-            //yield return playerinstance.MoveSpeed;
+       }
+       if(timePassed >= skilltime) {
             playerinstance.MoveSpeed = defaultspeed;
-            //yield return null;
-
+            stminstance.skills = SkillsSTM.Skills.noskill;
         }
     }
+
 }
