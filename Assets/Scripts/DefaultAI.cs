@@ -8,7 +8,6 @@ public class DefaultAI : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            gameObject.GetComponentInChildren<MeshRenderer>().material = gameObject.GetComponent<EnemyController>().Orange;
             yield return StartCoroutine("Wait");
             gameObject.GetComponent<EnemyController>().Attacked = true;
         }
@@ -20,7 +19,6 @@ public class DefaultAI : MonoBehaviour
         {
             if (gameObject.GetComponent<EnemyController>().Attacked == true)
             {
-                gameObject.GetComponentInChildren<MeshRenderer>().material = gameObject.GetComponent<EnemyController>().Red;
                 other.GetComponent<PlayerController>().Health -= gameObject.GetComponent<EnemyController>().AttackDamage;
                 other.GetComponent<PlayerController>().HealthBar.value =
                     other.GetComponent<PlayerController>().Health /
@@ -30,7 +28,6 @@ public class DefaultAI : MonoBehaviour
             }
             else
             {
-                gameObject.GetComponentInChildren<MeshRenderer>().material = gameObject.GetComponent<EnemyController>().Orange;
                 yield return StartCoroutine("Wait");
                 gameObject.GetComponent<EnemyController>().Attacked = true;
             }
@@ -43,7 +40,6 @@ public class DefaultAI : MonoBehaviour
         {
             yield return StartCoroutine("Wait");
             gameObject.GetComponent<EnemyController>().Attacked = false;
-            gameObject.GetComponentInChildren<MeshRenderer>().material = gameObject.GetComponent<EnemyController>().White;
         }
     }
 
