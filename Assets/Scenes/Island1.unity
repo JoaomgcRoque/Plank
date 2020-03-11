@@ -3953,6 +3953,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92fc387e4b234af4f96fabe6d3e2eb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinstance: {fileID: 415265507}
+  newDamage: 2
+  stminstance: {fileID: 415265508}
+  skilltime: 3
+  defaultDamage: 1
 --- !u!114 &415265513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3967,8 +3972,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerinstance: {fileID: 415265507}
   newSpeed: 20
-  skillTime: 3
   stminstance: {fileID: 415265508}
+  skilltime: 3
+  defaultspeed: 10
 --- !u!1 &424084522
 GameObject:
   m_ObjectHideFlags: 0
