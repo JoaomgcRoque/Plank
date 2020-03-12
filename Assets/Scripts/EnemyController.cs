@@ -14,9 +14,6 @@ public class EnemyController : MonoBehaviour
     public Slider HealthBar;
     public Slider theHealthBar;
     public GameObject LookRange;
-    public Material White;
-    public Material Orange;
-    public Material Red;
     private Vector2 ScreenPosition;
 
     public float MaxHealth = 2f;
@@ -58,7 +55,8 @@ public class EnemyController : MonoBehaviour
 
         float distance = Vector3.Distance(target.position, transform.position);
 
-        agent.SetDestination(target.position);
+        if (gameObject.GetComponent<NavMeshAgent>() != null)
+            agent.SetDestination(target.position);
 
         if (HitCooldown)
             if (SwordAtt.AttackTimer <= 0)
