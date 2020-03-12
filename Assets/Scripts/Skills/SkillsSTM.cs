@@ -68,7 +68,7 @@ public class SkillsSTM : MonoBehaviour
            && isSkill5 == true && canClick == true)
         {
             skills = Skills.skill5;
-            canClick = false;
+            //canClick = false;
         }
         STM();
     }
@@ -82,31 +82,31 @@ public class SkillsSTM : MonoBehaviour
                 //Debug.Log("skill1");
                 skill1.Skill1method();
                 StartCoroutine(Cooldown());
-                skills = Skills.noskill;
+                //skills = Skills.noskill;
                 break;
             case Skills.skill2:
                 //Debug.Log("skill2");
                 skill2.Skill2method();
                 StartCoroutine(Cooldown());
-                skills = Skills.noskill;
+                //skills = Skills.noskill;
                 break;
             case Skills.skill3:
                 //Debug.Log("skill3");
                 skill3.Skill3method();
                 StartCoroutine(Cooldown());
-                skills = Skills.noskill;
+                //skills = Skills.noskill;
                 break;
             case Skills.skill4:
                 //Debug.Log("skill4");
                 skill4.Skill4method();
                 StartCoroutine(Cooldown());
-                skills = Skills.noskill;
+                //skills = Skills.noskill;
                 break;
             case Skills.skill5:
                 //Debug.Log("skill5");
                 skill5.Skill5method();
                 StartCoroutine(Cooldown());
-                skills = Skills.noskill;
+                //skills = Skills.noskill;
                 break;
             default:
                 skills = Skills.noskill;
@@ -117,5 +117,7 @@ public class SkillsSTM : MonoBehaviour
         yield return new WaitForSeconds(cooldown);
 
         canClick = true;
+
+        skills = Skills.noskill;
     }
 }
