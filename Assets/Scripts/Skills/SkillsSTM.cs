@@ -23,20 +23,17 @@ public class SkillsSTM : MonoBehaviour
     public bool isSkill2 = false;
     public bool isSkill3 = false;
     public bool isSkill4 = false;
-    public bool isSkill5 = false;
 
     public Skill1 skill1;
     public Skill2 skill2;
     public Skill3 skill3;
     public Skill4 skill4;
-    public Skill5 skill5;
 
     private void Start() {
         skill1 = GetComponent<Skill1>();
         skill2 = GetComponent<Skill2>();
         skill3 = GetComponent<Skill3>();
         skill4 = GetComponent<Skill4>();
-        skill5 = GetComponent<Skill5>();
     }
 
     private void FixedUpdate() {
@@ -63,12 +60,6 @@ public class SkillsSTM : MonoBehaviour
         {
             skills = Skills.skill4;
             canClick = false;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5) 
-           && isSkill5 == true && canClick == true)
-        {
-            skills = Skills.skill5;
-            //canClick = false;
         }
         STM();
     }
@@ -99,12 +90,6 @@ public class SkillsSTM : MonoBehaviour
             case Skills.skill4:
                 //Debug.Log("skill4");
                 skill4.Skill4method();
-                StartCoroutine(Cooldown());
-                //skills = Skills.noskill;
-                break;
-            case Skills.skill5:
-                //Debug.Log("skill5");
-                skill5.Skill5method();
                 StartCoroutine(Cooldown());
                 //skills = Skills.noskill;
                 break;
