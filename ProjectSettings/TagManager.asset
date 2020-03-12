@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Throwable
   - Bullet
+  - Grenade
+  - Terrain
   layers:
   - Default
   - TransparentFX

@@ -291,6 +291,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.78
@@ -2749,6 +2753,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.4
@@ -3941,6 +3949,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd34c03bacf4bd84cad451405bbd1cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerinstance: {fileID: 415265507}
+  stminstance: {fileID: 415265508}
+  bomb: {fileID: 2056070051005514068, guid: c7ae53f913adde6468b79c015687c6e1, type: 3}
+  skilltime: 3
+  canThrow: 1
+  hand: {fileID: 760921007}
 --- !u!114 &415265512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6277,7 +6291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &653571242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8345,6 +8359,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42.8
@@ -9490,6 +9508,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.1
@@ -9574,6 +9596,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9756,7 +9782,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
@@ -9776,7 +9802,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
@@ -9796,7 +9822,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
@@ -10956,6 +10982,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14319,7 +14349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1503446301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14716,6 +14746,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15650,6 +15684,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.1
@@ -15722,6 +15760,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16371,6 +16413,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.6
@@ -16451,7 +16497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1803392430
 MonoBehaviour:
   m_ObjectHideFlags: 0
