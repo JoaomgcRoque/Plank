@@ -11,6 +11,8 @@ public class Skill3 : MonoBehaviour
     [SerializeField] private bool canThrow = true;
     [SerializeField] private Transform hand;
 
+    public float deletethis;
+
     private void Update() {
         playerinstance.GetComponent<PlayerController>();
         stminstance.GetComponent<SkillsSTM>();
@@ -31,9 +33,21 @@ public class Skill3 : MonoBehaviour
     }
 
     IEnumerator SkillTime() {
-            yield return new WaitForSeconds(skilltime);
-            stminstance.skills = SkillsSTM.Skills.noskill;
+        /*yield return new WaitForSeconds(skilltime);
+        stminstance.skills = SkillsSTM.Skills.noskill;
+        canThrow = true;*/
+
+        float timePassed = 0;
+        while (timePassed < skilltime) {
+            timePassed += Time.deltaTime;
+            deletethis = timePassed;
+            yield return null;
+        }
+        if (timePassed >= skilltime) {
             canThrow = true;
+            stminstance.canClick = true;
+            stminstance.skills = SkillsSTM.Skills.noskill;
+        }
     }
  }
 
