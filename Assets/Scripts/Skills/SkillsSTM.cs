@@ -67,31 +67,22 @@ public class SkillsSTM : MonoBehaviour
     private void STM() {
         switch(skills) {
             case Skills.noskill:
-                //Debug.Log("no skills");
                 break;
             case Skills.skill1:
-                //Debug.Log("skill1");
                 skill1.Skill1method();
                 StartCoroutine(Cooldown());
-                //skills = Skills.noskill;
                 break;
             case Skills.skill2:
-                //Debug.Log("skill2");
                 skill2.Skill2method();
                 StartCoroutine(Cooldown());
-                //skills = Skills.noskill;
                 break;
             case Skills.skill3:
-                //Debug.Log("skill3");
                 skill3.Skill3method();
                 StartCoroutine(Cooldown());
-                //skills = Skills.noskill;
                 break;
             case Skills.skill4:
-                //Debug.Log("skill4");
                 skill4.Skill4method();
                 StartCoroutine(Cooldown());
-                //skills = Skills.noskill;
                 break;
             default:
                 skills = Skills.noskill;

@@ -26,39 +26,62 @@ public class SkillsUI : MonoBehaviour
             cooldown();
         }
     }
-    private void locked() {
-        foreach (GameObject locked in skilllocked) {
-            locked.active = true;
-        }
-        foreach (GameObject idle in skillidle) {
-            idle.active = false;
-        }
-        foreach (GameObject cooldown in skillcooldown) {
-            cooldown.active = false;
-        }
-    }
 
     private void idle() {
-        foreach (GameObject locked in skilllocked) {
-            locked.active = false;
+        if(skillsstm.isSkill1 == true) {
+            skillidle[0].SetActive(true);
+            skilllocked[0].SetActive(false);
+            skillcooldown[0].SetActive(false);
+        } else {
+            skillidle[0].SetActive(false);
+            skilllocked[0].SetActive(true);
         }
-        foreach (GameObject idle in skillidle) {
-            idle.active = true;
+        if (skillsstm.isSkill2 == true) {
+            skillidle[1].SetActive(true);
+            skilllocked[1].SetActive(false);
+            skillcooldown[1].SetActive(false);
+        } else {
+            skillidle[1].SetActive(false);
+            skilllocked[1].SetActive(true);
         }
-        foreach (GameObject cooldown in skillcooldown) {
-            cooldown.active = false;
+        if (skillsstm.isSkill3 == true) {
+            skillidle[2].SetActive(true);
+            skilllocked[2].SetActive(false);
+            skillcooldown[2].SetActive(false);
+        } else {
+            skillidle[2].SetActive(false);
+            skilllocked[2].SetActive(true);
+        }
+        if (skillsstm.isSkill4 == true) {
+            skillidle[3].SetActive(true);
+            skilllocked[3].SetActive(false);
+            skillcooldown[3].SetActive(false);
+        } else {
+            skillidle[3].SetActive(false);
+            skilllocked[3].SetActive(true);
         }
     }
 
     private void cooldown() {
-        foreach (GameObject locked in skilllocked) {
-            locked.active = false;
+        if(skillsstm.isSkill1 == true) {
+            skilllocked[0].SetActive(false);
+            skillidle[0].SetActive(false);
+            skillcooldown[0].SetActive(true);
         }
-        foreach (GameObject idle in skillidle) {
-            idle.active = false;
+        if (skillsstm.isSkill2 == true) {
+            skilllocked[1].SetActive(false);
+            skillidle[1].SetActive(false);
+            skillcooldown[1].SetActive(true);
         }
-        foreach (GameObject cooldown in skillcooldown) {
-            cooldown.active = true;
+        if (skillsstm.isSkill3 == true) {
+            skilllocked[2].SetActive(false);
+            skillidle[2].SetActive(false);
+            skillcooldown[2].SetActive(true);
+        }
+        if (skillsstm.isSkill4 == true) {
+            skilllocked[3].SetActive(false);
+            skillidle[3].SetActive(false);
+            skillcooldown[3].SetActive(true);
         }
     }
 }
