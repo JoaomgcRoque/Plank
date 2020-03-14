@@ -10,6 +10,8 @@ public class Skill2 : MonoBehaviour
     [SerializeField] private float skilltime;
     [SerializeField] private float defaultDamage;
 
+    public float deletethis;
+
     private void Update() {
         playerinstance.GetComponent<PlayerController>();
         stminstance.GetComponent<SkillsSTM>();
@@ -23,11 +25,12 @@ public class Skill2 : MonoBehaviour
         float timePassed = 0;
         while (timePassed < skilltime) {
             timePassed += Time.deltaTime;
+            deletethis = timePassed;
             yield return null;
         }
         if (timePassed >= skilltime) {
             playerinstance.AttackDamage = defaultDamage;
-            stminstance.skills = SkillsSTM.Skills.noskill;
+            timePassed = skilltime;
         }
     }
 }
