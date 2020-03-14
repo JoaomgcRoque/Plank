@@ -29,6 +29,8 @@ public class SkillsSTM : MonoBehaviour
     public Skill3 skill3;
     public Skill4 skill4;
 
+    public float deletethis;
+
     private void Start() {
         skill1 = GetComponent<Skill1>();
         skill2 = GetComponent<Skill2>();
@@ -67,6 +69,7 @@ public class SkillsSTM : MonoBehaviour
     private void STM() {
         switch(skills) {
             case Skills.noskill:
+                StopAllCoroutines();
                 break;
             case Skills.skill1:
                 skill1.Skill1method();
@@ -90,10 +93,17 @@ public class SkillsSTM : MonoBehaviour
         }
     }
     IEnumerator Cooldown() {
-        yield return new WaitForSeconds(cooldown);
-
-        canClick = true;
-
-        skills = Skills.noskill;
+        //yield return new WaitForSeconds(cooldown);
+        float timePassed = 0;
+        while (timePassed < cooldown) {
+            timePassed += Time.deltaTime;
+            deletethis = timePassed;
+            yield return null;
+        }
+        if (timePassed >= cooldown) {
+            canClick = true;
+            skills = Skills.noskill;
+            //yield return null;
+        }
     }
 }
