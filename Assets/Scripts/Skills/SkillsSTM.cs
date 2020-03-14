@@ -56,6 +56,7 @@ public class SkillsSTM : MonoBehaviour
         {
             skills = Skills.skill3;
             canClick = false;
+            skill3.canThrow = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4)
             && isSkill4 == true && canClick == true) 

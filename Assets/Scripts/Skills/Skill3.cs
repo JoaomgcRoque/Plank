@@ -8,7 +8,7 @@ public class Skill3 : MonoBehaviour
     [SerializeField] private SkillsSTM stminstance;
     [SerializeField] private GameObject bomb;
     [SerializeField] private float skilltime;
-    [SerializeField] private bool canThrow = true;
+    [SerializeField] public bool canThrow = true;
     [SerializeField] private Transform hand;
 
     public float deletethis;
@@ -44,9 +44,9 @@ public class Skill3 : MonoBehaviour
             yield return null;
         }
         if (timePassed >= skilltime) {
-            canThrow = true;
-            stminstance.canClick = true;
-            stminstance.skills = SkillsSTM.Skills.noskill;
+            canThrow = false;
+            //stminstance.canClick = true;
+            timePassed = skilltime;
         }
     }
  }
