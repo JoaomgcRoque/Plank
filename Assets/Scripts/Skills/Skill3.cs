@@ -33,10 +33,6 @@ public class Skill3 : MonoBehaviour
     }
 
     IEnumerator SkillTime() {
-        /*yield return new WaitForSeconds(skilltime);
-        stminstance.skills = SkillsSTM.Skills.noskill;
-        canThrow = true;*/
-
         float timePassed = 0;
         while (timePassed < skilltime) {
             timePassed += Time.deltaTime;
@@ -45,7 +41,6 @@ public class Skill3 : MonoBehaviour
         }
         if (timePassed >= skilltime) {
             canThrow = false;
-            //stminstance.canClick = true;
             timePassed = skilltime;
         }
     }

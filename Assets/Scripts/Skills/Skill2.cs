@@ -31,7 +31,6 @@ public class Skill2 : MonoBehaviour
         if (timePassed >= skilltime) {
             playerinstance.AttackDamage = defaultDamage;
             timePassed = skilltime;
-            //stminstance.skills = SkillsSTM.Skills.noskill;
         }
     }
 }

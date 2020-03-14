@@ -8,6 +8,7 @@ public class Skill4 : MonoBehaviour
     [SerializeField] private SkillsSTM stminstance;
     [SerializeField] private GameObject burp;
     [SerializeField] private float burptime;
+
     public float deletethis;
 
     private void Update() {
@@ -18,18 +19,9 @@ public class Skill4 : MonoBehaviour
     public void Skill4method() {
         Debug.Log("skill4");
         StartCoroutine(SkillTime());
-        //Burp();
-    }
-
-    void Burp() {
-        burp.SetActive(true);
     }
 
     IEnumerator SkillTime() {
-        /*yield return new WaitForSeconds(burptime);
-        burp.SetActive(false);
-        stminstance.skills = SkillsSTM.Skills.noskill;*/
-
         float timePassed = 0;
         while (timePassed < burptime) {
             timePassed += Time.deltaTime;
