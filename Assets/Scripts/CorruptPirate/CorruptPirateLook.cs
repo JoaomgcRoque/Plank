@@ -10,6 +10,12 @@ public class CorruptPirateLook : MonoBehaviour
     [SerializeField] private Transform gun;
     [SerializeField] private float time;
     [SerializeField] private bool cooldown = false;
+    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioClip shootclip;
+
+    private void Awake() {
+        audiosource = GetComponent<AudioSource>();
+    }
 
     private IEnumerator OnTriggerEnter(Collider other)
     {
@@ -59,6 +65,9 @@ public class CorruptPirateLook : MonoBehaviour
         Instantiate(bullet, gun.transform.position, gun.transform.rotation);
         cooldown = true;
         StartCoroutine(CooldDown(time));
+        audiosource.clip = null;
+        audiosource.clip = shootclip;
+        audiosource.Play();
     }
 
     public void DestroyBullet()

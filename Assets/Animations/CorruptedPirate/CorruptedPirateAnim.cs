@@ -16,6 +16,7 @@ public class CorruptedPirateAnim : MonoBehaviour
         }
     }
 
+
     private void OnTriggerExit(Collider other) {
         if (other.tag == "Player") {
             AnimController.Play("walk");
