@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8c2ce52f2cc208940a151e192643401c, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,3 +127,5 @@ MonoBehaviour:
   lefthand: {fileID: 0}
   force: 0.1
   throwable: {fileID: 2056070051005514068}
+  audiosource: {fileID: 0}
+  throwableclip: {fileID: 8300000, guid: 3feb98ecda55e234689f61c8966fabc1, type: 3}

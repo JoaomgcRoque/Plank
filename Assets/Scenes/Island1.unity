@@ -5237,6 +5237,8 @@ MonoBehaviour:
   hand: {fileID: 760921007}
   time: 1
   cooldown: 0
+  audiosource: {fileID: 415265514}
+  throwclip: {fileID: 8300000, guid: d5033e4d389da0c4481e764599a0d5ca, type: 3}
 --- !u!143 &415265506
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5368,6 +5370,8 @@ MonoBehaviour:
   skilltime: 10
   canThrow: 1
   hand: {fileID: 760921007}
+  audiosource: {fileID: 415265514}
+  throwclip: {fileID: 8300000, guid: d5033e4d389da0c4481e764599a0d5ca, type: 3}
   deletethis: 0
 --- !u!114 &415265512
 MonoBehaviour:
@@ -23181,7 +23185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803392429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 100.3, z: 3.08}
+  m_LocalPosition: {x: 4.61, y: 100.25, z: 3.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 121298659}

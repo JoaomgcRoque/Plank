@@ -11,7 +11,15 @@ public class Skill3 : MonoBehaviour
     [SerializeField] public bool canThrow = true;
     [SerializeField] private Transform hand;
 
+    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioClip throwclip;
+
     public float deletethis;
+
+    private void Awake() {
+        audiosource = GetComponent<AudioSource>();
+    }
+
 
     private void Update() {
         playerinstance.GetComponent<PlayerController>();
@@ -28,6 +36,9 @@ public class Skill3 : MonoBehaviour
         if(canThrow == true) {
             Debug.Log("Throw");
             Instantiate(bomb, hand.transform.position, hand.transform.rotation);
+            audiosource.clip = null;
+            audiosource.clip = throwclip;
+            audiosource.Play();
             canThrow = false;
         }
     }
