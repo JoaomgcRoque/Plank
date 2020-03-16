@@ -8,9 +8,18 @@ public class ThrowObject : MonoBehaviour
     [SerializeField] private Transform hand;
     [SerializeField] private float time;
     [SerializeField] private bool cooldown = false;
+    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioClip throwclip;
+
+    private void Awake() {
+        audiosource = GetComponent<AudioSource>();
+    }
 
     private void Update() {
         if (Input.GetMouseButtonDown(1) && cooldown == false) {
+            audiosource.clip = null;
+            audiosource.clip = throwclip;
+            audiosource.Play();
             Throw();
         }
     }

@@ -14,7 +14,6 @@ public class ThrowableObject : MonoBehaviour
         PlayerCont = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         lefthand = GameObject.Find("left_hand").GetComponent<Transform>();
         rigidbody.AddForce(lefthand.transform.forward * force);
-
     }
 
     private void OnTriggerEnter(Collider other) {

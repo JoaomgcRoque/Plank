@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CorruptedPirateAnim : MonoBehaviour
+public class GiantCrabSound : MonoBehaviour
 {
-    [SerializeField] private Animator AnimController;
-
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip walkclip;
 
@@ -18,19 +16,9 @@ public class CorruptedPirateAnim : MonoBehaviour
         audiosource.Play();
     }
 
-    private void Update() {
-        AnimController = GetComponent<Animator>();
-    }
-
     private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") {
-            audiosource.clip = null;
-        }
-    }
-
-    private void OnTriggerStay(Collider other) {
-        if (other.tag == "Player") {
-            AnimController.Play("shoot");
+        if(other.tag == "Player") {
+            //audiosource.clip = null;
         }
     }
 
@@ -39,7 +27,6 @@ public class CorruptedPirateAnim : MonoBehaviour
             audiosource.clip = null;
             audiosource.clip = walkclip;
             audiosource.Play();
-            AnimController.Play("walk");
         }
     }
 }

@@ -49,7 +49,7 @@ public class GiantCrabLook : MonoBehaviour
                     if (GiantCrab.GetComponent<NavMeshAgent>() != null)
                         GiantCrab.GetComponent<NavMeshAgent>().speed = 0f;
                     if (GiantCrab.GetComponent<NavMeshAgent>() != null)
-                        GiantCrab.GetComponent<NavMeshAgent>().destination = player.transform.position;
+                    GiantCrab.GetComponent<NavMeshAgent>().destination = player.transform.position;
                     yield return StartCoroutine("Wait");
                     isJump = true;
                     if (GiantCrab.GetComponent<NavMeshAgent>() != null)
