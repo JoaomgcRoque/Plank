@@ -14,6 +14,7 @@ public class SwordAttack : MonoBehaviour
     void Awake()
     {
         SwordCollider.enabled = false;
+        audio = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
