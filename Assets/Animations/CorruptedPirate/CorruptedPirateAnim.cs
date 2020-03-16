@@ -6,8 +6,26 @@ public class CorruptedPirateAnim : MonoBehaviour
 {
     [SerializeField] private Animator AnimController;
 
+    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioClip walkclip;
+
+    private void Awake() {
+        audiosource = GetComponent<AudioSource>();
+    }
+
+    private void Start() {
+        audiosource.clip = walkclip;
+        audiosource.Play();
+    }
+
     private void Update() {
         AnimController = GetComponent<Animator>();
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.tag == "Player") {
+            audiosource.clip = null;
+        }
     }
 
     private void OnTriggerStay(Collider other) {
@@ -16,9 +34,11 @@ public class CorruptedPirateAnim : MonoBehaviour
         }
     }
 
-
     private void OnTriggerExit(Collider other) {
         if (other.tag == "Player") {
+            audiosource.clip = null;
+            audiosource.clip = walkclip;
+            audiosource.Play();
             AnimController.Play("walk");
         }
     }

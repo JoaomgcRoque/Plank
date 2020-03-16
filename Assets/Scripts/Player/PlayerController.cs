@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
             CharacterController.Move(Movement * Time.deltaTime);
         }
         else
-            Anim.SetBool("Moving", false);
+        Anim.SetBool("Moving", false);
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
