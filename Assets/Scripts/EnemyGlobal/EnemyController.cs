@@ -42,13 +42,15 @@ public class EnemyController : MonoBehaviour
         Timer = InvisibleFrames;
     }
 
-    void Update()
-    {
+    void Update() {
         // Enemy Health UI
         HealthText.text = Health.ToString();
         HealthText.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.position);
         // Enemy Name UI
+        if (NameText != null)
+            { 
         NameText.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.position);
+            }
 
         ScreenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position + new Vector3(0f, 3f, 0f));
 
