@@ -19355,6 +19355,7 @@ MonoBehaviour:
   AnimController: {fileID: 1420366783}
   audiosource: {fileID: 1420366786}
   walkclip: {fileID: 8300000, guid: 72fc665dcd0dea24480f07f722240f8d, type: 3}
+  enemycontroller: {fileID: 1503446301}
 --- !u!82 &1420366786
 AudioSource:
   m_ObjectHideFlags: 0
