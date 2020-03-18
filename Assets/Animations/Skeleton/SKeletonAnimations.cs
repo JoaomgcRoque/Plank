@@ -12,6 +12,8 @@ public class SKeletonAnimations : MonoBehaviour
     [SerializeField] private float walkaudiovolume;
     [SerializeField] private float swordaudiovolume;
 
+    [SerializeField] private EnemyController enemycontroller;
+
     private void Awake() {
         audiosource = GetComponent<AudioSource>();
     }
@@ -24,6 +26,9 @@ public class SKeletonAnimations : MonoBehaviour
     private void Update()
     {
         AnimController = GetComponent<Animator>();
+        if(enemycontroller.GetComponent<EnemyController>().Health <= 0) {
+            audiosource.enabled = false;
+        }
     }
 
     private void OnTriggerStay(Collider other)

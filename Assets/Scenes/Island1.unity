@@ -8737,7 +8737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &653571242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8765,7 +8765,7 @@ MonoBehaviour:
   AttackCooldown: 0
   InvisibleFrames: 1.5
   Timer: 0
-  modelanimation: {fileID: 0}
+  modelanimation: {fileID: 5873494299315772717}
 --- !u!95 &653571243
 Animator:
   serializedVersion: 3
@@ -14223,7 +14223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 1503446300}
-  enemyCount: 0
+  enemyCount: 10
   xPos: 0
   xPosLesserLimit: -50
   xPosBiggerLimit: 80
@@ -14237,13 +14237,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 653571241}
-  enemyCount: 0
+  enemyCount: 10
   xPos: 0
   xPosLesserLimit: -55
   xPosBiggerLimit: -50
@@ -14257,13 +14257,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 1803392429}
-  enemyCount: 1
+  enemyCount: 10
   xPos: 0
   xPosLesserLimit: 75
   xPosBiggerLimit: 85
@@ -19357,6 +19357,7 @@ MonoBehaviour:
   AnimController: {fileID: 1420366783}
   audiosource: {fileID: 1420366786}
   walkclip: {fileID: 8300000, guid: 72fc665dcd0dea24480f07f722240f8d, type: 3}
+  enemycontroller: {fileID: 1503446301}
 --- !u!82 &1420366786
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23109,6 +23110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GiantCrab: {fileID: 653571241}
+  enemycontroller: {fileID: 653571242}
 --- !u!1 &1785367097
 GameObject:
   m_ObjectHideFlags: 0
@@ -23464,7 +23466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1803392430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23492,7 +23494,7 @@ MonoBehaviour:
   AttackCooldown: 0
   InvisibleFrames: 1.5
   Timer: 0
-  modelanimation: {fileID: 0}
+  modelanimation: {fileID: 1917937060}
 --- !u!95 &1803392431
 Animator:
   serializedVersion: 3
@@ -23761,6 +23763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Skeleton: {fileID: 1803392429}
+  enemycontroller: {fileID: 1803392430}
 --- !u!1001 &1829304484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25201,6 +25204,7 @@ MonoBehaviour:
   walkclip: {fileID: 8300000, guid: 72fc665dcd0dea24480f07f722240f8d, type: 3}
   walkaudiovolume: 0.01
   swordaudiovolume: 1
+  enemycontroller: {fileID: 1803392430}
 --- !u!82 &1917937063
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25679,6 +25683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audiosource: {fileID: 1941200035}
   walkclip: {fileID: 8300000, guid: 109735da0c23ff94aa4b5c335da9f5f9, type: 3}
+  enemycontroller: {fileID: 653571242}
 --- !u!1001 &1945834343
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -28,7 +28,8 @@ public class Grenade : MonoBehaviour
 
     private void OnTriggerStay(Collider other) {
         if (other.tag == "Enemy" && doeskill == true) {
-            Destroy(other);
+            //Destroy(other);
+            other.GetComponent<EnemyController>().Health = 0f;
             Debug.Log("Explosion");
             doeskill = false;
         }

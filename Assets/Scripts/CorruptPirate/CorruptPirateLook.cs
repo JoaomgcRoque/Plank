@@ -19,13 +19,19 @@ public class CorruptPirateLook : MonoBehaviour
         audiosource = GetComponent<AudioSource>();
     }
 
+    private void Update() {
+        if(enemycontroller.Health <= 0) {
+            Destroy(this.GetComponent<BoxCollider>());
+        }
+    }
+
     private IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             yield return StartCoroutine("Wait");
-            CorruptPirate.GetComponent<NavMeshAgent>().speed = 0f;
-            CorruptPirate.GetComponent<EnemyController>().Attacked = true;
+                CorruptPirate.GetComponent<NavMeshAgent>().speed = 0f;
+                CorruptPirate.GetComponent<EnemyController>().Attacked = true;
         }
     }
 

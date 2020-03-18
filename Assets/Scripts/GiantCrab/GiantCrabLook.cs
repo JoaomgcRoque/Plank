@@ -19,18 +19,18 @@ public class GiantCrabLook : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (GiantCrab.GetComponent<NavMeshAgent>() != null)
-                GiantCrab.GetComponent<NavMeshAgent>().speed = 0f;
-            if (GiantCrab.GetComponent<NavMeshAgent>() != null)
-                GiantCrab.GetComponent<NavMeshAgent>().destination = player.transform.position;
-            yield return StartCoroutine("Wait");
-            isJump = true;
-            if (GiantCrab.GetComponent<NavMeshAgent>() != null)
-                GiantCrab.GetComponent<NavMeshAgent>().speed = 5f;
-            yield return StartCoroutine("Wait");
-            if (GiantCrab.GetComponent<NavMeshAgent>() != null)
-                GiantCrab.GetComponent<NavMeshAgent>().speed = 1.5f;
-            GiantCrab.GetComponent<EnemyController>().Attacked = true;
+                if (GiantCrab.GetComponent<NavMeshAgent>() != null)
+                    GiantCrab.GetComponent<NavMeshAgent>().speed = 0f;
+                if (GiantCrab.GetComponent<NavMeshAgent>() != null)
+                    GiantCrab.GetComponent<NavMeshAgent>().destination = player.transform.position;
+                yield return StartCoroutine("Wait");
+                isJump = true;
+                if (GiantCrab.GetComponent<NavMeshAgent>() != null)
+                    GiantCrab.GetComponent<NavMeshAgent>().speed = 5f;
+                yield return StartCoroutine("Wait");
+                if (GiantCrab.GetComponent<NavMeshAgent>() != null)
+                    GiantCrab.GetComponent<NavMeshAgent>().speed = 1.5f;
+                GiantCrab.GetComponent<EnemyController>().Attacked = true;
         }
     }
 
