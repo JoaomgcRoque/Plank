@@ -8765,6 +8765,7 @@ MonoBehaviour:
   AttackCooldown: 0
   InvisibleFrames: 1.5
   Timer: 0
+  modelanimation: {fileID: 0}
 --- !u!95 &653571243
 Animator:
   serializedVersion: 3
@@ -16198,6 +16199,7 @@ MonoBehaviour:
   cooldown: 0
   audiosource: {fileID: 1240729132}
   shootclip: {fileID: 8300000, guid: 7080b9815cccefb4c836c738f4b766c1, type: 3}
+  enemycontroller: {fileID: 1503446301}
 --- !u!82 &1240729132
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19355,7 +19357,6 @@ MonoBehaviour:
   AnimController: {fileID: 1420366783}
   audiosource: {fileID: 1420366786}
   walkclip: {fileID: 8300000, guid: 72fc665dcd0dea24480f07f722240f8d, type: 3}
-  enemycontroller: {fileID: 1503446301}
 --- !u!82 &1420366786
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20257,6 +20258,7 @@ MonoBehaviour:
   AttackCooldown: 0
   InvisibleFrames: 0.5
   Timer: 0
+  modelanimation: {fileID: 1420366783}
 --- !u!54 &1503446302
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23490,6 +23492,7 @@ MonoBehaviour:
   AttackCooldown: 0
   InvisibleFrames: 1.5
   Timer: 0
+  modelanimation: {fileID: 0}
 --- !u!95 &1803392431
 Animator:
   serializedVersion: 3

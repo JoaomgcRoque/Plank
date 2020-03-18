@@ -9,23 +9,15 @@ public class CorruptedPirateAnim : MonoBehaviour
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip walkclip;
 
-    [SerializeField] private EnemyController enemycontroller;
 
     private void Awake() {
         audiosource = GetComponent<AudioSource>();
-        enemycontroller = GetComponent<EnemyController>();
+        AnimController = GetComponent<Animator>();
     }
 
     private void Start() {
         audiosource.clip = walkclip;
         audiosource.Play();
-    }
-
-    private void Update() {
-        AnimController = GetComponent<Animator>();
-        if(enemycontroller.Health <= 0f) {
-            AnimController.enabled = false;
-        }
     }
 
     private void OnTriggerEnter(Collider other) {

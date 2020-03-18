@@ -13,6 +13,8 @@ public class CorruptPirateLook : MonoBehaviour
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip shootclip;
 
+    [SerializeField] private EnemyController enemycontroller;
+
     private void Awake() {
         audiosource = GetComponent<AudioSource>();
     }
@@ -62,12 +64,14 @@ public class CorruptPirateLook : MonoBehaviour
 
     public void Throw()
     {
-        Instantiate(bullet, gun.transform.position, gun.transform.rotation);
-        cooldown = true;
-        StartCoroutine(CooldDown(time));
-        audiosource.clip = null;
-        audiosource.clip = shootclip;
-        audiosource.Play();
+        if (enemycontroller.Health > 0) {
+            Instantiate(bullet, gun.transform.position, gun.transform.rotation);
+            cooldown = true;
+            StartCoroutine(CooldDown(time));
+            audiosource.clip = null;
+            audiosource.clip = shootclip;
+            audiosource.Play();
+        }
     }
 
     public void DestroyBullet()

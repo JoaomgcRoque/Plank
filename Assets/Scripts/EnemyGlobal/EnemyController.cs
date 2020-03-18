@@ -25,6 +25,8 @@ public class EnemyController : MonoBehaviour
     public float InvisibleFrames = 1.5f;
     public float Timer;
 
+    [SerializeField] private Animator modelanimation;
+
     Transform target;
     NavMeshAgent agent;
 
@@ -76,6 +78,7 @@ public class EnemyController : MonoBehaviour
         if (Health <= 0f)
         {
             GetComponent<Animator>().SetBool("Dead", true);
+            modelanimation.GetComponent<Animator>().enabled = false;
             Destroy(GetComponent<NavMeshAgent>());
             Destroy(GetComponent<CapsuleCollider>());
             Destroy(GetComponent<Rigidbody>());
