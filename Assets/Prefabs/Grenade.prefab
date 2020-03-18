@@ -128,7 +128,7 @@ MonoBehaviour:
   PlayerCont: {fileID: 0}
   rigidbody: {fileID: 2056070051005514069}
   lefthand: {fileID: 0}
-  force: 0.02
+  force: 0.005
   grenade: {fileID: 2056070051005514068}
   secondstoexplode: 2
   explosiontime: 1
