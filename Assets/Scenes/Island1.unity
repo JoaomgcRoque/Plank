@@ -8858,7 +8858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 653571241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.59, y: -0.8, z: -12.97}
+  m_LocalPosition: {x: 9.59, y: 99.895996, z: -12.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 261730276}
@@ -14223,7 +14223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 1503446300}
-  enemyCount: 10
+  enemyCount: 5
   xPos: 0
   xPosLesserLimit: -50
   xPosBiggerLimit: 80
@@ -14243,7 +14243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 653571241}
-  enemyCount: 10
+  enemyCount: 5
   xPos: 0
   xPosLesserLimit: -55
   xPosBiggerLimit: -50
@@ -14263,7 +14263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 1803392429}
-  enemyCount: 10
+  enemyCount: 5
   xPos: 0
   xPosLesserLimit: 75
   xPosBiggerLimit: 85
@@ -20320,7 +20320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503446300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08, y: -0.41, z: -16}
+  m_LocalPosition: {x: -0.08, y: 100.285995, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 313306108}
@@ -23587,7 +23587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803392429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.61, y: -0.656, z: 3.08}
+  m_LocalPosition: {x: 4.61, y: 100.04, z: 3.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 121298659}
