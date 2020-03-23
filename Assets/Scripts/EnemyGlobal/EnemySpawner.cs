@@ -30,5 +30,11 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(5);
             enemyCount -= 1;
         }
+        if(enemyCount <= 0) {
+            GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach(GameObject go in gos) {
+                Destroy(go);
+            }
+        }
     }
 }
