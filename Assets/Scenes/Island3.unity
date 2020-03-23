@@ -5543,7 +5543,7 @@ MonoBehaviour:
   isSkill1: 1
   isSkill2: 1
   isSkill3: 1
-  isSkill4: 1
+  isSkill4: 0
   skill1: {fileID: 415265513}
   skill2: {fileID: 415265512}
   skill3: {fileID: 415265511}
@@ -14714,7 +14714,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
@@ -14734,7 +14734,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
@@ -14760,7 +14760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 1803392429}
-  enemyCount: 5
+  enemyCount: 10
   xPos: 0
   xPosLesserLimit: 75
   xPosBiggerLimit: 85
@@ -14780,7 +14780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberofdead: 0
-  maxdead: 15
+  maxdead: 10
   WinMenu: {fileID: 783379987}
 --- !u!1 &1087378012
 GameObject:

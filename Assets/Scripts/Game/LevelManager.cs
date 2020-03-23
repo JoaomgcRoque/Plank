@@ -28,9 +28,7 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    /*public void Pause() {
-        PauseCanvas.SetActive(true);
-        Time.timeScale = 0f;
-        Paused = true;
-    }*/
+    public void ReturnMenu() {
+        SceneManager.LoadScene("StartMenu");
+    }
 }
