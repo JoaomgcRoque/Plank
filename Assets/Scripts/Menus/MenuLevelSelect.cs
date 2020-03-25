@@ -16,4 +16,8 @@ public class MenuLevelSelect : MonoBehaviour
     public void LevelLoader() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + index);
     }
+
+    public void ReturnMenu() {
+        SceneManager.LoadScene("StartMenu");
+    }
 }
