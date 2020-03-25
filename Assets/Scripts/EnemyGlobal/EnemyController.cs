@@ -26,12 +26,14 @@ public class EnemyController : MonoBehaviour
     public float Timer;
 
     [SerializeField] private Animator modelanimation;
+    [SerializeField] private LevelManager levelmanager;
 
     Transform target;
     NavMeshAgent agent;
 
     void Start()
     {
+        //levelmanager = GetComponent<LevelManager>();
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
         Health = MaxHealth;
@@ -87,7 +89,8 @@ public class EnemyController : MonoBehaviour
             Destroy(GetComponent<BoxCollider>());
             Destroy(GetComponentInChildren<TextMeshPro>());
             if (theHealthBar != null)
-                Destroy(theHealthBar.gameObject);
+                levelmanager.GetComponent<LevelManager>().numberofdead += 1;
+            Destroy(theHealthBar.gameObject);
         }
     }
 
