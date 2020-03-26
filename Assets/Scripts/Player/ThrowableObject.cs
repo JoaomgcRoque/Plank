@@ -27,5 +27,8 @@ public class ThrowableObject : MonoBehaviour
                 other.GetComponent<EnemyController>().HitCooldown = true;
             }
         }
+        if(other.tag == "Obstacle") {
+            Destroy(throwable);
+        }
     }
 }

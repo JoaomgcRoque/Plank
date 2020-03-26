@@ -277,6 +277,8 @@ MonoBehaviour:
   numberofdead: 0
   maxdead: 0
   WinMenu: {fileID: 0}
+  wintime: 0
+  destroytime: 0
 --- !u!1 &4553511
 GameObject:
   m_ObjectHideFlags: 0
@@ -4252,6 +4254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Large_01
       objectReference: {fileID: 0}
+    - target: {fileID: 175060, guid: d2402c37ee91cab4498a66672680e0c0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 418364, guid: d2402c37ee91cab4498a66672680e0c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.01
@@ -4938,6 +4944,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1567078566}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &371420339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371420338}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.931442, y: 4.0057783, z: 6.0586076}
+  m_Center: {x: -0.0000023841858, y: 2.0028892, z: -0.00000071525574}
 --- !u!4 &371420341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477614, guid: 59c46909f95e9a94fae7eea9a6ddc7d9,
@@ -8296,6 +8315,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 325161329}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &603978508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603978507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.303177, y: 3.4775195, z: 6.152931}
+  m_Center: {x: -0.0000019073486, y: 1.7387598, z: 0}
 --- !u!4 &603978510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 418364, guid: d2402c37ee91cab4498a66672680e0c0,
@@ -9258,7 +9290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &653571242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15245,6 +15277,8 @@ MonoBehaviour:
   numberofdead: 0
   maxdead: 5
   WinMenu: {fileID: 783379987}
+  wintime: 3
+  destroytime: 1.5
 --- !u!1 &1087378012
 GameObject:
   m_ObjectHideFlags: 0
@@ -17822,6 +17856,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: e84f66602d08aab4d84ff38ac1cf5616, type: 3}
+--- !u!65 &1283712682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283712679}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.406738, y: 7.7709346, z: 5.590849}
+  m_Center: {x: 0, y: 3.8854673, z: -0.0000009536743}
 --- !u!4 &1283712684 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477554, guid: 208fdd3ef1228294c807f19ad1f8a2b3,
@@ -22250,6 +22297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Large_07
       objectReference: {fileID: 0}
+    - target: {fileID: 115282, guid: 59c46909f95e9a94fae7eea9a6ddc7d9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 477614, guid: 59c46909f95e9a94fae7eea9a6ddc7d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.299057
@@ -24543,7 +24594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1803392430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24852,6 +24903,10 @@ PrefabInstance:
     - target: {fileID: 118406, guid: d9990814fad01bc40982daa055540d5a, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Large_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 118406, guid: d9990814fad01bc40982daa055540d5a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 489410, guid: d9990814fad01bc40982daa055540d5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26226,6 +26281,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1829304484}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1913152212
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913152211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.672654, y: 4.337843, z: 5.6768274}
+  m_Center: {x: 1.1368684e-13, y: 2.1689215, z: 0.0000038146977}
 --- !u!4 &1913152214 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 489410, guid: d9990814fad01bc40982daa055540d5a,
@@ -27391,6 +27459,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2067997315}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1998430945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998430944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.049927, y: 13.458082, z: 19.199982}
+  m_Center: {x: 0, y: 3.0780838, z: 0.00000047683716}
 --- !u!4 &1998430947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 402170, guid: f7a9904488fffb8458355a1532858d62,
@@ -27759,6 +27840,10 @@ PrefabInstance:
     - target: {fileID: 109168, guid: 208fdd3ef1228294c807f19ad1f8a2b3, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Arch_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 109168, guid: 208fdd3ef1228294c807f19ad1f8a2b3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 477554, guid: 208fdd3ef1228294c807f19ad1f8a2b3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28429,6 +28514,10 @@ PrefabInstance:
     - target: {fileID: 187470, guid: f7a9904488fffb8458355a1532858d62, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Skull_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 187470, guid: f7a9904488fffb8458355a1532858d62, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 402170, guid: f7a9904488fffb8458355a1532858d62, type: 3}
       propertyPath: m_LocalPosition.x

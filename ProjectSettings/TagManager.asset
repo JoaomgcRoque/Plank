@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Grenade
   - Terrain
+  - Obstacle
   layers:
   - Default
   - TransparentFX

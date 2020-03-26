@@ -27,6 +27,7 @@ public class SKeletonAnimations : MonoBehaviour
     {
         AnimController = GetComponent<Animator>();
         if(enemycontroller.GetComponent<EnemyController>().Health <= 0) {
+            audiosource.clip = null;
             audiosource.enabled = false;
         }
     }
