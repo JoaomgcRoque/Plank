@@ -11,3 +11,7 @@ no changes made
 pistol: https://freesound.org/people/senitiel/sounds/220612/
 made by: senitiel
 no changes made
+
+button hover: https://creativecommons.org/licenses/by/3.0/
+made by: GameDevC
+no changes made
