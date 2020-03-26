@@ -9243,6 +9243,9 @@ MonoBehaviour:
   Timer: 0
   modelanimation: {fileID: 5873494299315772717}
   levelmanager: {fileID: 1085870439}
+  Enemy: {fileID: 653571248}
+  audiosources:
+  - {fileID: 1941200035}
 --- !u!95 &653571243
 Animator:
   serializedVersion: 3
@@ -21384,6 +21387,10 @@ MonoBehaviour:
   Timer: 0
   modelanimation: {fileID: 1420366783}
   levelmanager: {fileID: 1085870439}
+  Enemy: {fileID: 1503446305}
+  audiosources:
+  - {fileID: 1420366786}
+  - {fileID: 1240729132}
 --- !u!54 &1503446302
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -24624,6 +24631,10 @@ MonoBehaviour:
   Timer: 0
   modelanimation: {fileID: 1917937060}
   levelmanager: {fileID: 1085870439}
+  Enemy: {fileID: 1803392436}
+  audiosources:
+  - {fileID: 121298662}
+  - {fileID: 1917937063}
 --- !u!95 &1803392431
 Animator:
   serializedVersion: 3
