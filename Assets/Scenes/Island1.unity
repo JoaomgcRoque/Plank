@@ -15088,7 +15088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberofdead: 0
-  maxdead: 7
+  maxdead: 5
   WinMenu: {fileID: 783379987}
 --- !u!1 &1087378012
 GameObject:
