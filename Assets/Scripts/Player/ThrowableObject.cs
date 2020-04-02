@@ -9,6 +9,7 @@ public class ThrowableObject : MonoBehaviour
     [SerializeField] private Transform lefthand;
     [SerializeField] private float force;
     [SerializeField] private GameObject throwable;
+    [SerializeField] private int damage;
 
     private void Start() {
         PlayerCont = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
@@ -20,7 +21,7 @@ public class ThrowableObject : MonoBehaviour
         if (other.tag == "Enemy") {
             Destroy(throwable);
             if (other.GetComponent<EnemyController>().HitCooldown == false) {
-                other.GetComponent<EnemyController>().Health -= PlayerCont.AttackDamage;
+                other.GetComponent<EnemyController>().Health -= damage; //PlayerCont.AttackDamage;
                 other.GetComponent<EnemyController>().theHealthBar.value =
                     other.GetComponent<EnemyController>().Health /
                     other.GetComponent<EnemyController>().MaxHealth;

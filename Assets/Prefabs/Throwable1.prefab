@@ -128,6 +128,7 @@ MonoBehaviour:
   lefthand: {fileID: 0}
   force: 0.1
   throwable: {fileID: 2056070051005514068}
+  damage: 1
 --- !u!1001 &7649047961688197696
 PrefabInstance:
   m_ObjectHideFlags: 0

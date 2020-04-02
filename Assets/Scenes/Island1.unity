@@ -5753,7 +5753,7 @@ MonoBehaviour:
   cooldown: 10
   canClick: 1
   isSkill1: 1
-  isSkill2: 1
+  isSkill2: 0
   isSkill3: 0
   isSkill4: 0
   skill1: {fileID: 415265513}
