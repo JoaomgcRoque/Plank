@@ -28,13 +28,13 @@ public class Skill1 : MonoBehaviour
             playerinstance.MoveSpeed = newSpeed;
             deletethis = timePassed;
             yield return null;
-       }
-       if(timePassed >= skilltime) {
+        }
+        if (timePassed >= skilltime) {
             playerinstance.MoveSpeed = defaultspeed;
             timePassed = skilltime;
             //stminstance.skills = SkillsSTM.Skills.noskill;
             //yield return null;
-       }
+        }
     }
 
 }
