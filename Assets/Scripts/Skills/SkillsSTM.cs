@@ -31,6 +31,13 @@ public class SkillsSTM : MonoBehaviour
 
     public float deletethis;
 
+    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioClip skill1clip;
+
+    private void Awake() {
+        audiosource = GetComponent<AudioSource>();
+    }
+
     private void Start() {
         skill1 = GetComponent<Skill1>();
         skill2 = GetComponent<Skill2>();
@@ -44,6 +51,9 @@ public class SkillsSTM : MonoBehaviour
         {
             skills = Skills.skill1;
             canClick = false;
+            audiosource.clip = null;
+            audiosource.clip = skill1clip;
+            audiosource.Play();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)
            && isSkill2 == true && canClick == true)

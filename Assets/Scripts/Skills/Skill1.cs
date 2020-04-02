@@ -21,7 +21,7 @@ public class Skill1 : MonoBehaviour
     }
 
     IEnumerator SkillTime() {
-       float timePassed = 0; 
+       float timePassed = 0;
        while(timePassed < skilltime)
        {
             timePassed += Time.deltaTime;
