@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillsSTM : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class SkillsSTM : MonoBehaviour
 
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip skill1clip;
+    [SerializeField] private Text countDown;
 
     private void Awake() {
         audiosource = GetComponent<AudioSource>();
@@ -109,6 +111,7 @@ public class SkillsSTM : MonoBehaviour
         while (timePassed < cooldown) {
             timePassed += Time.deltaTime;
             deletethis = timePassed;
+            countDown.text = timePassed.ToString("0");
             yield return null;
         }
         if (timePassed >= cooldown) {
