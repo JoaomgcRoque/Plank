@@ -5595,7 +5595,10 @@ MonoBehaviour:
   deletethis: 0
   audiosource: {fileID: 1087378014}
   skill1clip: {fileID: 8300000, guid: 2b3534444cad9344bbf113537609a7ee, type: 3}
+  finalcountDown: 0
   countDown: {fileID: 596954026}
+  countDownObject: {fileID: 1726547269}
+  startCount: 0
 --- !u!114 &415265509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8183,12 +8186,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1733416396}
-  m_RootOrder: 5
+  m_Father: {fileID: 1726547270}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24, y: -125.6}
+  m_AnchoredPosition: {x: 0, y: -1.1899872}
   m_SizeDelta: {x: 35.32, y: 33.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &596954026
@@ -24101,7 +24104,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 596954025}
   m_Father: {fileID: 1733416396}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24184,7 +24188,6 @@ RectTransform:
   - {fileID: 839521327}
   - {fileID: 372777719}
   - {fileID: 1726547270}
-  - {fileID: 596954025}
   m_Father: {fileID: 769203543}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

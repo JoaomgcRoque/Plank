@@ -34,10 +34,14 @@ public class SkillsSTM : MonoBehaviour
 
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip skill1clip;
+    [SerializeField] private float finalcountDown;
     [SerializeField] private Text countDown;
+    [SerializeField] private GameObject countDownObject;
+    [SerializeField] private float startCount;
 
     private void Awake() {
         audiosource = GetComponent<AudioSource>();
+        countDownObject.SetActive(false);
     }
 
     private void Start() {
@@ -45,6 +49,8 @@ public class SkillsSTM : MonoBehaviour
         skill2 = GetComponent<Skill2>();
         skill3 = GetComponent<Skill3>();
         skill4 = GetComponent<Skill4>();
+        startCount = cooldown;
+        countDown.text = startCount.ToString("0");
     }
 
     private void FixedUpdate() {
@@ -109,14 +115,18 @@ public class SkillsSTM : MonoBehaviour
         //yield return new WaitForSeconds(cooldown);
         float timePassed = 0;
         while (timePassed < cooldown) {
+            countDownObject.SetActive(true);
             timePassed += Time.deltaTime;
             deletethis = timePassed;
-            countDown.text = timePassed.ToString("0");
+            finalcountDown = startCount - timePassed;
+            countDown.text = finalcountDown.ToString("0");
             yield return null;
         }
         if (timePassed >= cooldown) {
             canClick = true;
             skills = Skills.noskill;
+            countDown.text = startCount.ToString("0");
+            countDownObject.SetActive(false);
             //yield return null;
         }
     }
