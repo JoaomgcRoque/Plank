@@ -5930,7 +5930,7 @@ MonoBehaviour:
   playerinstance: {fileID: 415265507}
   newSpeed: 20
   stminstance: {fileID: 415265508}
-  skilltime: 3
+  skilltime: 2
   defaultspeed: 10
   deletethis: 0
 --- !u!82 &415265514
