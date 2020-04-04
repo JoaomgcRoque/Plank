@@ -31,6 +31,15 @@ public class EnemyController : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
+    [SerializeField] private Transform Enemy;
+    [SerializeField] private AudioSource[] audiosources;
+
+    private void Awake() {
+        foreach (AudioSource audio in audiosources) {
+            GetComponent<AudioSource>();
+        }
+    }
+
     void Start()
     {
         //levelmanager = GetComponent<LevelManager>();
@@ -45,6 +54,7 @@ public class EnemyController : MonoBehaviour
     }
 
     void Update() {
+        CheckGround();
         // Enemy Health UI
         HealthText.text = Health.ToString();
         HealthText.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.position);
@@ -98,4 +108,18 @@ public class EnemyController : MonoBehaviour
     {
         return Health / MaxHealth;
     }
+
+    private void CheckGround() {
+        if(Enemy.transform.position.y > 10) {
+            foreach (AudioSource audio in audiosources) {
+                audio.mute = true;
+            }
+        }
+        else {
+            foreach (AudioSource audio in audiosources) {
+                audio.mute = false;
+            }
+        }
+    }
+
 }

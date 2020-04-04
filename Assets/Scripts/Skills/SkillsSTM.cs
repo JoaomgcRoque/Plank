@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillsSTM : MonoBehaviour
 {
@@ -31,11 +32,25 @@ public class SkillsSTM : MonoBehaviour
 
     public float deletethis;
 
+    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioClip skill1clip;
+    [SerializeField] private float finalcountDown;
+    [SerializeField] private Text countDown;
+    [SerializeField] private GameObject countDownObject;
+    [SerializeField] private float startCount;
+
+    private void Awake() {
+        audiosource = GetComponent<AudioSource>();
+        countDownObject.SetActive(false);
+    }
+
     private void Start() {
         skill1 = GetComponent<Skill1>();
         skill2 = GetComponent<Skill2>();
         skill3 = GetComponent<Skill3>();
         skill4 = GetComponent<Skill4>();
+        startCount = cooldown;
+        countDown.text = startCount.ToString("0");
     }
 
     private void FixedUpdate() {
@@ -44,6 +59,9 @@ public class SkillsSTM : MonoBehaviour
         {
             skills = Skills.skill1;
             canClick = false;
+            audiosource.clip = null;
+            audiosource.clip = skill1clip;
+            audiosource.Play();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)
            && isSkill2 == true && canClick == true)
@@ -97,13 +115,18 @@ public class SkillsSTM : MonoBehaviour
         //yield return new WaitForSeconds(cooldown);
         float timePassed = 0;
         while (timePassed < cooldown) {
+            countDownObject.SetActive(true);
             timePassed += Time.deltaTime;
             deletethis = timePassed;
+            finalcountDown = startCount - timePassed;
+            countDown.text = finalcountDown.ToString("0");
             yield return null;
         }
         if (timePassed >= cooldown) {
             canClick = true;
             skills = Skills.noskill;
+            countDown.text = startCount.ToString("0");
+            countDownObject.SetActive(false);
             //yield return null;
         }
     }

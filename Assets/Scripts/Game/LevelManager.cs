@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
     public int numberofdead;
     [SerializeField] private int maxdead;
     [SerializeField] private GameObject WinMenu;
+    [SerializeField] private float wintime;
+    [SerializeField] private float destroytime;
 
     private void Awake() {
         WinMenu.SetActive(false);
@@ -15,11 +17,14 @@ public class LevelManager : MonoBehaviour
     }
     private void Update() {
         if (numberofdead == maxdead) {
-            Win();
+            //Win();
+            StartCoroutine(DestroyTime());
+            StartCoroutine(WinTime());
         }
     }
 
     private void Win() {
+        StopCoroutine(WinTime());
         WinMenu.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -30,5 +35,23 @@ public class LevelManager : MonoBehaviour
 
     public void ReturnMenu() {
         SceneManager.LoadScene("StartMenu");
+    }
+
+    public void DestroyAllEnemies() {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies) {
+            GameObject.Destroy(enemy);
+        }
+        StopCoroutine(DestroyTime());
+    }
+
+    IEnumerator DestroyTime() {
+        yield return new WaitForSeconds(destroytime);
+        DestroyAllEnemies();
+    }
+
+    IEnumerator WinTime() {
+        yield return new WaitForSeconds(wintime);
+        Win();
     }
 }

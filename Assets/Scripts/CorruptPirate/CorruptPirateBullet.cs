@@ -25,5 +25,8 @@ public class CorruptPirateBullet : MonoBehaviour
                 other.GetComponent<PlayerController>().MaxHealth;
             Destroy(bullet);
         }
+        if(other.tag == "Obstacle") {
+            Destroy(bullet);
+        }
     }
 }
