@@ -46,6 +46,7 @@ public class Skill2 : MonoBehaviour
             playerinstance.AttackDamage = defaultDamage;
             timePassed = skilltime;
             isActive = false;
+            stminstance.isSkill2Active = false;
         }
     }
 }

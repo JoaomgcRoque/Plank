@@ -8,6 +8,7 @@ public class SkillsUI : MonoBehaviour
     [SerializeField] private GameObject[] skilllocked;
     [SerializeField] private GameObject[] skillidle;
     [SerializeField] private GameObject[] skillcooldown;
+    [SerializeField] private GameObject[] skillhighlighted;
     [SerializeField] private SkillsSTM skillsstm;
 
     private void Start() {
@@ -24,6 +25,30 @@ public class SkillsUI : MonoBehaviour
         }
         if (skillsstm.canClick == false) {
             cooldown();
+        }
+        if(skillsstm.isSkill1Active == true) {
+            skillhighlighted[0].SetActive(true);
+        }
+        if (skillsstm.isSkill1Active == false) {
+            skillhighlighted[0].SetActive(false);
+        }
+        if (skillsstm.isSkill2Active == true) {
+            skillhighlighted[1].SetActive(true);
+        }
+        if (skillsstm.isSkill2Active == false) {
+            skillhighlighted[1].SetActive(false);
+        }
+        if (skillsstm.isSkill3Active == true) {
+            skillhighlighted[2].SetActive(true);
+        }
+        if (skillsstm.isSkill3Active == false) {
+            skillhighlighted[2].SetActive(false);
+        }
+        if (skillsstm.isSkill4Active == true) {
+            skillhighlighted[3].SetActive(true);
+        }
+        if (skillsstm.isSkill4Active == false) {
+            skillhighlighted[3].SetActive(false);
         }
     }
 

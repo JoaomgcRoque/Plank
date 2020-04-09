@@ -25,6 +25,11 @@ public class SkillsSTM : MonoBehaviour
     public bool isSkill3 = false;
     public bool isSkill4 = false;
 
+    public bool isSkill1Active = false;
+    public bool isSkill2Active = false;
+    public bool isSkill3Active = false;
+    public bool isSkill4Active = false;
+
     public Skill1 skill1;
     public Skill2 skill2;
     public Skill3 skill3;
@@ -55,8 +60,9 @@ public class SkillsSTM : MonoBehaviour
 
     private void FixedUpdate() {
         if(Input.GetKeyDown(KeyCode.Alpha1) && 
-           isSkill1 == true && canClick == true) 
+           isSkill1 == true && canClick == true && isSkill1Active == false) 
         {
+            isSkill1Active = true;
             skills = Skills.skill1;
             canClick = false;
             audiosource.clip = null;
@@ -64,21 +70,24 @@ public class SkillsSTM : MonoBehaviour
             audiosource.Play();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)
-           && isSkill2 == true && canClick == true)
+           && isSkill2 == true && canClick == true && isSkill2Active == false)
         {
+            isSkill2Active = true;
             skills = Skills.skill2;
             canClick = false;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3)
-           && isSkill3 == true && canClick == true)
+           && isSkill3 == true && canClick == true && isSkill3Active == false)
         {
+            isSkill3Active = true;
             skills = Skills.skill3;
             canClick = false;
             skill3.canThrow = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4)
-            && isSkill4 == true && canClick == true) 
+            && isSkill4 == true && canClick == true && isSkill4Active == false) 
         {
+            isSkill4Active = true;
             skills = Skills.skill4;
             canClick = false;
         }
@@ -88,7 +97,11 @@ public class SkillsSTM : MonoBehaviour
     private void STM() {
         switch(skills) {
             case Skills.noskill:
-                StopAllCoroutines();
+                /*isSkill1Active = false;
+                isSkill2Active = false;
+                isSkill3Active = false;
+                isSkill4Active = false;*/
+    StopAllCoroutines();
                 break;
             case Skills.skill1:
                 skill1.Skill1method();

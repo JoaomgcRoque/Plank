@@ -5579,7 +5579,7 @@ GameObject:
   - component: {fileID: 409401844}
   - component: {fileID: 409401843}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: hightlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5601,8 +5601,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 22.09, y: 44.22}
+  m_AnchoredPosition: {x: 0.0000085831, y: 0}
+  m_SizeDelta: {x: 50, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &409401843
 MonoBehaviour:
@@ -5617,7 +5617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5629,15 +5629,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '3
-
-'
+  m_Text: X
 --- !u!222 &409401844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5822,6 +5820,10 @@ MonoBehaviour:
   isSkill2: 1
   isSkill3: 1
   isSkill4: 0
+  isSkill1Active: 0
+  isSkill2Active: 0
+  isSkill3Active: 0
+  isSkill4Active: 0
   skill1: {fileID: 415265513}
   skill2: {fileID: 415265512}
   skill3: {fileID: 415265511}
@@ -5860,6 +5862,11 @@ MonoBehaviour:
   - {fileID: 1512362990}
   - {fileID: 2053993354}
   - {fileID: 457979043}
+  skillhighlighted:
+  - {fileID: 2000560257}
+  - {fileID: 1785367097}
+  - {fileID: 409401841}
+  - {fileID: 1074285928}
   skillsstm: {fileID: 415265508}
 --- !u!114 &415265510
 MonoBehaviour:
@@ -15281,7 +15288,7 @@ GameObject:
   - component: {fileID: 1074285931}
   - component: {fileID: 1074285930}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: highlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15303,8 +15310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 22.09, y: 44.22}
+  m_AnchoredPosition: {x: 0.0000085831, y: 0}
+  m_SizeDelta: {x: 50, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074285930
 MonoBehaviour:
@@ -15319,7 +15326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15337,9 +15344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '4
-
-'
+  m_Text: X
 --- !u!222 &1074285931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25106,7 +25111,7 @@ GameObject:
   - component: {fileID: 1785367100}
   - component: {fileID: 1785367099}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: highlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25128,8 +25133,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 22.09, y: 44.22}
+  m_AnchoredPosition: {x: -0.000021935, y: 0}
+  m_SizeDelta: {x: 50, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785367099
 MonoBehaviour:
@@ -25144,7 +25149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -25156,13 +25161,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
+  m_Text: 'X
+
+'
 --- !u!222 &1785367100
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28386,7 +28393,7 @@ GameObject:
   - component: {fileID: 2000560260}
   - component: {fileID: 2000560259}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: highlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28408,8 +28415,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 22.09, y: 44.22}
+  m_AnchoredPosition: {x: 0.0000085831, y: 0}
+  m_SizeDelta: {x: 50, y: 44.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000560259
 MonoBehaviour:
@@ -28424,7 +28431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -28436,13 +28443,15 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 50
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1
+  m_Text: 'X
+
+'
 --- !u!222 &2000560260
 CanvasRenderer:
   m_ObjectHideFlags: 0

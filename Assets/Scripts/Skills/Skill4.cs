@@ -32,6 +32,7 @@ public class Skill4 : MonoBehaviour
         if (timePassed >= burptime) {
             burp.SetActive(false);
             timePassed = burptime;
+            stminstance.isSkill4Active = false;
         }
     }
 }

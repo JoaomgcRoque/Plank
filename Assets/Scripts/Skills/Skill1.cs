@@ -31,6 +31,7 @@ public class Skill1 : MonoBehaviour
         }
         if (timePassed > skilltime) {
             playerinstance.MoveSpeed = defaultspeed;
+            stminstance.isSkill1Active = false;
             //timePassed = skilltime;
         }
     }

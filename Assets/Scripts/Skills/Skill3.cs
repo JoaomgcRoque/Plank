@@ -53,6 +53,7 @@ public class Skill3 : MonoBehaviour
         if (timePassed >= skilltime) {
             canThrow = false;
             timePassed = skilltime;
+            stminstance.isSkill3Active = false;
         }
     }
  }
