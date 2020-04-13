@@ -11,7 +11,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] private GameObject grenade;
     [SerializeField] private float secondstoexplode;
     [SerializeField] private float explosiontime;
-    [SerializeField] private bool doeskill = false;
+    public bool doeskill = false;
     [SerializeField] private GameObject explosion;
 
     private void Start() {
