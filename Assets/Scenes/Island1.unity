@@ -43543,11 +43543,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 566943375171486098, guid: 4380c96d3ac5959428924ea4bcdba2b2,
-        type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
     - target: {fileID: 566943375171486111, guid: 4380c96d3ac5959428924ea4bcdba2b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43719,6 +43714,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1444749691, guid: cf0619de2f18d2f41a56f04d8d62fca7, type: 3}
+      propertyPath: swordattack
+      value: 
+      objectReference: {fileID: 415265504}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0619de2f18d2f41a56f04d8d62fca7, type: 3}
 --- !u!4 &1444990244153572794
@@ -44114,11 +44113,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7378623168067700816, guid: 94b7a42cf23653340827f1add5928b1a,
-        type: 3}
-      propertyPath: swordattack
-      value: 
-      objectReference: {fileID: 415265504}
     - target: {fileID: 7378623169571028427, guid: 94b7a42cf23653340827f1add5928b1a,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

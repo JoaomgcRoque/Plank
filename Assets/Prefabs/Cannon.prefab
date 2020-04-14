@@ -30,6 +30,63 @@ Transform:
   m_Father: {fileID: 1405604207304806332}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1405604207605128288
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405604207159350835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.141414, y: 1.0314279, z: 3.9907317}
+  m_Center: {x: 0.0045312643, y: 0.513705, z: 0.12119764}
+--- !u!65 &1405604207605128291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405604207159350835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99055505, y: 1.0314279, z: 2.2763891}
+  m_Center: {x: 0.0000019073485, y: 0.513705, z: 0.40983057}
+--- !u!208 &1405604207605128289
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405604207159350835}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.49500003, y: 0.51600003, z: 1.2190001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.514, z: 0.49100003}
+  m_TimeToStationary: 0.5
+--- !u!114 &1444749691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405604207159350835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bc34e1901125644affdfe18380d3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonstm: {fileID: 1405604207304806333}
+  swordattack: {fileID: 0}
+  isOpen: 0
 --- !u!1 &1405604207304806330
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +99,7 @@ GameObject:
   - component: {fileID: 1405604207304806333}
   m_Layer: 0
   m_Name: Cannon
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,48 +141,6 @@ MonoBehaviour:
     type: 3}
   shoot: {fileID: 1405604206307959456}
   hasShoot: 0
---- !u!65 &1405604207605128288
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405604207159350835}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99055505, y: 1.0314279, z: 2.2763891}
-  m_Center: {x: 0.0000019073485, y: 0.513705, z: 0.40983057}
---- !u!65 &1405604207605128291
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405604207159350835}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.99055505, y: 1.0314279, z: 2.2763891}
-  m_Center: {x: 0.0000019073485, y: 0.513705, z: 0.40983057}
---- !u!208 &1405604207605128289
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1405604207159350835}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.49500003, y: 0.51600003, z: 1.2190001}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.514, z: 0.49100003}
-  m_TimeToStationary: 0.5
 --- !u!1001 &1405604206313850027
 PrefabInstance:
   m_ObjectHideFlags: 0
