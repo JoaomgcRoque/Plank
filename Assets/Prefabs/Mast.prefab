@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 7757885011018521411}
   m_Layer: 0
   m_Name: SM_Veh_Boat_Warship_01_Mast_01
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 7757885012879003556}
   m_Layer: 0
   m_Name: Mast
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
