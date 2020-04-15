@@ -44216,11 +44216,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7757885012879003558, guid: 02f9c377f0e633247beb88654774b1e0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
     - target: {fileID: 7757885012879003559, guid: 02f9c377f0e633247beb88654774b1e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44281,11 +44276,6 @@ PrefabInstance:
       propertyPath: swordattack
       value: 
       objectReference: {fileID: 415265504}
-    - target: {fileID: 7757885011018521437, guid: 02f9c377f0e633247beb88654774b1e0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02f9c377f0e633247beb88654774b1e0, type: 3}
 --- !u!4 &7765622654019316125

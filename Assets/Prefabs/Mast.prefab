@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37098a262ff59f944bc52b6d407d5b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rumbarrelstm: {fileID: 7757885011018521417}
+  maststm: {fileID: 7757885011018521417}
   swordattack: {fileID: 0}
   isOpen: 0
 --- !u!65 &7757885012879003556

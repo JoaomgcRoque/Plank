@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class AnchorDam : MonoBehaviour
 {
-    [SerializeField] private AnchorSTM maststm;
+    [SerializeField] private AnchorSTM anchorstm;
 
     private void OnTriggerStay(Collider other) {
-        if (other.tag == "Enemy" && maststm.states == AnchorSTM.States.fall) {
+        if (other.tag == "Enemy" && anchorstm.states == AnchorSTM.States.fall) {
             other.GetComponent<EnemyController>().Health = 0f;
         }
 
-        if (other.tag == "Player" && maststm.states == AnchorSTM.States.fall) {
+        if (other.tag == "Player" && anchorstm.states == AnchorSTM.States.fall) {
             other.GetComponent<PlayerController>().Health = 0f;
         }
     }
 
     public void EndAnimation() {
-        maststm.states = AnchorSTM.States.off;
+        anchorstm.states = AnchorSTM.States.off;
     }
 }
