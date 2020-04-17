@@ -13,6 +13,7 @@ public class CannonSTM : MonoBehaviour
     [SerializeField] private GameObject cannonBullet;
     [SerializeField] private Transform shoot;
     [SerializeField] private bool hasShoot = false;
+    [SerializeField] private GameObject cannonsound;
 
     private void Update() {
         STM();
@@ -22,6 +23,7 @@ public class CannonSTM : MonoBehaviour
         switch (states) {
             case States.idle:
                 smoke.SetActive(false);
+                cannonsound.SetActive(false);
                 break;
             case States.shoot:
                 StartCoroutine(TimetoShoot(time));
@@ -36,6 +38,7 @@ public class CannonSTM : MonoBehaviour
     private void Shoot() {
         if (hasShoot == false) {
             hasShoot = true;
+            cannonsound.SetActive(true);
             Instantiate(cannonBullet, shoot.transform.position, shoot.transform.rotation);
         }
     }

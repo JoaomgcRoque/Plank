@@ -9,6 +9,7 @@ public class RumBarrelSTM : MonoBehaviour
 
     [SerializeField] private GameObject rum;
     [SerializeField] private float time;
+    [SerializeField] private GameObject rumsound;
 
     private void Update() {
         STM();
@@ -18,9 +19,11 @@ public class RumBarrelSTM : MonoBehaviour
         switch (states) {
             case States.idle:
                 rum.SetActive(false);
+                rumsound.SetActive(false);
                 break;
             case States.open:
                 rum.SetActive(true);
+                rumsound.SetActive(true);
                 StartCoroutine(TurnOff(time));
                 break;
             case States.off:

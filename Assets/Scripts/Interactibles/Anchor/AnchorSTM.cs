@@ -8,6 +8,7 @@ public class AnchorSTM : MonoBehaviour
     public States states;
 
     [SerializeField] private Animator AnchorAnimator;
+    [SerializeField] private GameObject anchorsound;
 
     private void Start() {
         states = States.idle;
@@ -20,9 +21,11 @@ public class AnchorSTM : MonoBehaviour
     private void STM() {
         switch (states) {
             case States.idle:
+                anchorsound.SetActive(false);
                 break;
             case States.fall:
                 AnchorAnimator.Play("fall");
+                anchorsound.SetActive(true);
                 break;
             case States.off:
                 AnchorAnimator.Play("off");

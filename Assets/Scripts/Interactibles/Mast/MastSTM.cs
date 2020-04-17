@@ -8,6 +8,7 @@ public class MastSTM : MonoBehaviour
     public States states;
 
     [SerializeField] private Animator MastAnimator;
+    [SerializeField] private GameObject mastsound;
 
     private void Start() {
         states = States.idle;
@@ -20,8 +21,10 @@ public class MastSTM : MonoBehaviour
     private void STM() {
         switch (states) {
             case States.idle:
+                mastsound.SetActive(false);
                 break;
             case States.fall:
+                mastsound.SetActive(true);
                 MastAnimator.Play("Fall");
                 break;
             case States.off:

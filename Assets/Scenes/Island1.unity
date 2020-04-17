@@ -22207,7 +22207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
@@ -43538,11 +43538,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RumBarrel
       objectReference: {fileID: 0}
-    - target: {fileID: 566943375171486098, guid: 4380c96d3ac5959428924ea4bcdba2b2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 566943375171486111, guid: 4380c96d3ac5959428924ea4bcdba2b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43653,11 +43648,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cannon
-      objectReference: {fileID: 0}
-    - target: {fileID: 1405604207304806330, guid: cf0619de2f18d2f41a56f04d8d62fca7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1405604207304806332, guid: cf0619de2f18d2f41a56f04d8d62fca7,
         type: 3}
@@ -44029,11 +44019,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anchor
       objectReference: {fileID: 0}
-    - target: {fileID: 6200138723803202137, guid: 8300fe2dfeaf2214a9dfd0cefa5ceddd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6200138723803202142, guid: 8300fe2dfeaf2214a9dfd0cefa5ceddd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44132,11 +44117,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExplosiveBarrel
       objectReference: {fileID: 0}
-    - target: {fileID: 7378623170211550230, guid: 94b7a42cf23653340827f1add5928b1a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7378623170211550229, guid: 94b7a42cf23653340827f1add5928b1a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44210,11 +44190,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mast
-      objectReference: {fileID: 0}
-    - target: {fileID: 7757885012879003558, guid: 02f9c377f0e633247beb88654774b1e0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7757885012879003559, guid: 02f9c377f0e633247beb88654774b1e0,
         type: 3}
