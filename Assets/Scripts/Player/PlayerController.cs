@@ -44,8 +44,10 @@ public class PlayerController : MonoBehaviour
         {
             Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
+
             Anim.SetBool("Moving", true);
-            Movement *= MoveSpeed;
+            //Movement *= MoveSpeed;
+            Movement = Movement.normalized * MoveSpeed; //isto é melhor
 
             if (Movement != new Vector3(0f, 0f, 0f))
                 transform.rotation = Quaternion.LookRotation(Movement);
