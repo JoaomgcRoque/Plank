@@ -14,5 +14,10 @@ public class MastCol : MonoBehaviour
             maststm.states = MastSTM.States.fall;
             isOpen = true;
         }
+        if (other.gameObject.tag == "Grenade" &&
+            other.gameObject.GetComponent<Grenade>().doeskill == true) {
+            maststm.states = MastSTM.States.fall;
+            isOpen = true;
+        }
     }
 }

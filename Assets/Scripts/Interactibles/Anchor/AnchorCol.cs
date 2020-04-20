@@ -14,5 +14,10 @@ public class AnchorCol : MonoBehaviour
             anchorstm.states = AnchorSTM.States.fall;
             isOpen = true;
         }
+        if (other.gameObject.tag == "Grenade" &&
+           other.gameObject.GetComponent<Grenade>().doeskill == true) {
+            anchorstm.states = AnchorSTM.States.fall;
+            isOpen = true;
+        }
     }
 }
