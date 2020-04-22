@@ -8,6 +8,7 @@ public class Skill4 : MonoBehaviour
     [SerializeField] private SkillsSTM stminstance;
     [SerializeField] private GameObject burp;
     [SerializeField] private float burptime;
+    [SerializeField] private float cooldown;
 
     public float deletethis;
 
@@ -19,6 +20,7 @@ public class Skill4 : MonoBehaviour
     public void Skill4method() {
         Debug.Log("skill4");
         StartCoroutine(SkillTime());
+        stminstance.skills = SkillsSTM.Skills.noskill;
     }
 
     IEnumerator SkillTime() {
@@ -32,7 +34,14 @@ public class Skill4 : MonoBehaviour
         if (timePassed >= burptime) {
             burp.SetActive(false);
             timePassed = burptime;
-            stminstance.isSkill4Active = false;
+            StartCoroutine(Cooldown());
         }
+    }
+
+    IEnumerator Cooldown() {
+        yield return new WaitForSeconds(cooldown);
+        stminstance.isSkill4Active = false;
+        Debug.Log("Cooldown4 terminou");
+        StopCoroutine(Cooldown());
     }
 }
