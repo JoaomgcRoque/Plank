@@ -9221,9 +9221,9 @@ MonoBehaviour:
   playerinstance: {fileID: 415265507}
   stminstance: {fileID: 415265508}
   bomb: {fileID: 2056070051005514068, guid: c7ae53f913adde6468b79c015687c6e1, type: 3}
-  skilltime: 10
   canThrow: 1
   hand: {fileID: 760921007}
+  cooldown: 5
   audiosource: {fileID: 415265514}
   throwclip: {fileID: 8300000, guid: d5033e4d389da0c4481e764599a0d5ca, type: 3}
   deletethis: 0

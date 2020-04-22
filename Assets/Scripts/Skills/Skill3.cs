@@ -7,9 +7,9 @@ public class Skill3 : MonoBehaviour
     [SerializeField] private PlayerController playerinstance;
     [SerializeField] private SkillsSTM stminstance;
     [SerializeField] private GameObject bomb;
-    [SerializeField] private float skilltime;
     [SerializeField] public bool canThrow = true;
     [SerializeField] private Transform hand;
+    [SerializeField] private float cooldown;
 
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip throwclip;
@@ -27,34 +27,26 @@ public class Skill3 : MonoBehaviour
     }
 
     public void Skill3method() {
-        StartCoroutine(SkillTime());
         Debug.Log("skill3");
         Throw();
+        stminstance.skills = SkillsSTM.Skills.noskill;
     }
 
     private void Throw() {
         if(canThrow == true) {
-            Debug.Log("Throw");
             Instantiate(bomb, hand.transform.position, hand.transform.rotation);
             audiosource.clip = null;
             audiosource.clip = throwclip;
             audiosource.Play();
             canThrow = false;
+            StartCoroutine(Cooldown());
         }
     }
-
-    IEnumerator SkillTime() {
-        float timePassed = 0;
-        while (timePassed < skilltime) {
-            timePassed += Time.deltaTime;
-            deletethis = timePassed;
-            yield return null;
-        }
-        if (timePassed >= skilltime) {
-            canThrow = false;
-            timePassed = skilltime;
-            stminstance.isSkill3Active = false;
-        }
+    IEnumerator Cooldown() {
+        yield return new WaitForSeconds(cooldown);
+        stminstance.isSkill3Active = false;
+        Debug.Log("Cooldown3 terminou");
+        StopCoroutine(Cooldown());
     }
- }
+}
 
