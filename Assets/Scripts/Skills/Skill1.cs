@@ -10,42 +10,37 @@ public class Skill1 : MonoBehaviour
     [SerializeField] public float skilltime;
     [SerializeField] private float defaultspeed;
     [SerializeField] private float cooldown;
-    private float timePassed = 0;
+    [SerializeField] private float timePassed = 0;
+    [SerializeField] private bool isActive = false;
 
     public float deletethis;
 
     private void Update() {
         playerinstance.GetComponent<PlayerController>();
         stminstance.GetComponent<SkillsSTM>();
-        if (stminstance.skills == SkillsSTM.Skills.skill1) {
+        if (isActive == true) {
             timePassed += Time.deltaTime;
         }
-        if (stminstance.skills == SkillsSTM.Skills.noskill) {
+        if (isActive == false) {
             timePassed = 0f;
         }
-        /*if (stminstance.isSkill1Active == false) {
-            stminstance.skills = SkillsSTM.Skills.noskill;
-            StartCoroutine(Cooldown());
-        }*/
+        Speed();
     }
     public void Skill1method() {
-        //StartCoroutine(SkillTime());
-        if(timePassed < skilltime) {
+        isActive = true;
+        stminstance.skills = SkillsSTM.Skills.noskill;
+    }
+
+    private void Speed() {
+        if (timePassed < skilltime && isActive == true) {
             playerinstance.MoveSpeed = newSpeed;
             deletethis = timePassed;
         }
-        if (timePassed > skilltime) {
+        if (timePassed > skilltime && isActive == true) {
             playerinstance.MoveSpeed = defaultspeed;
-            //stminstance.isSkill1Active = false;
-            //timePassed = skilltime;
-            stminstance.skills = SkillsSTM.Skills.noskill;
+            isActive = false;
             StartCoroutine(Cooldown());
         }
-
-        /*if (stminstance.isSkill1Active == false) {
-            stminstance.skills = SkillsSTM.Skills.noskill;
-            StartCoroutine(Cooldown());
-        }*/
     }
 
     IEnumerator Cooldown() {
