@@ -9,6 +9,7 @@ public class Skill1 : MonoBehaviour
     [SerializeField] private SkillsSTM stminstance;
     [SerializeField] public float skilltime;
     [SerializeField] private float defaultspeed;
+    [SerializeField] private float cooldown;
     private float timePassed = 0;
 
     public float deletethis;
@@ -22,6 +23,10 @@ public class Skill1 : MonoBehaviour
         if (stminstance.skills == SkillsSTM.Skills.noskill) {
             timePassed = 0f;
         }
+        /*if (stminstance.isSkill1Active == false) {
+            stminstance.skills = SkillsSTM.Skills.noskill;
+            StartCoroutine(Cooldown());
+        }*/
     }
     public void Skill1method() {
         //StartCoroutine(SkillTime());
@@ -31,26 +36,22 @@ public class Skill1 : MonoBehaviour
         }
         if (timePassed > skilltime) {
             playerinstance.MoveSpeed = defaultspeed;
-            stminstance.isSkill1Active = false;
+            //stminstance.isSkill1Active = false;
             //timePassed = skilltime;
+            stminstance.skills = SkillsSTM.Skills.noskill;
+            StartCoroutine(Cooldown());
         }
+
+        /*if (stminstance.isSkill1Active == false) {
+            stminstance.skills = SkillsSTM.Skills.noskill;
+            StartCoroutine(Cooldown());
+        }*/
     }
 
-    /*IEnumerator SkillTime() {
-       float timePassed = 0;
-       while(timePassed < skilltime)
-       {
-            timePassed += Time.deltaTime;
-            playerinstance.MoveSpeed = newSpeed;
-            deletethis = timePassed;
-            yield return null;
-        }
-        if (timePassed > skilltime) {
-            playerinstance.MoveSpeed = defaultspeed;
-            timePassed = skilltime;
-            //stminstance.skills = SkillsSTM.Skills.noskill;
-            //yield return null;
-        }
-    }*/
-
+    IEnumerator Cooldown() {
+        yield return new WaitForSeconds(cooldown);
+        stminstance.isSkill1Active = false;
+        Debug.Log("Cooldown terminou");
+        StopCoroutine(Cooldown());
+    }
 }

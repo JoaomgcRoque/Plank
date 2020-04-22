@@ -60,36 +60,32 @@ public class SkillsSTM : MonoBehaviour
 
     private void FixedUpdate() {
         if(Input.GetKeyDown(KeyCode.Alpha1) && 
-           isSkill1 == true && canClick == true && isSkill1Active == false) 
+           isSkill1 == true && isSkill1Active == false) 
         {
             isSkill1Active = true;
             skills = Skills.skill1;
-            canClick = false;
             audiosource.clip = null;
             audiosource.clip = skill1clip;
             audiosource.Play();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)
-           && isSkill2 == true && canClick == true && isSkill2Active == false)
+           && isSkill2 == true && isSkill2Active == false)
         {
             isSkill2Active = true;
             skills = Skills.skill2;
-            canClick = false;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3)
-           && isSkill3 == true && canClick == true && isSkill3Active == false)
+           && isSkill3 == true && isSkill3Active == false)
         {
             isSkill3Active = true;
             skills = Skills.skill3;
-            canClick = false;
             skill3.canThrow = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4)
-            && isSkill4 == true && canClick == true && isSkill4Active == false) 
+            && isSkill4 == true && isSkill4Active == false) 
         {
             isSkill4Active = true;
             skills = Skills.skill4;
-            canClick = false;
         }
         STM();
     }
@@ -97,50 +93,22 @@ public class SkillsSTM : MonoBehaviour
     private void STM() {
         switch(skills) {
             case Skills.noskill:
-                /*isSkill1Active = false;
-                isSkill2Active = false;
-                isSkill3Active = false;
-                isSkill4Active = false;*/
-    StopAllCoroutines();
                 break;
             case Skills.skill1:
                 skill1.Skill1method();
-                StartCoroutine(Cooldown());
                 break;
             case Skills.skill2:
                 skill2.Skill2method();
-                StartCoroutine(Cooldown());
                 break;
             case Skills.skill3:
                 skill3.Skill3method();
-                StartCoroutine(Cooldown());
                 break;
             case Skills.skill4:
                 skill4.Skill4method();
-                StartCoroutine(Cooldown());
                 break;
             default:
                 skills = Skills.noskill;
                 break;
-        }
-    }
-    IEnumerator Cooldown() {
-        //yield return new WaitForSeconds(cooldown);
-        float timePassed = 0;
-        while (timePassed < cooldown) {
-            countDownObject.SetActive(true);
-            timePassed += Time.deltaTime;
-            deletethis = timePassed;
-            finalcountDown = startCount - timePassed;
-            countDown.text = finalcountDown.ToString("0");
-            yield return null;
-        }
-        if (timePassed >= cooldown) {
-            canClick = true;
-            skills = Skills.noskill;
-            countDown.text = startCount.ToString("0");
-            countDownObject.SetActive(false);
-            //yield return null;
         }
     }
 }
