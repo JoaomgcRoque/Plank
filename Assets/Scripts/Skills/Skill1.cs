@@ -46,7 +46,7 @@ public class Skill1 : MonoBehaviour
     IEnumerator Cooldown() {
         yield return new WaitForSeconds(cooldown);
         stminstance.isSkill1Active = false;
-        Debug.Log("Cooldown terminou");
+        Debug.Log("Cooldown1 terminou");
         StopCoroutine(Cooldown());
     }
 }
