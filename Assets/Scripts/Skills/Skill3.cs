@@ -9,7 +9,7 @@ public class Skill3 : MonoBehaviour
     [SerializeField] private GameObject bomb;
     [SerializeField] public bool canThrow = true;
     [SerializeField] private Transform hand;
-    [SerializeField] private float cooldown;
+    [SerializeField] public float cooldown;
 
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip throwclip;

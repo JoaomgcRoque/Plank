@@ -7,12 +7,12 @@ public class Skill2 : MonoBehaviour
     [SerializeField] private PlayerController playerinstance;
     [SerializeField] private float newDamage;
     [SerializeField] private SkillsSTM stminstance;
-    [SerializeField] private float skilltime;
+    [SerializeField] public float skilltime;
     [SerializeField] private float defaultDamage;
     [SerializeField] private GameObject normalsword;
     [SerializeField] private GameObject redsword;
     [SerializeField] private bool isActive = false;
-    [SerializeField] private float cooldown;
+    [SerializeField] public float cooldown;
 
     public float deletethis;
 

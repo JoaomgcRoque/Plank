@@ -7,9 +7,9 @@ public class Skill1 : MonoBehaviour
     [SerializeField] private PlayerController playerinstance;
     [SerializeField] private float newSpeed;
     [SerializeField] private SkillsSTM stminstance;
-    [SerializeField] public float skilltime;
+                     public float skilltime;
     [SerializeField] private float defaultspeed;
-    [SerializeField] private float cooldown;
+                     public float cooldown;
     [SerializeField] private float timePassed = 0;
     [SerializeField] private bool isActive = false;
 

@@ -11,6 +11,13 @@ public class SkillsUI : MonoBehaviour
     [SerializeField] private GameObject[] skillhighlighted;
     [SerializeField] private SkillsSTM skillsstm;
 
+    [SerializeField] private Image[] imageCooldown;
+    [SerializeField] private float[] cooldowntime;
+    [SerializeField] private Skill1 skill1;
+    [SerializeField] private Skill2 skill2;
+    [SerializeField] private Skill3 skill3;
+    [SerializeField] private Skill4 skill4;
+
     private void Start() {
         skillsstm = GetComponent<SkillsSTM>();
     }
@@ -81,18 +88,22 @@ public class SkillsUI : MonoBehaviour
         if (skillsstm.isSkill1Active == true && skillsstm.isSkill1 == true) {
             skillidle[0].SetActive(false);
             skillcooldown[0].SetActive(true);
+            StartCoroutine(Skill1Cooldown());
         }
         if (skillsstm.isSkill2Active == true && skillsstm.isSkill2 == true) {
             skillidle[1].SetActive(false);
             skillcooldown[1].SetActive(true);
+            StartCoroutine(Skill2Cooldown());
         }
         if (skillsstm.isSkill3Active == true && skillsstm.isSkill3 == true) {
             skillidle[2].SetActive(false);
             skillcooldown[2].SetActive(true);
+            StartCoroutine(Skill3Cooldown());
         }
         if (skillsstm.isSkill4Active == true && skillsstm.isSkill4 == true) {
             skillidle[3].SetActive(false);
             skillcooldown[3].SetActive(true);
+            StartCoroutine(Skill4Cooldown());
         }
     }
 
@@ -129,5 +140,43 @@ public class SkillsUI : MonoBehaviour
             skilllocked[3].SetActive(true);
             skillidle[3].SetActive(false);
         }
+    }
+
+    IEnumerator Skill1Cooldown() {
+        cooldowntime[0] = skill1.skilltime + skill1.cooldown;
+        imageCooldown[0].fillAmount += 1 / cooldowntime[0] * Time.deltaTime;
+        if (imageCooldown[0].fillAmount >= 1) {
+            imageCooldown[0].fillAmount = 0;
+            yield return null;
+        }
+        StopCoroutine(Skill1Cooldown());
+    }
+    IEnumerator Skill2Cooldown() {
+        cooldowntime[1] = skill2.skilltime + skill2.cooldown;
+        imageCooldown[1].fillAmount += 1 / cooldowntime[1] * Time.deltaTime;
+        if (imageCooldown[1].fillAmount >= 1) {
+            imageCooldown[1].fillAmount = 0;
+            yield return null;
+        }
+        StopCoroutine(Skill2Cooldown());
+    }
+    IEnumerator Skill3Cooldown() {
+        cooldowntime[2] = skill3.cooldown;
+        imageCooldown[2].fillAmount += 1 / cooldowntime[2] * Time.deltaTime;
+        if (imageCooldown[2].fillAmount >= 1) {
+            imageCooldown[2].fillAmount = 0;
+            yield return null;
+        }
+        StopCoroutine(Skill3Cooldown());
+    }
+
+    IEnumerator Skill4Cooldown() {
+        cooldowntime[3] = skill4.burptime + skill4.cooldown;
+        imageCooldown[3].fillAmount += 1 / cooldowntime[3] * Time.deltaTime;
+        if (imageCooldown[3].fillAmount >= 1) {
+            imageCooldown[3].fillAmount = 0;
+            yield return null;
+        }
+        StopCoroutine(Skill4Cooldown());
     }
 }
