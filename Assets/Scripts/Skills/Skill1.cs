@@ -7,50 +7,46 @@ public class Skill1 : MonoBehaviour
     [SerializeField] private PlayerController playerinstance;
     [SerializeField] private float newSpeed;
     [SerializeField] private SkillsSTM stminstance;
-    [SerializeField] public float skilltime;
+                     public float skilltime;
     [SerializeField] private float defaultspeed;
-    private float timePassed = 0;
+                     public float cooldown;
+    [SerializeField] private float timePassed = 0;
+    [SerializeField] private bool isActive = false;
 
     public float deletethis;
 
     private void Update() {
         playerinstance.GetComponent<PlayerController>();
         stminstance.GetComponent<SkillsSTM>();
-        if (stminstance.skills == SkillsSTM.Skills.skill1) {
+        if (isActive == true) {
             timePassed += Time.deltaTime;
         }
-        if (stminstance.skills == SkillsSTM.Skills.noskill) {
+        if (isActive == false) {
             timePassed = 0f;
         }
+        Speed();
     }
     public void Skill1method() {
-        //StartCoroutine(SkillTime());
-        if(timePassed < skilltime) {
+        isActive = true;
+        stminstance.skills = SkillsSTM.Skills.noskill;
+    }
+
+    private void Speed() {
+        if (timePassed < skilltime && isActive == true) {
             playerinstance.MoveSpeed = newSpeed;
             deletethis = timePassed;
         }
-        if (timePassed > skilltime) {
+        if (timePassed > skilltime && isActive == true) {
             playerinstance.MoveSpeed = defaultspeed;
-            stminstance.isSkill1Active = false;
-            //timePassed = skilltime;
+            isActive = false;
+            StartCoroutine(Cooldown());
         }
     }
 
-    /*IEnumerator SkillTime() {
-       float timePassed = 0;
-       while(timePassed < skilltime)
-       {
-            timePassed += Time.deltaTime;
-            playerinstance.MoveSpeed = newSpeed;
-            deletethis = timePassed;
-            yield return null;
-        }
-        if (timePassed > skilltime) {
-            playerinstance.MoveSpeed = defaultspeed;
-            timePassed = skilltime;
-            //stminstance.skills = SkillsSTM.Skills.noskill;
-            //yield return null;
-        }
-    }*/
-
+    IEnumerator Cooldown() {
+        yield return new WaitForSeconds(cooldown);
+        stminstance.isSkill1Active = false;
+        Debug.Log("Cooldown1 terminou");
+        StopCoroutine(Cooldown());
+    }
 }

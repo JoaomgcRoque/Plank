@@ -7,11 +7,12 @@ public class Skill2 : MonoBehaviour
     [SerializeField] private PlayerController playerinstance;
     [SerializeField] private float newDamage;
     [SerializeField] private SkillsSTM stminstance;
-    [SerializeField] private float skilltime;
+    [SerializeField] public float skilltime;
     [SerializeField] private float defaultDamage;
     [SerializeField] private GameObject normalsword;
     [SerializeField] private GameObject redsword;
     [SerializeField] private bool isActive = false;
+    [SerializeField] public float cooldown;
 
     public float deletethis;
 
@@ -20,17 +21,20 @@ public class Skill2 : MonoBehaviour
         stminstance.GetComponent<SkillsSTM>();
 
         if(isActive == true) {
+            playerinstance.AttackDamage = newDamage;
             normalsword.SetActive(false);
             redsword.SetActive(true);
         }
         if (isActive == false) {
+            playerinstance.AttackDamage = defaultDamage;
             normalsword.SetActive(true);
             redsword.SetActive(false);
         }
     }
     public void Skill2method() {
+        isActive = true;
         StartCoroutine(SkillTime());
-        playerinstance.AttackDamage = newDamage;
+        stminstance.skills = SkillsSTM.Skills.noskill;
     }
 
     IEnumerator SkillTime() {
@@ -43,10 +47,15 @@ public class Skill2 : MonoBehaviour
         }
         if (timePassed >= skilltime) {
             isActive = false;
-            playerinstance.AttackDamage = defaultDamage;
             timePassed = skilltime;
-            isActive = false;
-            stminstance.isSkill2Active = false;
+            StartCoroutine(Cooldown());
         }
+    }
+
+    IEnumerator Cooldown() {
+        yield return new WaitForSeconds(cooldown);
+        stminstance.isSkill2Active = false;
+        Debug.Log("Cooldown2 terminou");
+        StopCoroutine(Cooldown());
     }
 }
