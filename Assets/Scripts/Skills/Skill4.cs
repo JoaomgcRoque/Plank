@@ -7,8 +7,8 @@ public class Skill4 : MonoBehaviour
     [SerializeField] private PlayerController playerinstance;
     [SerializeField] private SkillsSTM stminstance;
     [SerializeField] private GameObject burp;
-    [SerializeField] private float burptime;
-    [SerializeField] private float cooldown;
+    [SerializeField] public float burptime;
+    [SerializeField] public float cooldown;
 
     public float deletethis;
 
