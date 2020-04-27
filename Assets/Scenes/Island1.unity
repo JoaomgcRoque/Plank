@@ -9225,10 +9225,6 @@ MonoBehaviour:
   deletethis: 0
   audiosource: {fileID: 1087378014}
   skill1clip: {fileID: 8300000, guid: 2b3534444cad9344bbf113537609a7ee, type: 3}
-  finalcountDown: 0
-  countDown: {fileID: 781063342}
-  countDownObject: {fileID: 438800278}
-  startCount: 0
 --- !u!114 &415265509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9256,11 +9252,6 @@ MonoBehaviour:
   - {fileID: 1512362990}
   - {fileID: 2053993354}
   - {fileID: 457979043}
-  skillhighlighted:
-  - {fileID: 2000560257}
-  - {fileID: 1785367097}
-  - {fileID: 409401841}
-  - {fileID: 1074285928}
   skillsstm: {fileID: 415265508}
   imageCooldown:
   - {fileID: 993067069}
@@ -9276,6 +9267,7 @@ MonoBehaviour:
   skill2: {fileID: 415265512}
   skill3: {fileID: 415265511}
   skill4: {fileID: 415265510}
+  isActive: 00000000
 --- !u!114 &415265510
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,12 +17,19 @@ public class SkillsUI : MonoBehaviour
     [SerializeField] private Skill3 skill3;
     [SerializeField] private Skill4 skill4;
 
+    [SerializeField] private bool[] isActive;
+
     private void Start() {
         skillsstm = GetComponent<SkillsSTM>();
         cooldowntime[0] = skill1.skilltime + skill1.cooldown;
         cooldowntime[1] = skill2.skilltime + skill2.cooldown;
         cooldowntime[2] = skill3.cooldown;
         cooldowntime[3] = skill4.burptime + skill4.cooldown;
+
+        isActive[0] = false;
+        isActive[1] = false;
+        isActive[2] = false;
+        isActive[3] = false;
     }
 
     private void Update() {
@@ -80,23 +87,30 @@ public class SkillsUI : MonoBehaviour
         }
     }
     private void cooldown() {
-        if (skillsstm.isSkill1Active == true && skillsstm.isSkill1 == true) {
+        if (skillsstm.isSkill1Active == true && skillsstm.isSkill1 == true
+            && isActive[0] == false) {
+            isActive[0] = true;
             skillidle[0].SetActive(false);
             skillcooldown[0].SetActive(true);
-            //StartCoroutine(Skill1Cooldown());
             StartCoroutine(Skill1Cooldown(imageCooldown, cooldowntime));
         }
-        if (skillsstm.isSkill2Active == true && skillsstm.isSkill2 == true) {
+        if (skillsstm.isSkill2Active == true && skillsstm.isSkill2 == true
+            && isActive[1] == false) {
+            isActive[1] = true;
             skillidle[1].SetActive(false);
             skillcooldown[1].SetActive(true);
             StartCoroutine(Skill2Cooldown(imageCooldown, cooldowntime));
         }
-        if (skillsstm.isSkill3Active == true && skillsstm.isSkill3 == true) {
+        if (skillsstm.isSkill3Active == true && skillsstm.isSkill3 == true 
+            && isActive[2] == false) {
+            isActive[2] = true;
             skillidle[2].SetActive(false);
             skillcooldown[2].SetActive(true);
             StartCoroutine(Skill3Cooldown(imageCooldown, cooldowntime));
         }
-        if (skillsstm.isSkill4Active == true && skillsstm.isSkill4 == true) {
+        if (skillsstm.isSkill4Active == true && skillsstm.isSkill4 == true
+            && isActive[3] == false) {
+            isActive[3] = true;
             skillidle[3].SetActive(false);
             skillcooldown[3].SetActive(true);
             StartCoroutine(Skill4Cooldown(imageCooldown, cooldowntime));
@@ -147,6 +161,10 @@ public class SkillsUI : MonoBehaviour
             time += Time.deltaTime;
         }
         imageCooldown[0].fillAmount = 1f;
+        isActive[0] = false;
+        if (isActive[0] == false) {
+            StopCoroutine(Skill1Cooldown(imageCooldown, cooldowntime));
+        }
 
     }
 
@@ -159,6 +177,10 @@ public class SkillsUI : MonoBehaviour
             time += Time.deltaTime;
         }
         imageCooldown[1].fillAmount = 1f;
+        isActive[1] = false;
+        if (isActive[1] == false) {
+            StopCoroutine(Skill2Cooldown(imageCooldown, cooldowntime));
+        }
 
     }
 
@@ -171,6 +193,8 @@ public class SkillsUI : MonoBehaviour
             time += Time.deltaTime;
         }
         imageCooldown[2].fillAmount = 1f;
+        isActive[2] = false;
+            StopCoroutine(Skill3Cooldown(imageCooldown, cooldowntime));
 
     }
 
@@ -183,6 +207,8 @@ public class SkillsUI : MonoBehaviour
             time += Time.deltaTime;
         }
         imageCooldown[3].fillAmount = 1f;
+        isActive[3] = false;
+            StopCoroutine(Skill4Cooldown(imageCooldown, cooldowntime));
 
     }
 }
