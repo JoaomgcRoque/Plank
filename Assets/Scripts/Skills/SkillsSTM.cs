@@ -39,14 +39,9 @@ public class SkillsSTM : MonoBehaviour
 
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip skill1clip;
-    [SerializeField] private float finalcountDown;
-    [SerializeField] private Text countDown;
-    [SerializeField] private GameObject countDownObject;
-    [SerializeField] private float startCount;
 
     private void Awake() {
         audiosource = GetComponent<AudioSource>();
-        countDownObject.SetActive(false);
     }
 
     private void Start() {
@@ -54,8 +49,6 @@ public class SkillsSTM : MonoBehaviour
         skill2 = GetComponent<Skill2>();
         skill3 = GetComponent<Skill3>();
         skill4 = GetComponent<Skill4>();
-        startCount = cooldown;
-        countDown.text = startCount.ToString("0");
     }
 
     private void FixedUpdate() {
