@@ -19,6 +19,10 @@ public class SkillsUI : MonoBehaviour
 
     private void Start() {
         skillsstm = GetComponent<SkillsSTM>();
+        cooldowntime[0] = skill1.skilltime + skill1.cooldown;
+        cooldowntime[1] = skill2.skilltime + skill2.cooldown;
+        cooldowntime[2] = skill3.cooldown;
+        cooldowntime[3] = skill4.burptime + skill4.cooldown;
     }
 
     private void Update() {
@@ -79,22 +83,23 @@ public class SkillsUI : MonoBehaviour
         if (skillsstm.isSkill1Active == true && skillsstm.isSkill1 == true) {
             skillidle[0].SetActive(false);
             skillcooldown[0].SetActive(true);
-            StartCoroutine(Skill1Cooldown());
+            //StartCoroutine(Skill1Cooldown());
+            StartCoroutine(Skill1Cooldown(imageCooldown, cooldowntime));
         }
         if (skillsstm.isSkill2Active == true && skillsstm.isSkill2 == true) {
             skillidle[1].SetActive(false);
             skillcooldown[1].SetActive(true);
-            StartCoroutine(Skill2Cooldown());
+            StartCoroutine(Skill2Cooldown(imageCooldown, cooldowntime));
         }
         if (skillsstm.isSkill3Active == true && skillsstm.isSkill3 == true) {
             skillidle[2].SetActive(false);
             skillcooldown[2].SetActive(true);
-            StartCoroutine(Skill3Cooldown());
+            StartCoroutine(Skill3Cooldown(imageCooldown, cooldowntime));
         }
         if (skillsstm.isSkill4Active == true && skillsstm.isSkill4 == true) {
             skillidle[3].SetActive(false);
             skillcooldown[3].SetActive(true);
-            StartCoroutine(Skill4Cooldown());
+            StartCoroutine(Skill4Cooldown(imageCooldown, cooldowntime));
         }
     }
 
@@ -133,53 +138,51 @@ public class SkillsUI : MonoBehaviour
         }
     }
 
-    IEnumerator Skill1Cooldown() {
-        Debug.Log("skill1cooldown começou");
-        cooldowntime[0] = skill1.skilltime + skill1.cooldown;
-        imageCooldown[0].fillAmount += 1 / cooldowntime[0] * Time.deltaTime;
-        if (imageCooldown[0].fillAmount >= 1) {
-            imageCooldown[0].fillAmount = 0;
+    IEnumerator Skill1Cooldown(Image[] imageCooldown, float[] cooldowntime) {
+        float time = 0;
+        while (time < cooldowntime[0]) {
+            float t = time / cooldowntime[0];
+            imageCooldown[0].fillAmount = t;
             yield return null;
-        } else {
-            StopCoroutine(Skill1Cooldown());
-            Debug.Log("skill1cooldown terminou");
+            time += Time.deltaTime;
         }
-    }
-    IEnumerator Skill2Cooldown() {
-        Debug.Log("skill2cooldown começou");
-        cooldowntime[1] = skill2.skilltime + skill2.cooldown;
-        imageCooldown[1].fillAmount += 1 / cooldowntime[1] * Time.deltaTime;
-        if (imageCooldown[1].fillAmount >= 1) {
-            imageCooldown[1].fillAmount = 0;
-            yield return null;
-        } else {
-            StopCoroutine(Skill2Cooldown());
-            Debug.Log("skill2cooldown terminou");
-        }
-    }
-    IEnumerator Skill3Cooldown() {
-        Debug.Log("skill3cooldown começou");
-        cooldowntime[2] = skill3.cooldown;
-        imageCooldown[2].fillAmount += 1 / cooldowntime[2] * Time.deltaTime;
-        if (imageCooldown[2].fillAmount >= 1) {
-            imageCooldown[2].fillAmount = 0;
-            yield return null;
-        } else {
-            StopCoroutine(Skill3Cooldown());
-            Debug.Log("skill3cooldown terminou");
-        }
+        imageCooldown[0].fillAmount = 1f;
+
     }
 
-    IEnumerator Skill4Cooldown() {
-        Debug.Log("skill4cooldown começou");
-        cooldowntime[3] = skill4.burptime + skill4.cooldown;
-        imageCooldown[3].fillAmount += 1 / cooldowntime[3] * Time.deltaTime;
-        if (imageCooldown[3].fillAmount >= 1) {
-            imageCooldown[3].fillAmount = 0;
+    IEnumerator Skill2Cooldown(Image[] imageCooldown, float[] cooldowntime) {
+        float time = 0;
+        while (time < cooldowntime[1]) {
+            float t = time / cooldowntime[1];
+            imageCooldown[1].fillAmount = t;
             yield return null;
-        } else {
-            StopCoroutine(Skill4Cooldown());
-            Debug.Log("skill4cooldown terminou");
+            time += Time.deltaTime;
         }
+        imageCooldown[1].fillAmount = 1f;
+
+    }
+
+    IEnumerator Skill3Cooldown(Image[] imageCooldown, float[] cooldowntime) {
+        float time = 0;
+        while (time < cooldowntime[2]) {
+            float t = time / cooldowntime[2];
+            imageCooldown[2].fillAmount = t;
+            yield return null;
+            time += Time.deltaTime;
+        }
+        imageCooldown[2].fillAmount = 1f;
+
+    }
+
+    IEnumerator Skill4Cooldown(Image[] imageCooldown, float[] cooldowntime) {
+        float time = 0;
+        while (time < cooldowntime[3]) {
+            float t = time / cooldowntime[3];
+            imageCooldown[3].fillAmount = t;
+            yield return null;
+            time += Time.deltaTime;
+        }
+        imageCooldown[3].fillAmount = 1f;
+
     }
 }
