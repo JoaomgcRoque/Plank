@@ -39,6 +39,7 @@ public class SkillsSTM : MonoBehaviour
 
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private AudioClip skill1clip;
+    [SerializeField] private SkillsUI skillsui;
 
     private void Awake() {
         audiosource = GetComponent<AudioSource>();
@@ -53,7 +54,7 @@ public class SkillsSTM : MonoBehaviour
 
     private void FixedUpdate() {
         if(Input.GetKeyDown(KeyCode.Alpha1) && 
-           isSkill1 == true && isSkill1Active == false) 
+           isSkill1 == true && isSkill1Active == false && skillsui.isActive[0] == false) 
         {
             isSkill1Active = true;
             skills = Skills.skill1;
@@ -62,20 +63,20 @@ public class SkillsSTM : MonoBehaviour
             audiosource.Play();
         }
         if (Input.GetKeyDown(KeyCode.Alpha2)
-           && isSkill2 == true && isSkill2Active == false)
+           && isSkill2 == true && isSkill2Active == false && skillsui.isActive[1] == false)
         {
             isSkill2Active = true;
             skills = Skills.skill2;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3)
-           && isSkill3 == true && isSkill3Active == false)
+           && isSkill3 == true && isSkill3Active == false && skillsui.isActive[2] == false)
         {
             isSkill3Active = true;
             skills = Skills.skill3;
             skill3.canThrow = true;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4)
-            && isSkill4 == true && isSkill4Active == false) 
+            && isSkill4 == true && isSkill4Active == false && skillsui.isActive[3] == false) 
         {
             isSkill4Active = true;
             skills = Skills.skill4;

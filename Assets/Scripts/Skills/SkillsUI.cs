@@ -17,7 +17,7 @@ public class SkillsUI : MonoBehaviour
     [SerializeField] private Skill3 skill3;
     [SerializeField] private Skill4 skill4;
 
-    [SerializeField] private bool[] isActive;
+    [SerializeField] public bool[] isActive;
 
     private void Start() {
         skillsstm = GetComponent<SkillsSTM>();
