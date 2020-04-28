@@ -162,6 +162,7 @@ public class SkillsUI : MonoBehaviour
         }
         imageCooldown[0].fillAmount = 1f;
         isActive[0] = false;
+        skillsstm.isSkill1Active = false;
         if (isActive[0] == false) {
             StopCoroutine(Skill1Cooldown(imageCooldown, cooldowntime));
         }
@@ -178,6 +179,7 @@ public class SkillsUI : MonoBehaviour
         }
         imageCooldown[1].fillAmount = 1f;
         isActive[1] = false;
+        skillsstm.isSkill2Active = false;
         if (isActive[1] == false) {
             StopCoroutine(Skill2Cooldown(imageCooldown, cooldowntime));
         }
@@ -194,7 +196,10 @@ public class SkillsUI : MonoBehaviour
         }
         imageCooldown[2].fillAmount = 1f;
         isActive[2] = false;
+        skillsstm.isSkill3Active = false;
+        if (isActive[2] == false) {
             StopCoroutine(Skill3Cooldown(imageCooldown, cooldowntime));
+        }
 
     }
 
@@ -208,7 +213,10 @@ public class SkillsUI : MonoBehaviour
         }
         imageCooldown[3].fillAmount = 1f;
         isActive[3] = false;
+        skillsstm.isSkill4Active = false;
+        if (isActive[3] == false) {
             StopCoroutine(Skill4Cooldown(imageCooldown, cooldowntime));
+        }
 
     }
 }
