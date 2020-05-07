@@ -31,6 +31,7 @@ public class LevelManager : MonoBehaviour
 
     public void NextIsland() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
     }
 
     public void ReturnMenu() {
