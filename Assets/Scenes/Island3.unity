@@ -9585,6 +9585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Large_07
       objectReference: {fileID: 0}
+    - target: {fileID: 115282, guid: 59c46909f95e9a94fae7eea9a6ddc7d9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 477614, guid: 59c46909f95e9a94fae7eea9a6ddc7d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.71
@@ -29130,6 +29134,10 @@ PrefabInstance:
     - target: {fileID: 165124, guid: fece7ebecc6caad448be7fe592de95cc, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Shanty_Preset_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 165124, guid: fece7ebecc6caad448be7fe592de95cc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 479728, guid: fece7ebecc6caad448be7fe592de95cc, type: 3}
       propertyPath: m_LocalPosition.x
