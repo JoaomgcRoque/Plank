@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public int numberofdead;
-    [SerializeField] private int maxdead;
+    [SerializeField] public int maxdead;
     [SerializeField] private GameObject WinMenu;
     [SerializeField] private float wintime;
     [SerializeField] private float destroytime;
