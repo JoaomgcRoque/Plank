@@ -31,6 +31,7 @@ public class SKeleton2Animations : MonoBehaviour
         if(enemycontroller.GetComponent<EnemyController>().Health <= 0) {
             audiosource.clip = null;
             audiosource.enabled = false;
+            Destroy(burp);
         }
     }
 
