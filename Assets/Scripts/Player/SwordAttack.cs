@@ -22,7 +22,8 @@ public class SwordAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        //if (Input.GetKeyDown(KeyCode.Mouse0))
+        if(Input.GetKeyDown(KeyCode.LeftControl))
         {
             Anim.SetBool("Attacking", true);
             audiosource.clip = swordclip;
