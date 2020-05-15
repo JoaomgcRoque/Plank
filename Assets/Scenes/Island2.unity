@@ -8891,6 +8891,7 @@ MonoBehaviour:
   HealthBar: {fileID: 830097247}
   DeathCanvas: {fileID: 108948667}
   PauseCanvas: {fileID: 1996406853}
+  Player: {fileID: 415265503}
   MoveSpeed: 10
   Gravity: 500
   MaxHealth: 25

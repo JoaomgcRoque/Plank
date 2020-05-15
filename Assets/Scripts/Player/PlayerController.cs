@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public Slider HealthBar;
     public GameObject DeathCanvas;
     public GameObject PauseCanvas;
+    public Transform Player;
 
     public float MoveSpeed = 10;
     public float Gravity = 20;
@@ -78,6 +79,10 @@ public class PlayerController : MonoBehaviour
             if (HealthBar != null)
                 Destroy(HealthBar.gameObject);
             DeathCanvas.SetActive(true);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Q)) {
+            Player.transform.Rotate(0f, 180f, 0f);
         }
     }
 
