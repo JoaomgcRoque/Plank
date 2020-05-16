@@ -14503,7 +14503,7 @@ MonoBehaviour:
   stminstance: {fileID: 415265508}
   burp: {fileID: 268610905}
   burptime: 2
-  cooldown: 5
+  cooldown: 30
   deletethis: 0
 --- !u!114 &415265511
 MonoBehaviour:

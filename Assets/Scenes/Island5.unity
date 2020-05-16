@@ -3480,7 +3480,7 @@ MonoBehaviour:
   stminstance: {fileID: 415265508}
   burp: {fileID: 268610905}
   burptime: 2
-  cooldown: 0
+  cooldown: 30
   deletethis: 0
 --- !u!114 &415265511
 MonoBehaviour:
@@ -3523,7 +3523,7 @@ MonoBehaviour:
   normalsword: {fileID: 281079444}
   redsword: {fileID: 263516447}
   isActive: 0
-  cooldown: 0
+  cooldown: 5
   deletethis: 0
 --- !u!114 &415265513
 MonoBehaviour:
@@ -3542,7 +3542,7 @@ MonoBehaviour:
   stminstance: {fileID: 415265508}
   skilltime: 2
   defaultspeed: 10
-  cooldown: 0
+  cooldown: 5
   timePassed: 0
   isActive: 0
   deletethis: 0
