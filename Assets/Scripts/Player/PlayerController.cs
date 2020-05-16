@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public CharacterController CharacterController;
     public Animator Anim;
     public SwordAttack SwordAtt;
-    public TextMeshPro Text;
     public Slider HealthBar;
     public GameObject DeathCanvas;
     public GameObject PauseCanvas;
@@ -33,13 +32,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Text.text = Health.ToString();
-        Text.transform.rotation = Quaternion.LookRotation(transform.position - MainCamera.position);
-
-        Vector2 screenPosition = Camera.main.WorldToScreenPoint(gameObject.transform.position + new Vector3(0f, 3f, 0f));
-
-        HealthBar.transform.position = screenPosition;
-
         if ((Input.GetAxis("Horizontal") > 0f || Input.GetAxis("Horizontal") < 0f ||
             Input.GetAxis("Vertical") < 0f || Input.GetAxis("Vertical") > 0f) && SwordAtt.AttackTimer == 0)
         {

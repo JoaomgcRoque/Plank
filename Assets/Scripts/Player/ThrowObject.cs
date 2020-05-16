@@ -17,7 +17,7 @@ public class ThrowObject : MonoBehaviour
 
     private void Update() {
         //if (Input.GetMouseButtonDown(1) && cooldown == false) {
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetMouseButtonDown(1) && cooldown == false) {
+        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetMouseButtonDown(1)) && cooldown == false) {
             audiosource.clip = null;
             audiosource.clip = throwclip;
             audiosource.Play();
