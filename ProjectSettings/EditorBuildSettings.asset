@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Island5.unity
     guid: 079fa9a186f44124ba25e2a8f7e32487
   - enabled: 0
+    path: Assets/Scenes/skillvideos.unity
+    guid: f410498726688284a9b1ada524c11808
+  - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
