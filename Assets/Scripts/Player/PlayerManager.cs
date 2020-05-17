@@ -16,4 +16,8 @@ public class PlayerManager : MonoBehaviour
     #endregion
 
     public GameObject player;
+
+    private void Start() {
+        Time.timeScale = 1f;
+    }
 }
