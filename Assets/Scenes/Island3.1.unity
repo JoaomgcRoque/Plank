@@ -5784,7 +5784,7 @@ MonoBehaviour:
   canClick: 1
   isSkill1: 1
   isSkill2: 1
-  isSkill3: 0
+  isSkill3: 1
   isSkill4: 0
   isSkill1Active: 0
   isSkill2Active: 0
@@ -15450,11 +15450,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019481019}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 8955087b3219b4e47b16a9e22d0c8e6e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: a4d38a6441553b44bbcdc6855376436f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: fc126c801224e094eacfbc77876360ef, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: b631b2ee521c6754cb72315c03938245, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -16511,7 +16511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theEnemy: {fileID: 1503446300}
+  theEnemy: {fileID: 2070267898}
   enemyCount: 3
   xPos: -40
   xPosLesserLimit: -30
@@ -16531,7 +16531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theEnemy: {fileID: 1503446300}
+  theEnemy: {fileID: 2070267898}
   enemyCount: 3
   xPos: -35
   xPosLesserLimit: -30
@@ -16551,7 +16551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theEnemy: {fileID: 1503446300}
+  theEnemy: {fileID: 2070267898}
   enemyCount: 3
   xPos: 0
   xPosLesserLimit: 0
@@ -18861,7 +18861,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: fc126c801224e094eacfbc77876360ef, type: 2}
+  m_Texture: {fileID: 8400000, guid: b631b2ee521c6754cb72315c03938245, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
