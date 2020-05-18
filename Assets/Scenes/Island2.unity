@@ -5039,6 +5039,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 242711523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &245055908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 141284, guid: 90d45fff77f00204d9fb1966ba8dd1cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1283778965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &245055911
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245055908}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.1, y: 0.526, z: 0.91400003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.526, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!4 &245999818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 438250, guid: ab08969352dd15648919e529870214e2,
@@ -23879,7 +23901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theEnemy: {fileID: 1803392429}
-  enemyCount: 10
+  enemyCount: 5
   xPos: 25
   xPosLesserLimit: 20
   xPosBiggerLimit: 30
@@ -23910,12 +23932,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085870433}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theEnemy: {fileID: 2143927765}
+  theEnemy: {fileID: 1803392429}
   enemyCount: 5
   xPos: -33
   xPosLesserLimit: -33
