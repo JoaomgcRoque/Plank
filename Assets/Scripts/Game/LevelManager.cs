@@ -13,8 +13,13 @@ public class LevelManager : MonoBehaviour
 
     private void Awake() {
         WinMenu.SetActive(false);
+        //Time.timeScale = 1f;
+    }
+
+    private void Start() {
         Time.timeScale = 1f;
     }
+
     private void Update() {
         if (numberofdead == maxdead) {
             //Win();

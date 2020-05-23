@@ -15,12 +15,15 @@ public class CorruptPirateLook : MonoBehaviour
 
     [SerializeField] private EnemyController enemycontroller;
 
-    private void Awake() {
+    private void Awake()
+    {
         audiosource = GetComponent<AudioSource>();
     }
 
-    private void Update() {
-        if(enemycontroller.Health <= 0) {
+    private void Update()
+    {
+        if (enemycontroller.Health <= 0)
+        {
             Destroy(this.GetComponent<BoxCollider>());
         }
     }
@@ -30,8 +33,8 @@ public class CorruptPirateLook : MonoBehaviour
         if (other.tag == "Player")
         {
             yield return StartCoroutine("Wait");
-                CorruptPirate.GetComponent<NavMeshAgent>().speed = 0f;
-                CorruptPirate.GetComponent<EnemyController>().Attacked = true;
+            CorruptPirate.GetComponent<NavMeshAgent>().speed = 0f;
+            CorruptPirate.GetComponent<EnemyController>().Attacked = true;
         }
     }
 
@@ -70,8 +73,9 @@ public class CorruptPirateLook : MonoBehaviour
 
     public void Throw()
     {
-        if (enemycontroller.Health > 0) {
-            Instantiate(bullet, gun.transform.position, gun.transform.rotation);
+        if (enemycontroller.Health > 0)
+        {
+            Instantiate(bullet, gun.transform.position + new Vector3(0, 1.5f, 0), gun.transform.rotation);
             cooldown = true;
             StartCoroutine(CooldDown(time));
             audiosource.clip = null;
