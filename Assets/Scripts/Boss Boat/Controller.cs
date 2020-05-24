@@ -26,11 +26,12 @@ public class Controller : MonoBehaviour
         stop = true;
         if (fase1)
         {
+            yield return new WaitForSeconds(1f);
             for (int x = 0; x < nAttacksFase1; x++)
             {
                 animator.SetInteger("Fase", 1);
                 animator.SetInteger("Attack", Random.Range(1, 5));
-                yield return new WaitForSeconds(1.5f);
+                yield return new WaitForSeconds(1.75f);
                 animator.SetInteger("Attack", 0);
                 yield return new WaitForSeconds(0.5f);
             }
@@ -43,11 +44,12 @@ public class Controller : MonoBehaviour
         stop = true;
         if (fase2)
         {
+            yield return new WaitForSeconds(1f);
             for (int x = 0; x < nAttacksFase2; x++)
             {
                 animator.SetInteger("Fase", 2);
                 animator.SetInteger("Attack", Random.Range(1, 5));
-                yield return new WaitForSeconds(1.25f);
+                yield return new WaitForSeconds(1.5f);
                 animator.SetInteger("Attack", 0);
                 yield return new WaitForSeconds(0.5f);
             }
@@ -60,11 +62,12 @@ public class Controller : MonoBehaviour
         stop = true;
         if (fase3)
         {
+            yield return new WaitForSeconds(1f);
             for (int x = 0; x < nAttacksFase3; x++)
             {
                 animator.SetInteger("Fase", 3);
                 animator.SetInteger("Attack", Random.Range(1, 5));
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(1.3f);
                 animator.SetInteger("Attack", 0);
                 yield return new WaitForSeconds(0.5f);
             }
