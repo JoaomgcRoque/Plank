@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public GameObject PauseCanvas;
     public Transform Player;
 
+    [SerializeField] private bool rotate = false;
+
     public float MoveSpeed = 10;
     public float Gravity = 20;
     public float MaxHealth = 10f;
@@ -73,7 +75,10 @@ public class PlayerController : MonoBehaviour
             DeathCanvas.SetActive(true);
         }
 
-        if(Input.GetKeyDown(KeyCode.Q)) {
+        if(Input.GetKey("q")) {
+            Player.transform.Rotate(new Vector3(0, 360, 0) * Time.deltaTime);
+        }
+        if (Input.GetKeyDown(KeyCode.Q)) {
             Player.transform.Rotate(0f, 180f, 0f);
         }
     }
