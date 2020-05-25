@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public GameObject DeathCanvas;
     public GameObject PauseCanvas;
     public Transform Player;
+    public GameObject Footsteps;
 
     [SerializeField] private bool rotate = false;
 
@@ -35,8 +36,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if ((Input.GetAxis("Horizontal") > 0f || Input.GetAxis("Horizontal") < 0f ||
-            Input.GetAxis("Vertical") < 0f || Input.GetAxis("Vertical") > 0f) && SwordAtt.AttackTimer == 0)
-        {
+            Input.GetAxis("Vertical") < 0f || Input.GetAxis("Vertical") > 0f) && SwordAtt.AttackTimer == 0) {
             Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
 
@@ -50,9 +50,12 @@ public class PlayerController : MonoBehaviour
             Movement.y -= (Gravity * Time.deltaTime);
 
             CharacterController.Move(Movement * Time.deltaTime);
+
+            Footsteps.SetActive(true);
+        } else {
+            Anim.SetBool("Moving", false);
+            Footsteps.SetActive(false);
         }
-        else
-        Anim.SetBool("Moving", false);
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
