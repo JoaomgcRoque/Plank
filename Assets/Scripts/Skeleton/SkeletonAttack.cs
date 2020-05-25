@@ -7,6 +7,7 @@ public class SkeletonAttack : MonoBehaviour
     public GameObject Skeleton;
 
     [SerializeField] private EnemyController enemycontroller;
+    public AudioSource hitsound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,6 +28,7 @@ public class SkeletonAttack : MonoBehaviour
         if (other.tag == "Player" && Skeleton.GetComponent<EnemyController>().Attacked == true && Skeleton.GetComponent<EnemyController>().AttackCooldown == false)
         {
             if (enemycontroller.GetComponent<EnemyController>().Health > 0) {
+                hitsound.Play();
                 other.GetComponent<PlayerController>().Health -= Skeleton.GetComponent<EnemyController>().AttackDamage;
                 other.GetComponent<PlayerController>().HealthBar.value =
                     other.GetComponent<PlayerController>().Health /

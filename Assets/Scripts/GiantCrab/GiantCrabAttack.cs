@@ -8,6 +8,8 @@ public class GiantCrabAttack : MonoBehaviour
 
     [SerializeField] private EnemyController enemycontroller;
 
+    public AudioSource hitsound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && GiantCrab.GetComponent<EnemyController>().Attacked == true && GiantCrab.GetComponent<EnemyController>().AttackCooldown == false)
@@ -26,6 +28,7 @@ public class GiantCrabAttack : MonoBehaviour
     {
         if (enemycontroller.GetComponent<EnemyController>().Health > 0) {
             if (other.tag == "Player" && GiantCrab.GetComponent<EnemyController>().Attacked == true && GiantCrab.GetComponent<EnemyController>().AttackCooldown == false) {
+                hitsound.Play();
                 other.GetComponent<PlayerController>().Health -= GiantCrab.GetComponent<EnemyController>().AttackDamage;
                 other.GetComponent<PlayerController>().HealthBar.value =
                     other.GetComponent<PlayerController>().Health /

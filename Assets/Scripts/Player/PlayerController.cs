@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public GameObject PauseCanvas;
     public Transform Player;
     public GameObject Footsteps;
+    public AudioSource hitsound;
 
     [SerializeField] private bool rotate = false;
 
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public float Health;
     public float AttackDamage = 1f;
     public bool Paused;
+
 
     void Start()
     {
@@ -103,5 +105,11 @@ public class PlayerController : MonoBehaviour
         PauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         Paused = true;
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if(other.tag == "Bullet") {
+            hitsound.Play();
+        }
     }
 }
