@@ -7,12 +7,13 @@ public class SwordTrigger : MonoBehaviour
 {
     public PlayerController PlayerCont;
 
+    public AudioSource audio;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
-        {
-            if (other.GetComponent<EnemyController>().HitCooldown == false)
-            {
+        if (other.tag == "Enemy") {
+            if (other.GetComponent<EnemyController>().HitCooldown == false) {
+                audio.Play();
                 other.GetComponent<EnemyController>().Health -= PlayerCont.AttackDamage;
                 other.GetComponent<EnemyController>().theHealthBar.value =
                     other.GetComponent<EnemyController>().Health /
