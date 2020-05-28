@@ -7,6 +7,8 @@ public class SwordTrigger : MonoBehaviour
 {
     public PlayerController PlayerCont;
 
+    public Transform Playertransform;
+
     public AudioSource audio;
 
     private void OnTriggerEnter(Collider other)
@@ -19,6 +21,10 @@ public class SwordTrigger : MonoBehaviour
                     other.GetComponent<EnemyController>().Health /
                     other.GetComponent<EnemyController>().MaxHealth;
                 other.GetComponent<EnemyController>().HitCooldown = true;
+                other.GetComponent<EnemyController>();
+
+                //fazer push pa frente ao inimigo
+                other.transform.position = Playertransform.position;
             }
         }
     }

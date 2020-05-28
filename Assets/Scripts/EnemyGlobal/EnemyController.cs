@@ -31,7 +31,7 @@ public class EnemyController : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
-    [SerializeField] private Transform Enemy;
+    public Transform Enemy;
     [SerializeField] private AudioSource[] audiosources;
 
     private void Awake() {
