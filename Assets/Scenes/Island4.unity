@@ -6642,6 +6642,7 @@ MonoBehaviour:
   Footsteps: {fileID: 649902439}
   hitsound: {fileID: 650083943}
   rotate: 0
+  footprints: {fileID: 0}
   MoveSpeed: 10
   Gravity: 500
   MaxHealth: 25
@@ -6901,6 +6902,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &415265515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415265501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03ae41776d48eb459d43fd932be77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footfalls: {fileID: 6754474878045655878, guid: 4a580cfc000cce847965be6828690e75,
+    type: 3}
+  totaltime: 0
+  timetoprint: 0.5
 --- !u!114 &415507737 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1372987245593071596, guid: 8298f72de59a3aa458d323561c690828,
@@ -17236,15 +17253,6 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 13742236, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f7c7451502548d24fbc4058b1a56861e, type: 2}
-    - target: {fileID: 3463669010459741185, guid: d9c07cfde6c39324bb235e430d1e6f87,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 491144, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.5785498
@@ -17276,6 +17284,15 @@ PrefabInstance:
     - target: {fileID: 493804, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.76430154
+      objectReference: {fileID: 0}
+    - target: {fileID: 13742236, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7c7451502548d24fbc4058b1a56861e, type: 2}
+    - target: {fileID: 3463669010459741185, guid: d9c07cfde6c39324bb235e430d1e6f87,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}

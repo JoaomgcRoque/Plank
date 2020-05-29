@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource hitsound;
 
     [SerializeField] private bool rotate = false;
+    [SerializeField] private Footprints footprints;
 
     public float MoveSpeed = 10;
     public float Gravity = 20;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         Health = MaxHealth;
         HealthBar.value = CalculateHealth();
         Paused = false;
+        footprints = GetComponent<Footprints>();
     }
 
     private void Update()
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
             Input.GetAxis("Vertical") < 0f || Input.GetAxis("Vertical") > 0f) && SwordAtt.AttackTimer == 0) {
             Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
+            footprints.Foot();
 
             Anim.SetBool("Moving", true);
             //Movement *= MoveSpeed;

@@ -9734,6 +9734,7 @@ MonoBehaviour:
   Footsteps: {fileID: 1059171756}
   hitsound: {fileID: 567127553}
   rotate: 0
+  footprints: {fileID: 0}
   MoveSpeed: 10
   Gravity: 500
   MaxHealth: 25
@@ -9993,6 +9994,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &415265515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415265501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03ae41776d48eb459d43fd932be77f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footfalls: {fileID: 6754474878045655878, guid: 4a580cfc000cce847965be6828690e75,
+    type: 3}
+  totaltime: 0
+  timetoprint: 0.5
 --- !u!1 &424084522
 GameObject:
   m_ObjectHideFlags: 0
