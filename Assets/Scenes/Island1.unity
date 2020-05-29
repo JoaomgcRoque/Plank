@@ -15259,7 +15259,7 @@ MonoBehaviour:
   footfalls: {fileID: 6754474878045655878, guid: 4a580cfc000cce847965be6828690e75,
     type: 3}
   totaltime: 0
-  timetoprint: 0.5
+  timetoprint: 0.1
 --- !u!1001 &416096445
 PrefabInstance:
   m_ObjectHideFlags: 0
