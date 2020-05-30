@@ -6,15 +6,23 @@ public class TriggerWave : MonoBehaviour
 {
     [SerializeField] private bool isWave;
     [SerializeField] private GameObject wave;
+    [SerializeField] private GameObject invisibledoor2;
+    [SerializeField] private GameObject Objective;
 
     private void Awake() {
         isWave = false;
         wave.SetActive(false);
     }
 
+    private void Start() {
+        invisibledoor2.SetActive(false);
+    }
+
     private void Update() {
         if(isWave == true) {
             wave.SetActive(true);
+            invisibledoor2.SetActive(true);
+            Objective.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other) {
