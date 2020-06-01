@@ -25,6 +25,9 @@ public class SwordTrigger : MonoBehaviour
 
                 //fazer push pa frente ao inimigo
                 other.transform.position = Playertransform.position;
+
+                //mudar cor apos dano
+                other.GetComponent<ChangeColor>().change = true;
             }
         }
     }

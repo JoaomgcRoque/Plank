@@ -14033,6 +14033,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Skeleton_04
       objectReference: {fileID: 0}
+    - target: {fileID: 145884, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 412276, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.00000001490116
@@ -14400,6 +14404,10 @@ PrefabInstance:
     - target: {fileID: 493804, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 139964, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
+      propertyPath: m_TagString
+      value: model
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
@@ -18925,6 +18933,7 @@ GameObject:
   - component: {fileID: 653571243}
   - component: {fileID: 653571242}
   - component: {fileID: 653571249}
+  - component: {fileID: 653571250}
   m_Layer: 0
   m_Name: Giant Crab
   m_TagString: Enemy
@@ -19084,6 +19093,23 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &653571250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653571241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3293bf3699b9c42b9ba32d1a6837d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultcolor: {fileID: 2100000, guid: f77d4620fbd5844408ad5a5935258de5, type: 2}
+  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  model: {fileID: 2522600490914848304}
+  change: 0
+  time: 0.2
 --- !u!1001 &655675579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33894,6 +33920,31 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1372987245185968885}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1185742035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 139964, guid: d9c07cfde6c39324bb235e430d1e6f87,
+    type: 3}
+  m_PrefabInstance: {fileID: 481590876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1185742037 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13742236, guid: d9c07cfde6c39324bb235e430d1e6f87,
+    type: 3}
+  m_PrefabInstance: {fileID: 481590876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1185742038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185742035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 207.58655, y: 192.76349, z: 46.365772}
+  m_Center: {x: 62.98768, y: 88.851456, z: 696.4427}
 --- !u!1 &1189479468
 GameObject:
   m_ObjectHideFlags: 0
@@ -35581,6 +35632,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 480000, guid: 95d7c0f5fade0344aad483314886f0fe,
     type: 3}
   m_PrefabInstance: {fileID: 1243324857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1243701141 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13742236, guid: d9c07cfde6c39324bb235e430d1e6f87,
+    type: 3}
+  m_PrefabInstance: {fileID: 1025166187}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1246734150
 GameObject:
@@ -44488,6 +44545,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 481590876}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &1467094726 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13789198, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1426721640}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1470830552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52791,6 +52854,7 @@ GameObject:
   - component: {fileID: 1803392431}
   - component: {fileID: 1803392430}
   - component: {fileID: 1803392437}
+  - component: {fileID: 1803392438}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -52951,6 +53015,23 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1803392438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803392429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3293bf3699b9c42b9ba32d1a6837d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultcolor: {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
+  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  model: {fileID: 1185742037}
+  change: 0
+  time: 0.2
 --- !u!1 &1804284302
 GameObject:
   m_ObjectHideFlags: 0
@@ -54020,6 +54101,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 456230, guid: cfe5d370eb7adbd43bead7f2e91204b1,
     type: 3}
   m_PrefabInstance: {fileID: 1835155737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1835324983 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13789198, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1253801585}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1838442948
 PrefabInstance:
@@ -55896,6 +55983,7 @@ GameObject:
   - component: {fileID: 1892211990}
   - component: {fileID: 1892211989}
   - component: {fileID: 1892211988}
+  - component: {fileID: 1892211996}
   m_Layer: 0
   m_Name: CorruptPirate2
   m_TagString: Enemy
@@ -56055,6 +56143,23 @@ Transform:
   m_Father: {fileID: 1691653383}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1892211996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892211987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3293bf3699b9c42b9ba32d1a6837d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultcolor: {fileID: 2100000, guid: d6be02d18993392429c629e15d3c24b8, type: 2}
+  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  model: {fileID: 1467094726}
+  change: 0
+  time: 0.2
 --- !u!1001 &1894585210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60047,6 +60152,7 @@ GameObject:
   - component: {fileID: 2047777428}
   - component: {fileID: 2047777426}
   - component: {fileID: 2047777427}
+  - component: {fileID: 2047777433}
   m_Layer: 0
   m_Name: Corrupt Pirate
   m_TagString: Enemy
@@ -60206,6 +60312,23 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2047777433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047777424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3293bf3699b9c42b9ba32d1a6837d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultcolor: {fileID: 2100000, guid: 0c338990ace2c4c4a9102552b91051a3, type: 2}
+  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  model: {fileID: 1835324983}
+  change: 0
+  time: 0.2
 --- !u!4 &2048637231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 444698, guid: a1f656c69d2080948aa8bcd6456962b9,
@@ -62234,6 +62357,7 @@ GameObject:
   - component: {fileID: 2143927769}
   - component: {fileID: 2143927767}
   - component: {fileID: 2143927768}
+  - component: {fileID: 2143927774}
   m_Layer: 0
   m_Name: Skeleton2
   m_TagString: Enemy
@@ -62395,6 +62519,23 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2143927774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143927765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3293bf3699b9c42b9ba32d1a6837d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultcolor: {fileID: 2100000, guid: f7c7451502548d24fbc4058b1a56861e, type: 2}
+  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  model: {fileID: 1243701141}
+  change: 0
+  time: 0.2
 --- !u!1 &2146388013
 GameObject:
   m_ObjectHideFlags: 0

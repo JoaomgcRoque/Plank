@@ -10,6 +10,7 @@ TagManager:
   - Grenade
   - Terrain
   - Obstacle
+  - model
   layers:
   - Default
   - TransparentFX
