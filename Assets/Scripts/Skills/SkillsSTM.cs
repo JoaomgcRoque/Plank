@@ -53,7 +53,7 @@ public class SkillsSTM : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if(Input.GetKeyDown(KeyCode.Alpha1) && 
+        if(Input.GetKeyDown(KeyCode.Alpha2) && 
            isSkill1 == true && isSkill1Active == false && skillsui.isActive[0] == false) 
         {
             isSkill1Active = true;
@@ -62,7 +62,7 @@ public class SkillsSTM : MonoBehaviour
             audiosource.clip = skill1clip;
             audiosource.Play();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2)
+        if (Input.GetKeyDown(KeyCode.Alpha1)
            && isSkill2 == true && isSkill2Active == false && skillsui.isActive[1] == false)
         {
             isSkill2Active = true;
