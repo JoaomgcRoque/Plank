@@ -10,6 +10,7 @@ public class Footprints : MonoBehaviour
 
     private void Update() {
         totaltime += Time.deltaTime;
+        Foot();
     }
 
     public void Foot() {
