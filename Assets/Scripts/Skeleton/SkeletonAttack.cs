@@ -29,6 +29,7 @@ public class SkeletonAttack : MonoBehaviour
         {
             if (enemycontroller.GetComponent<EnemyController>().Health > 0) {
                 hitsound.Play();
+                other.GetComponent<ChangeColor>().change = true;
                 other.GetComponent<PlayerController>().Health -= Skeleton.GetComponent<EnemyController>().AttackDamage;
                 other.GetComponent<PlayerController>().HealthBar.value =
                     other.GetComponent<PlayerController>().Health /

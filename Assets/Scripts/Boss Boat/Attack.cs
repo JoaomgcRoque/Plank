@@ -10,6 +10,7 @@ public class Attack : MonoBehaviour
         if (other.tag == "Player")
         {
             hitsound.Play();
+            other.GetComponent<ChangeColor>().change = true;
             other.GetComponent<PlayerController>().Health -= 5f;
             other.GetComponent<PlayerController>().HealthBar.value =
                 other.GetComponent<PlayerController>().Health /

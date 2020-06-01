@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float verticalSpeed;
 
     [SerializeField] private bool rotate = false;
+    [SerializeField] private ChangeColor changecolor;
 
     public float MoveSpeed = 10;
     public float Gravity = 20;
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
         Health = MaxHealth;
         HealthBar.value = CalculateHealth();
         Paused = false;
+        changecolor.GetComponent<ChangeColor>();
     }
 
     private void Update()
@@ -118,6 +120,7 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Bullet") {
             hitsound.Play();
+            changecolor.change = true;
         }
     }
 }

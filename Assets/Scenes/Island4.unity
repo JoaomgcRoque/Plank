@@ -11544,6 +11544,7 @@ MonoBehaviour:
   horizontalSpeed: 10
   verticalSpeed: 10
   rotate: 0
+  changecolor: {fileID: 415265516}
   MoveSpeed: 10
   Gravity: 500
   MaxHealth: 25
@@ -11819,6 +11820,23 @@ MonoBehaviour:
     type: 3}
   totaltime: 0
   timetoprint: 0.1
+--- !u!114 &415265516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415265501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3293bf3699b9c42b9ba32d1a6837d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultcolor: {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
+  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  model: {fileID: 1440240923}
+  change: 0
+  time: 0.2
 --- !u!114 &415507737 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1372987245593071596, guid: 8298f72de59a3aa458d323561c690828,
@@ -43678,6 +43696,12 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 9580124, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7,
     type: 3}
   m_PrefabInstance: {fileID: 1253801585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1440240923 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 13773600, guid: bc4987e2fb189ec4d96488b047577016,
+    type: 3}
+  m_PrefabInstance: {fileID: 1331176436}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1442536019
 GameObject:
