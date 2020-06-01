@@ -9733,6 +9733,8 @@ MonoBehaviour:
   Player: {fileID: 415265503}
   Footsteps: {fileID: 1059171756}
   hitsound: {fileID: 567127553}
+  horizontalSpeed: 10
+  verticalSpeed: 10
   rotate: 0
   MoveSpeed: 10
   Gravity: 500

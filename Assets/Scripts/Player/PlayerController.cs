@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     public GameObject Footsteps;
     public AudioSource hitsound;
 
+    public float horizontalSpeed;
+    public float verticalSpeed;
+
     [SerializeField] private bool rotate = false;
 
     public float MoveSpeed = 10;
@@ -37,6 +40,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
+        float h = horizontalSpeed * Input.GetAxis("Mouse X");
+        float v = verticalSpeed * Input.GetAxis("Mouse Y");
+        transform.Rotate(0, h, 0);
+
         if ((Input.GetAxis("Horizontal") > 0f || Input.GetAxis("Horizontal") < 0f ||
             Input.GetAxis("Vertical") < 0f || Input.GetAxis("Vertical") > 0f) && SwordAtt.AttackTimer == 0) {
             Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
