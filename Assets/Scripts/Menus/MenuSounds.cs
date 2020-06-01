@@ -11,6 +11,10 @@ public class MenuSounds : MonoBehaviour
         audiosource = GetComponent<AudioSource>();
     }
 
+    private void Start() {
+        AudioListener.pause = false;
+    }
+
     public void ClickSound() {
         audiosource.clip = null;
         audiosource.clip = clickclip;

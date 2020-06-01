@@ -88,6 +88,8 @@ public class PlayerController : MonoBehaviour
             if (HealthBar != null)
                 Destroy(HealthBar.gameObject);
             DeathCanvas.SetActive(true);
+            Time.timeScale = 0f;
+            AudioListener.pause = true;
         }
 
         if(Input.GetKey("q")) {
@@ -108,6 +110,7 @@ public class PlayerController : MonoBehaviour
         PauseCanvas.SetActive(false);
         Time.timeScale = 1f;
         Paused = false;
+        AudioListener.pause = false;
     }
 
     public void Pause ()
@@ -115,6 +118,7 @@ public class PlayerController : MonoBehaviour
         PauseCanvas.SetActive(true);
         Time.timeScale = 0f;
         Paused = true;
+        AudioListener.pause = true;
     }
 
     private void OnTriggerEnter(Collider other) {

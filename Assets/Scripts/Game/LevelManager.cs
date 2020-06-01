@@ -32,6 +32,7 @@ public class LevelManager : MonoBehaviour
         StopCoroutine(WinTime());
         WinMenu.SetActive(true);
         Time.timeScale = 0f;
+        AudioListener.pause = true;
     }
 
     public void NextIsland() {
