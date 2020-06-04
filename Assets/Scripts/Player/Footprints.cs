@@ -7,6 +7,7 @@ public class Footprints : MonoBehaviour
    [SerializeField] private Transform footfalls;
    [SerializeField] private float totaltime = 0;
     [SerializeField] private float timetoprint;
+    public bool issand = true;
 
     private void Update() {
         totaltime += Time.deltaTime;
@@ -14,9 +15,21 @@ public class Footprints : MonoBehaviour
     }
 
     public void Foot() {
-        if (totaltime > timetoprint) {
+        if (totaltime > timetoprint && issand == true) {
             Instantiate(footfalls, GetComponent<Transform>().position, footfalls.rotation);
             totaltime = 0;
+        }
+    }
+
+    private void OnTriggerStay(Collider other) {
+        if (other.tag == "Sand") {
+            issand = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.tag == "Sand") {
+            issand = false;
         }
     }
 }

@@ -2152,6 +2152,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 00e92230cf7b67d45a8117fe9adb5a54, type: 3}
+--- !u!65 &183685585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183685580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1341422, y: 1.4132798, z: 2.7440357}
+  m_Center: {x: 0.024786713, y: 0.78715765, z: 0.58425474}
 --- !u!1 &186886451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1372987245397809295, guid: 8298f72de59a3aa458d323561c690828,
@@ -4897,6 +4910,7 @@ MonoBehaviour:
     type: 3}
   totaltime: 0
   timetoprint: 0.1
+  issand: 1
 --- !u!114 &415265516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5195,6 +5209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Large_08
       objectReference: {fileID: 0}
+    - target: {fileID: 118406, guid: d9990814fad01bc40982daa055540d5a, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
+      objectReference: {fileID: 0}
     - target: {fileID: 489410, guid: d9990814fad01bc40982daa055540d5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.8114643
@@ -5432,6 +5450,10 @@ PrefabInstance:
     - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_Name
       value: SM_Env_Flat_Sand_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 479646, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5956,6 +5978,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 597745110}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &535898802
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535898800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.535781, y: 3.1757314, z: 3.7755427}
+  m_Center: {x: -0.00000047683716, y: 1.5878662, z: 0.00000023841858}
 --- !u!64 &535898804
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6666,6 +6701,10 @@ PrefabInstance:
     - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Large_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
       objectReference: {fileID: 0}
     - target: {fileID: 426668, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7489,6 +7528,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 461931273}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &713671199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713671197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.672656, y: 4.337843, z: 5.676828}
+  m_Center: {x: -0.0000009536743, y: 2.1689215, z: 0.0000028610239}
 --- !u!64 &713671201
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7527,6 +7579,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1374240005}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &722327751
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722327749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.535781, y: 3.1757314, z: 3.7755427}
+  m_Center: {x: -0.00000047683716, y: 1.5878661, z: 0.00000023841858}
 --- !u!64 &722327753
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7636,6 +7701,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 00e92230cf7b67d45a8117fe9adb5a54, type: 3}
+--- !u!65 &738476546
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738476541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0880375, y: 1.2720671, z: 3.5284767}
+  m_Center: {x: 0.0131672695, y: 0.7165513, z: 0.36129907}
 --- !u!1001 &747764137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9177,6 +9255,10 @@ PrefabInstance:
     - target: {fileID: 118406, guid: d9990814fad01bc40982daa055540d5a, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Large_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 118406, guid: d9990814fad01bc40982daa055540d5a, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
       objectReference: {fileID: 0}
     - target: {fileID: 489410, guid: d9990814fad01bc40982daa055540d5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11237,6 +11319,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1968254668}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &990164296
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990164294}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.535781, y: 3.1757314, z: 3.7755427}
+  m_Center: {x: -0.00000047683716, y: 1.5878662, z: 0.00000023841858}
 --- !u!64 &990164298
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -12986,6 +13081,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1535690993}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1111252645
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111252644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.535781, y: 3.1757314, z: 3.7755427}
+  m_Center: {x: -0.00000047683716, y: 1.5878657, z: 0.00000023841858}
 --- !u!4 &1111252647 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 426668, guid: 2d3f20e70723c1c44bd53c786fdc7b7b,
@@ -14396,6 +14504,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Large_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
+      objectReference: {fileID: 0}
     - target: {fileID: 426668, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.01
@@ -14911,6 +15023,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: ba50806594bf7894aad9e75c729c31b8, type: 3}
+--- !u!65 &1244064161
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244064156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.5366364, y: 0.7065128, z: 7.542956}
+  m_Center: {x: 0, y: 0.35325655, z: 0.0000008174352}
 --- !u!1 &1246825464
 GameObject:
   m_ObjectHideFlags: 0
@@ -15217,6 +15342,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: ba50806594bf7894aad9e75c729c31b8, type: 3}
+--- !u!65 &1261201466
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261201461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.5366364, y: 0.7545508, z: 7.542956}
+  m_Center: {x: 0, y: 0.3772754, z: 0.0000008174352}
 --- !u!1 &1262087891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1372987245294020721, guid: 8298f72de59a3aa458d323561c690828,
@@ -15279,6 +15417,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1207160716}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1263118526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263118524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.535781, y: 3.1757314, z: 3.7755427}
+  m_Center: {x: -0.00000047683716, y: 1.5878667, z: 0.00000023841858}
 --- !u!64 &1263118528
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -15305,6 +15456,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1934291668}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1264897422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264897420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.535781, y: 3.1757314, z: 3.7755427}
+  m_Center: {x: -0.00000047683716, y: 1.5878652, z: 0.00000023841858}
 --- !u!64 &1264897424
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -17538,6 +17702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Large_03
       objectReference: {fileID: 0}
+    - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
+      objectReference: {fileID: 0}
     - target: {fileID: 426668, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.01
@@ -18457,6 +18625,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 844255790}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1445082764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445082762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.672656, y: 4.337843, z: 5.676828}
+  m_Center: {x: -0.000002861023, y: 2.1689215, z: 0.0000047683725}
 --- !u!64 &1445082766
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18497,6 +18678,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 00e92230cf7b67d45a8117fe9adb5a54, type: 3}
+--- !u!65 &1451829788
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451829783}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0752463, y: 1.4164625, z: 2.6911724}
+  m_Center: {x: 0.03305306, y: 0.78874296, z: 0.5578233}
 --- !u!4 &1452979156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9473bf090aaa04164967cdceab413088,
@@ -18741,6 +18935,10 @@ PrefabInstance:
     - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_Name
       value: SM_Env_Flat_Sand_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
+      propertyPath: m_TagString
+      value: Sand
       objectReference: {fileID: 0}
     - target: {fileID: 479646, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19028,6 +19226,10 @@ PrefabInstance:
     - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Large_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
       objectReference: {fileID: 0}
     - target: {fileID: 426668, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20096,6 +20298,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1949508644}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1686977436
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686977435}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.672656, y: 4.337843, z: 5.676828}
+  m_Center: {x: -0.0000019073486, y: 2.1689215, z: 0.000003814698}
 --- !u!4 &1686977438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 489410, guid: d9990814fad01bc40982daa055540d5a,
@@ -20668,6 +20883,10 @@ PrefabInstance:
     - target: {fileID: 169096, guid: 6ae68959b612294439ad6fba98298aa5, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Cannon_02_Separate
+      objectReference: {fileID: 0}
+    - target: {fileID: 169096, guid: 6ae68959b612294439ad6fba98298aa5, type: 3}
+      propertyPath: m_TagString
+      value: Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 410482, guid: 6ae68959b612294439ad6fba98298aa5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22815,6 +23034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Rock_Large_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
+      objectReference: {fileID: 0}
     - target: {fileID: 426668, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.21999931
@@ -22946,6 +23169,10 @@ PrefabInstance:
     - target: {fileID: 118406, guid: d9990814fad01bc40982daa055540d5a, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Large_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 118406, guid: d9990814fad01bc40982daa055540d5a, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
       objectReference: {fileID: 0}
     - target: {fileID: 489410, guid: d9990814fad01bc40982daa055540d5a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23270,6 +23497,10 @@ PrefabInstance:
     - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_Name
       value: SM_Env_Rock_Large_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 122516, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
+      propertyPath: m_TagString
+      value: Rocks
       objectReference: {fileID: 0}
     - target: {fileID: 426668, guid: 2d3f20e70723c1c44bd53c786fdc7b7b, type: 3}
       propertyPath: m_LocalPosition.x

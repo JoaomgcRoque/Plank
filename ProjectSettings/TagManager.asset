@@ -11,6 +11,9 @@ TagManager:
   - Terrain
   - Obstacle
   - model
+  - Rocks
+  - Cannon
+  - Sand
   layers:
   - Default
   - TransparentFX
