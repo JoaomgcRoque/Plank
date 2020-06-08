@@ -53,7 +53,7 @@ public class SkillsSTM : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if(Input.GetKeyDown(KeyCode.Alpha2) || (Input.GetAxisRaw("Skill2") > 1f) && 
+        if(Input.GetKeyDown(KeyCode.Alpha2) || (Input.GetAxisRaw("Skill2") > 0f) && 
            isSkill1 == true && isSkill1Active == false && skillsui.isActive[0] == false) {
         /*if ((Input.GetAxisRaw("Skill2") > 0f) &&
         isSkill1 == true && isSkill1Active == false && skillsui.isActive[0] == false) {*/
@@ -64,14 +64,14 @@ public class SkillsSTM : MonoBehaviour
             audiosource.Play();
             Debug.Log("Skill2");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1) || (Input.GetAxisRaw("Skill1") > 1f)
+        if (Input.GetKeyDown(KeyCode.Alpha1) || (Input.GetAxisRaw("Skill1") > 0f)
            && isSkill2 == true && isSkill2Active == false && skillsui.isActive[1] == false)
         {
             isSkill2Active = true;
             skills = Skills.skill2;
             Debug.Log("Skill1");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) || (Input.GetAxisRaw("Skill3") > 1f)
+        if (Input.GetKeyDown(KeyCode.Alpha3) || (Input.GetAxisRaw("Skill3") > 0f)
            && isSkill3 == true && isSkill3Active == false && skillsui.isActive[2] == false)
         {
             isSkill3Active = true;
@@ -79,7 +79,7 @@ public class SkillsSTM : MonoBehaviour
             skill3.canThrow = true;
             Debug.Log("Skill3");
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) || (Input.GetAxis("Skill4") > 1f)
+        if (Input.GetKeyDown(KeyCode.Alpha4) || (Input.GetAxis("Skill4") > 0f)
             && isSkill4 == true && isSkill4Active == false && skillsui.isActive[3] == false) 
         {
             isSkill4Active = true;
