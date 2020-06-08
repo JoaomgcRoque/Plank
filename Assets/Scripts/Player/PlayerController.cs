@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
             if (HealthBar != null)
                 Destroy(HealthBar.gameObject);
             DeathCanvas.SetActive(true);
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
             AudioListener.pause = true;
         }
 
