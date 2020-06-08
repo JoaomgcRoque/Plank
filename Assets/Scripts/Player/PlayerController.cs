@@ -47,9 +47,9 @@ public class PlayerController : MonoBehaviour
         float v = verticalSpeed * Input.GetAxis("Mouse Y");
         transform.Rotate(0, h, 0);
 
-        if ((Input.GetAxis("Horizontal") > 0f || Input.GetAxis("Horizontal") < 0f ||
-            Input.GetAxis("Vertical") < 0f || Input.GetAxis("Vertical") > 0f) && SwordAtt.AttackTimer == 0) {
-            Movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if ((Input.GetAxisRaw("Horizontal") > 0f || Input.GetAxisRaw("Horizontal") < 0f ||
+            Input.GetAxisRaw("Vertical") < 0f || Input.GetAxisRaw("Vertical") > 0f) && SwordAtt.AttackTimer == 0) {
+            Movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
 
 
             Anim.SetBool("Moving", true);
