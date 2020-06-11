@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
             Footsteps.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if ((Input.GetKeyDown(KeyCode.Escape)) || (Input.GetButtonDown("Options")))
         {
             if (Paused)
                 Resume();
