@@ -11729,7 +11729,7 @@ MonoBehaviour:
   Player: {fileID: 415265503}
   Footsteps: {fileID: 649902439}
   hitsound: {fileID: 650083943}
-  horizontalSpeed: 10
+  horizontalSpeed: -15
   verticalSpeed: 10
   rotate: 0
   changecolor: {fileID: 415265516}
