@@ -12540,6 +12540,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character_Skeleton_04
       objectReference: {fileID: 0}
+    - target: {fileID: 13742236, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7c7451502548d24fbc4058b1a56861e, type: 2}
     - target: {fileID: 412276, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.00000001490116
@@ -12764,10 +12768,6 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 13742236, guid: d9c07cfde6c39324bb235e430d1e6f87, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f7c7451502548d24fbc4058b1a56861e, type: 2}
     - target: {fileID: 3463669010459741185, guid: d9c07cfde6c39324bb235e430d1e6f87,
         type: 3}
       propertyPath: m_IsActive
@@ -15302,7 +15302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultcolor: {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
-  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  flash: {fileID: 2100000, guid: 473a3e2d7f94f4346a305e96efc0e633, type: 2}
   model: {fileID: 2011425980}
   change: 0
   time: 0.2
@@ -25818,7 +25818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultcolor: {fileID: 2100000, guid: f77d4620fbd5844408ad5a5935258de5, type: 2}
-  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  flash: {fileID: 2100000, guid: 473a3e2d7f94f4346a305e96efc0e633, type: 2}
   model: {fileID: 2522600490914848304}
   change: 0
   time: 0.2
@@ -45894,7 +45894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultcolor: {fileID: 2100000, guid: f7c7451502548d24fbc4058b1a56861e, type: 2}
-  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  flash: {fileID: 2100000, guid: 473a3e2d7f94f4346a305e96efc0e633, type: 2}
   model: {fileID: 79584819}
   change: 0
   time: 0.2
@@ -58296,7 +58296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultcolor: {fileID: 2100000, guid: d6be02d18993392429c629e15d3c24b8, type: 2}
-  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  flash: {fileID: 2100000, guid: 473a3e2d7f94f4346a305e96efc0e633, type: 2}
   model: {fileID: 1702289542}
   change: 0
   time: 0.2
@@ -66121,7 +66121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultcolor: {fileID: 2100000, guid: f81a978cf85038f41a62cf0aad8c2981, type: 2}
-  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  flash: {fileID: 2100000, guid: 473a3e2d7f94f4346a305e96efc0e633, type: 2}
   model: {fileID: 55641561}
   change: 0
   time: 0.2
@@ -68144,6 +68144,10 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 13789198, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c338990ace2c4c4a9102552b91051a3, type: 2}
     - target: {fileID: 105144, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -68548,10 +68552,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 31.039001
       objectReference: {fileID: 0}
-    - target: {fileID: 13789198, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0c338990ace2c4c4a9102552b91051a3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7, type: 3}
 --- !u!4 &1846373676 stripped
@@ -69185,7 +69185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultcolor: {fileID: 2100000, guid: 0c338990ace2c4c4a9102552b91051a3, type: 2}
-  flash: {fileID: 2100000, guid: 910274b23547b29438b014403b9fa502, type: 2}
+  flash: {fileID: 2100000, guid: 473a3e2d7f94f4346a305e96efc0e633, type: 2}
   model: {fileID: 1431351223}
   change: 0
   time: 0.2
@@ -73804,6 +73804,10 @@ PrefabInstance:
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 13789198, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d6be02d18993392429c629e15d3c24b8, type: 2}
     - target: {fileID: 105144, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -74208,10 +74212,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 31.039001
       objectReference: {fileID: 0}
-    - target: {fileID: 13789198, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: d6be02d18993392429c629e15d3c24b8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd3b4bf6d7e36af41b2bc986a4ab13c7, type: 3}
 --- !u!1 &1995938360 stripped
