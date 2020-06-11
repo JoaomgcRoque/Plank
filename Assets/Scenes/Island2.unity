@@ -14369,6 +14369,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 739071010}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &623164208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 623164209}
+  m_Layer: 0
+  m_Name: spawn3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &623164209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623164208}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 105.03, y: -57.729107, z: -60.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1259348799}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &623609846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25910,6 +25940,8 @@ GameObject:
   - component: {fileID: 1085870436}
   - component: {fileID: 1085870439}
   - component: {fileID: 1085870441}
+  - component: {fileID: 1085870438}
+  - component: {fileID: 1085870437}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -25964,6 +25996,46 @@ MonoBehaviour:
   zPos: -23
   zPosLesserLimit: -20
   zPosBiggerLimit: -25
+--- !u!114 &1085870437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085870433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theEnemy: {fileID: 1803392429}
+  enemyCount: 5
+  xPos: 25
+  xPosLesserLimit: 20
+  xPosBiggerLimit: 30
+  zPos: -23
+  zPosLesserLimit: -20
+  zPosBiggerLimit: -25
+--- !u!114 &1085870438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085870433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e2ac657b4ae724aaadeab6194a61e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theEnemy: {fileID: 2143927765}
+  enemyCount: 5
+  xPos: -33
+  xPosLesserLimit: -33
+  xPosBiggerLimit: -33
+  zPos: -15
+  zPosLesserLimit: -15
+  zPosBiggerLimit: -15
 --- !u!114 &1085870439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25977,7 +26049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberofdead: 0
-  maxdead: 10
+  maxdead: 20
   WinMenu: {fileID: 783379987}
   wintime: 3
   destroytime: 1.5
@@ -30462,6 +30534,7 @@ Transform:
   m_Children:
   - {fileID: 1263635615}
   - {fileID: 1398503899}
+  - {fileID: 623164209}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
