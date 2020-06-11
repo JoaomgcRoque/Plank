@@ -5,18 +5,17 @@ using UnityEngine;
 public class Disappear : MonoBehaviour
 {
     [SerializeField] private float destroytime;
-    [SerializeField] private float totaltime;
+    [SerializeField] private Renderer rend;
+    public GameObject footstep;
     // Start is called before the first frame update
     void Start()
     {
-        if (totaltime == destroytime) {
-            Destroy(gameObject, destroytime);
-        }
+        StartCoroutine(Destroy(destroytime));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        totaltime += Time.deltaTime;
+
+    IEnumerator Destroy(float destroytime) {
+            yield return new WaitForSeconds(destroytime);
+            Destroy(footstep);
     }
 }

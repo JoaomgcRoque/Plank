@@ -106,4 +106,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroytime: 5
-  totaltime: 0
+  rend: {fileID: 6754474878045655880}
+  footstep: {fileID: 6754474878045655882}
