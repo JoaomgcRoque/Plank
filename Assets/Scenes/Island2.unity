@@ -15461,7 +15461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742df057c6a64f74d84965c8377a4e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
+  MainCamera: {fileID: 1085870434}
   NameText: {fileID: 652806353}
   HealthText: {fileID: 424084523}
   SwordAtt: {fileID: 415265504}
@@ -36302,7 +36302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742df057c6a64f74d84965c8377a4e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
+  MainCamera: {fileID: 1085870434}
   NameText: {fileID: 945794401}
   HealthText: {fileID: 1294510478}
   SwordAtt: {fileID: 415265504}
@@ -42145,7 +42145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742df057c6a64f74d84965c8377a4e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
+  MainCamera: {fileID: 534669905}
   NameText: {fileID: 1442536021}
   HealthText: {fileID: 546114035}
   SwordAtt: {fileID: 415265504}
@@ -48135,7 +48135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742df057c6a64f74d84965c8377a4e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
+  MainCamera: {fileID: 1085870434}
   NameText: {fileID: 745806078}
   HealthText: {fileID: 1190957746}
   SwordAtt: {fileID: 415265504}
@@ -49431,7 +49431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742df057c6a64f74d84965c8377a4e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 0}
+  MainCamera: {fileID: 1085870434}
   NameText: {fileID: 2146388014}
   HealthText: {fileID: 790239475}
   SwordAtt: {fileID: 415265504}

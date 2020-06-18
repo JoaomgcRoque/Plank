@@ -27,8 +27,10 @@ public class Footprints : MonoBehaviour
             if(Physics.Raycast(t_spawn.position, t_spawn.forward, 
                 out t_hit, distance, canbeprint))
             {
-                GameObject t_newStep = Instantiate(footprefab, 
-                    t_hit.point + t_hit.normal * 0.001f, Quaternion.identity) as GameObject;
+                /*GameObject t_newStep = Instantiate(footprefab, 
+                    t_hit.point + t_hit.normal * 0.001f, Quaternion.identity) as GameObject;*/
+                GameObject t_newStep = Instantiate(footprefab,
+                t_hit.point + t_hit.normal * 0.001f, footsteps.rotation) as GameObject;
                 t_newStep.transform.LookAt(t_hit.point + t_hit.normal);
                 //Destroy(t_newStep, 5f);
                 Debug.Log("Footstep");
