@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Island5.unity
     guid: 079fa9a186f44124ba25e2a8f7e32487
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 447584e59e8974241881c334bdc9aa47
   m_configObjects: {}
