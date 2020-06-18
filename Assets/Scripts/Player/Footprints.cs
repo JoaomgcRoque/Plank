@@ -6,8 +6,11 @@ public class Footprints : MonoBehaviour
 {
    [SerializeField] private Transform footfalls;
     [SerializeField] private Transform footsteps;
+    [SerializeField] private GameObject footprefab;
+    [SerializeField] private LayerMask canbeprint;
    [SerializeField] private float totaltime = 0;
     [SerializeField] private float timetoprint;
+    [SerializeField] private float distance;
     public bool issand = true;
 
     private void Update() {
@@ -17,8 +20,21 @@ public class Footprints : MonoBehaviour
 
     public void Foot() {
         if (totaltime > timetoprint && issand == true) {
-            //Instantiate(footfalls, GetComponent<Transform>().position, footfalls.rotation);
-            Instantiate(footfalls, GetComponent<Transform>().position, footsteps.rotation);
+            //Instantiate(footfalls, GetComponent<Transform>().position, footsteps.rotation);
+            Transform t_spawn = transform.Find("footstepspawner");
+
+            RaycastHit t_hit = new RaycastHit();
+            if(Physics.Raycast(t_spawn.position, t_spawn.forward, 
+                out t_hit, distance, canbeprint))
+            {
+                GameObject t_newStep = Instantiate(footprefab, 
+                    t_hit.point + t_hit.normal * 0.001f, Quaternion.identity) as GameObject;
+                t_newStep.transform.LookAt(t_hit.point + t_hit.normal);
+                //Destroy(t_newStep, 5f);
+                Debug.Log("Footstep");
+            }
+
+
             totaltime = 0;
         }
     }

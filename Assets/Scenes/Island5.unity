@@ -10026,8 +10026,14 @@ MonoBehaviour:
   footfalls: {fileID: 6754474878045655878, guid: 4a580cfc000cce847965be6828690e75,
     type: 3}
   footsteps: {fileID: 799613485}
+  footprefab: {fileID: 6754474878045655882, guid: 4a580cfc000cce847965be6828690e75,
+    type: 3}
+  canbeprint:
+    serializedVersion: 2
+    m_Bits: 512
   totaltime: 0
   timetoprint: 0.1
+  distance: 1
   issand: 1
 --- !u!114 &415265516
 MonoBehaviour:
@@ -11931,6 +11937,10 @@ PrefabInstance:
     - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_TagString
       value: Sand
+      objectReference: {fileID: 0}
+    - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 479646, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19803,7 +19813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799613484}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -55.23, y: -1.1770004, z: 0.90980065}
+  m_LocalPosition: {x: 0.038, y: 0.148, z: -0.061}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415265503}
@@ -41272,6 +41282,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 479646, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.1424904
@@ -43002,6 +43016,10 @@ PrefabInstance:
     - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 173536, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 479646, guid: b021ca9ebdf78b3428c32c2aab1ed578, type: 3}
       propertyPath: m_LocalPosition.x
