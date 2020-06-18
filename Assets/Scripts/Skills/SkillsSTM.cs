@@ -70,12 +70,15 @@ public class SkillsSTM : MonoBehaviour
             Debug.Log("Skill1");
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) || (Input.GetButtonDown("Skill3"))
-           && isSkill3 == true && isSkill3Active == false && skillsui.isActive[2] == false)
+           /*&& isSkill3 == true && isSkill3Active == false && skillsui.isActive[2] == false*/)
         {
-            isSkill3Active = true;
-            skills = Skills.skill3;
-            skill3.canThrow = true;
-            Debug.Log("Skill3");
+            if (isSkill3 == true && isSkill3Active == false
+                && skillsui.isActive[2] == false) {
+                isSkill3Active = true;
+                skills = Skills.skill3;
+                skill3.canThrow = true;
+                Debug.Log("Skill3");
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha4) || (Input.GetButtonDown("Skill4"))
             && isSkill4 == true && isSkill4Active == false && skillsui.isActive[3] == false) 
