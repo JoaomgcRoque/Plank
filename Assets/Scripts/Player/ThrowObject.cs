@@ -18,17 +18,19 @@ public class ThrowObject : MonoBehaviour
     private void Update() {
         //if (Input.GetMouseButtonDown(1) && cooldown == false) {
         if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetMouseButtonDown(1))
-            || (Input.GetAxisRaw("Throw") > 0f) && cooldown == false) {
-            audiosource.clip = null;
-            audiosource.clip = throwclip;
-            audiosource.Play();
-            Throw();
+            || (Input.GetAxisRaw("Throw") > 0f) /*&& cooldown == false*/) {
+            if (cooldown == false) {
+                audiosource.clip = null;
+                audiosource.clip = throwclip;
+                audiosource.Play();
+                Throw();
+            }
         }
     }
     public void Throw() {
         Instantiate(throwable, hand.transform.position, hand.transform.rotation);
         cooldown = true;
-        StartCoroutine(CooldDown(time));
+        StartCoroutine(CooldDown());
     }
 
     public void DestroyThrowables() {
@@ -37,7 +39,7 @@ public class ThrowObject : MonoBehaviour
         }
     }
 
-    IEnumerator CooldDown(float time) {
+    IEnumerator CooldDown() {
         yield return new WaitForSeconds(time);
         DestroyThrowables();
         cooldown = false;
