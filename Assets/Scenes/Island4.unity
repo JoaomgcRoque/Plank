@@ -2296,6 +2296,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.15
@@ -10518,6 +10522,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.1
@@ -12055,8 +12063,14 @@ MonoBehaviour:
   footfalls: {fileID: 6754474878045655878, guid: 4a580cfc000cce847965be6828690e75,
     type: 3}
   footsteps: {fileID: 1544150892}
+  footprefab: {fileID: 6754474878045655882, guid: 4a580cfc000cce847965be6828690e75,
+    type: 3}
+  canbeprint:
+    serializedVersion: 2
+    m_Bits: 512
   totaltime: 0
   timetoprint: 0.1
+  distance: 1
   issand: 1
 --- !u!114 &415265516
 MonoBehaviour:
@@ -15185,6 +15199,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.58
@@ -17929,6 +17947,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.6
@@ -18708,7 +18730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &649902440
 Transform:
   m_ObjectHideFlags: 0
@@ -18717,7 +18739,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649902439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.43, y: 0.60799956, z: -84.5099}
+  m_LocalPosition: {x: -0.12, y: 0.60799956, z: 0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1087378013}
@@ -24249,6 +24271,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.5
@@ -25207,6 +25233,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.25
@@ -26009,6 +26039,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_TagString
       value: Sand
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32513,6 +32547,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_TagString
       value: Sand
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47603,7 +47641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544150891}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 45.43, y: 0.5579996, z: -84.51}
+  m_LocalPosition: {x: 0.019, y: 0.447, z: -0.089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 415265503}
@@ -54123,6 +54161,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: -77.6
@@ -59057,6 +59099,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sand
       objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
       value: -69.1
@@ -63082,6 +63128,10 @@ PrefabInstance:
     - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_TagString
       value: Sand
+      objectReference: {fileID: 0}
+    - target: {fileID: 121640, guid: 2e125cab6d871274396100e655d03414, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 445726, guid: 2e125cab6d871274396100e655d03414, type: 3}
       propertyPath: m_LocalPosition.x
