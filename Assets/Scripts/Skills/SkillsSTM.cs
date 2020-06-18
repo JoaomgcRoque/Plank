@@ -53,21 +53,26 @@ public class SkillsSTM : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if(Input.GetKeyDown(KeyCode.Alpha2) || (Input.GetButtonDown("Skill2")) && 
-           isSkill1 == true && isSkill1Active == false && skillsui.isActive[0] == false) {
-            isSkill1Active = true;
-            skills = Skills.skill1;
-            audiosource.clip = null;
-            audiosource.clip = skill1clip;
-            audiosource.Play();
-            Debug.Log("Skill2");
+        if(Input.GetKeyDown(KeyCode.Alpha2) || (Input.GetButtonDown("Skill2")) /*&& 
+           isSkill1 == true && isSkill1Active == false && skillsui.isActive[0] == false*/) 
+           {
+            if (isSkill1 == true && isSkill1Active == false && skillsui.isActive[0] == false) {
+                isSkill1Active = true;
+                skills = Skills.skill1;
+                audiosource.clip = null;
+                audiosource.clip = skill1clip;
+                audiosource.Play();
+                Debug.Log("Skill2");
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha1) || (Input.GetButtonDown("Skill1"))
-           && isSkill2 == true && isSkill2Active == false && skillsui.isActive[1] == false)
+           /*&& isSkill2 == true && isSkill2Active == false && skillsui.isActive[1] == false*/)
         {
-            isSkill2Active = true;
-            skills = Skills.skill2;
-            Debug.Log("Skill1");
+            if (isSkill2 == true && isSkill2Active == false && skillsui.isActive[1] == false) {
+                isSkill2Active = true;
+                skills = Skills.skill2;
+                Debug.Log("Skill1");
+            }
         }
         if (Input.GetKeyDown(KeyCode.Alpha3) || (Input.GetButtonDown("Skill3"))
            /*&& isSkill3 == true && isSkill3Active == false && skillsui.isActive[2] == false*/)
@@ -81,11 +86,13 @@ public class SkillsSTM : MonoBehaviour
             }
         }
         if (Input.GetKeyDown(KeyCode.Alpha4) || (Input.GetButtonDown("Skill4"))
-            && isSkill4 == true && isSkill4Active == false && skillsui.isActive[3] == false) 
+            /*&& isSkill4 == true && isSkill4Active == false && skillsui.isActive[3] == false*/) 
         {
-            isSkill4Active = true;
-            skills = Skills.skill4;
-            Debug.Log("Skill4");
+            if (isSkill4 == true && isSkill4Active == false && skillsui.isActive[3] == false) {
+                isSkill4Active = true;
+                skills = Skills.skill4;
+                Debug.Log("Skill4");
+            }
         }
         STM();
     }
