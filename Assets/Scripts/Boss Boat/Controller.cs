@@ -58,10 +58,8 @@ public class Controller : MonoBehaviour
             {
                 cannon1.SetBool("Open", true);
                 for (int x = 0; x < wave1Enemies.Length; x++)
-                {
-                    Destroy(canvas.transform.GetChild(6+x).gameObject);
                     Destroy(wave1Enemies[x]);
-                }
+
                 wave2 = true;
                 stop = true;
                 wave1 = false;

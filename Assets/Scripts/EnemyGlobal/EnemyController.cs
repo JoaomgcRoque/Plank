@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     public Slider HealthBar;
     public Slider theHealthBar;
     public GameObject LookRange;
+    public Canvas canvas;
     private Vector2 ScreenPosition;
 
     public float MaxHealth = 2f;
@@ -98,7 +99,7 @@ public class EnemyController : MonoBehaviour
             Destroy(GetComponent<Rigidbody>());
             Destroy(GetComponent<BoxCollider>());
             Destroy(GetComponentInChildren<TextMeshPro>());
-            if (theHealthBar != null)
+            if (theHealthBar != null && levelmanager != null)
                 levelmanager.GetComponent<LevelManager>().numberofdead += 1;
             Destroy(theHealthBar.gameObject);
         }
