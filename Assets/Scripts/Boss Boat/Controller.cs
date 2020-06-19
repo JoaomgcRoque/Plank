@@ -35,7 +35,7 @@ public class Controller : MonoBehaviour
             {
                 animator.SetInteger("Fase", 1);
                 animator.SetInteger("Attack", Random.Range(1, 5));
-                yield return new WaitForSeconds(1.75f);
+                yield return new WaitForSeconds(1.7f);
                 animator.SetInteger("Attack", 0);
                 yield return new WaitForSeconds(0.5f);
             }
@@ -76,8 +76,8 @@ public class Controller : MonoBehaviour
             for (int x = 0; x < nAttacksFase2; x++)
             {
                 animator.SetInteger("Fase", 2);
-                animator.SetInteger("Attack", Random.Range(1, 5));
-                yield return new WaitForSeconds(1.5f);
+                animator.SetInteger("Attack", Random.Range(1, 9));
+                yield return new WaitForSeconds(1.6f);
                 animator.SetInteger("Attack", 0);
                 yield return new WaitForSeconds(0.5f);
             }
@@ -100,10 +100,8 @@ public class Controller : MonoBehaviour
             {
                 cannon2.SetBool("Open", true);
                 for (int x = 0; x < wave2Enemies.Length; x++)
-                {
-                    Destroy(canvas.transform.GetChild(6 + x).gameObject);
                     Destroy(wave2Enemies[x]);
-                }
+
                 wave3 = true;
                 stop = true;
                 wave2 = false;
@@ -120,8 +118,8 @@ public class Controller : MonoBehaviour
             for (int x = 0; x < nAttacksFase3; x++)
             {
                 animator.SetInteger("Fase", 3);
-                animator.SetInteger("Attack", Random.Range(1, 5));
-                yield return new WaitForSeconds(1.3f);
+                animator.SetInteger("Attack", Random.Range(1, 11));
+                yield return new WaitForSeconds(1.5f);
                 animator.SetInteger("Attack", 0);
                 yield return new WaitForSeconds(0.5f);
             }
@@ -144,10 +142,8 @@ public class Controller : MonoBehaviour
             {
                 cannon3.SetBool("Open", true);
                 for (int x = 0; x < wave3Enemies.Length; x++)
-                {
-                    Destroy(canvas.transform.GetChild(6 + x).gameObject);
                     Destroy(wave3Enemies[x]);
-                }
+
                 stop = true;
             }
         }
