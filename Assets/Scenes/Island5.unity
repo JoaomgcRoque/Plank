@@ -65910,9 +65910,9 @@ MonoBehaviour:
   wave2: 0
   wave3: 0
   stop: 0
-  nAttacksFase1: 6
-  nAttacksFase2: 10
-  nAttacksFase3: 14
+  nAttacksFase1: 5
+  nAttacksFase2: 5
+  nAttacksFase3: 5
   counter: 0
 --- !u!1 &2045308973
 GameObject:
