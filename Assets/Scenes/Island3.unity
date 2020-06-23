@@ -121,7 +121,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 3cf18b78a0f8e8140b3a9f660d26e852, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: d2337635b326e0042ac275204703b5fc, type: 2}
 --- !u!1 &3390259
 GameObject:
   m_ObjectHideFlags: 0
@@ -18583,7 +18583,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.8, y: 2, z: 0.8}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.3, z: 0}
 --- !u!54 &653571245
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18613,7 +18613,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.3, z: 0}
 --- !u!195 &653571247
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -18633,7 +18633,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: -0.3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!4 &653571248
@@ -18670,7 +18670,7 @@ NavMeshObstacle:
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.6, z: 0}
   m_TimeToStationary: 0.5
 --- !u!114 &653571250
 MonoBehaviour:
@@ -20694,8 +20694,8 @@ RectTransform:
   - {fileID: 108948668}
   - {fileID: 783379988}
   - {fileID: 723123789}
-  - {fileID: 737877217}
   - {fileID: 1256544234}
+  - {fileID: 737877217}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -33575,7 +33575,7 @@ RectTransform:
   m_Children:
   - {fileID: 2075985623}
   m_Father: {fileID: 769203543}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -41088,9 +41088,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 3.6655626
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 2.831072, z: 0}
 --- !u!195 &1503446304
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -41110,7 +41110,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0.5
+  m_BaseOffset: -1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!4 &1503446305
@@ -41143,8 +41143,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 2, z: 0.8}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.8, y: 3.604937, z: 0.8}
+  m_Center: {x: 0, y: 2.8183477, z: 0}
 --- !u!95 &1503446307
 Animator:
   serializedVersion: 3
@@ -41174,11 +41174,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.4, y: 1, z: 0.4}
+  m_Extents: {x: 0.4, y: 2, z: 0.4}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 3, z: 0}
   m_TimeToStationary: 0.5
 --- !u!114 &1503446309
 MonoBehaviour:
@@ -42289,6 +42289,10 @@ PrefabInstance:
     - target: {fileID: 438250, guid: ab08969352dd15648919e529870214e2, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.75000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308278, guid: ab08969352dd15648919e529870214e2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab08969352dd15648919e529870214e2, type: 3}
@@ -47152,8 +47156,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 2, z: 0.8}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.8, y: 2.1874542, z: 0.8}
+  m_Center: {x: 0, y: 0.9062729, z: 0}
 --- !u!54 &1803392433
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47181,9 +47185,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.1792374
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.9103813, z: 0}
 --- !u!195 &1803392435
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -47203,7 +47207,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!4 &1803392436
@@ -47240,7 +47244,7 @@ NavMeshObstacle:
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.3, z: 0}
   m_TimeToStationary: 0.5
 --- !u!114 &1803392438
 MonoBehaviour:
@@ -53297,11 +53301,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 0
-  m_Extents: {x: 0.4, y: 1, z: 0.4}
+  m_Extents: {x: 0.4, y: 2, z: 0.4}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 3, z: 0}
   m_TimeToStationary: 0.5
 --- !u!95 &2070267902
 Animator:
@@ -53333,8 +53337,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 2, z: 0.8}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.8, y: 3.7150793, z: 0.8}
+  m_Center: {x: 0, y: 2.8681812, z: 0}
 --- !u!54 &2070267904
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -53362,9 +53366,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 3.6845155
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 2.8682122, z: 0}
 --- !u!195 &2070267906
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -53384,7 +53388,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0.5
+  m_BaseOffset: -1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2070267907
@@ -55609,7 +55613,7 @@ NavMeshObstacle:
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.3, z: 0}
   m_TimeToStationary: 0.5
 --- !u!95 &2143927769
 Animator:
@@ -55641,8 +55645,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 2, z: 0.8}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.8, y: 2.7139587, z: 0.8}
+  m_Center: {x: 0, y: 1.1599808, z: 0}
 --- !u!54 &2143927771
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -55670,9 +55674,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.7632904
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.1847229, z: 0}
 --- !u!195 &2143927773
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -55692,7 +55696,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &2143927774
