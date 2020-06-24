@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7012b9136ff94b84d8f2b26028a94e93
+guid: 69bf1baf95f9ba74fa12bfc3e5d03907
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Manaspace
+  fontName: Pirate Kids
   fontNames:
-  - Manaspace
+  - Pirate Kids
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

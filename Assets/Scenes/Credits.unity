@@ -178,9 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -335,8 +334,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -564,8 +563,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Diogo Andrade
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -643,7 +642,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 477611288}
@@ -772,8 +771,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nuno Figueiredo
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -816,7 +815,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -929,8 +928,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Wilson Almeida
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1008,7 +1007,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 1175430177}
@@ -1611,8 +1610,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Diogo Martinho Maia
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1690,7 +1689,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 1056738032}
@@ -1766,10 +1765,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Special thanks
+  m_text: Special Thanks
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1812,7 +1811,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 8
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2316,8 +2315,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Nuno Fachada
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2360,7 +2359,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2395,7 +2394,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 1917069499}
@@ -2924,10 +2923,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nelio Codices
+  m_text: "N\xE9lio Codices"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3005,7 +3004,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 1482203454}
@@ -3283,8 +3282,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Francisco Pires
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3327,7 +3326,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -3867,8 +3866,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Credits
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3911,7 +3910,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4168,8 +4167,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Filipe Luz
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4212,7 +4211,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4247,7 +4246,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 2110568429}
@@ -4613,10 +4612,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Joao Roque
+  m_text: "Jo\xE3o Roque"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4659,7 +4658,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 0
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4772,8 +4771,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ivan Barroso
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 834bd5d538918324d814985081f05601, type: 2}
-  m_sharedMaterial: {fileID: -4289648894346374672, guid: 834bd5d538918324d814985081f05601,
+  m_fontAsset: {fileID: 11400000, guid: 36dd4624ab14a514aad2dfab0447ddc6, type: 2}
+  m_sharedMaterial: {fileID: 5403484386975161807, guid: 36dd4624ab14a514aad2dfab0447ddc6,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4851,7 +4850,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_subTextObjects:
   - {fileID: 0}
   - {fileID: 1290523875}
