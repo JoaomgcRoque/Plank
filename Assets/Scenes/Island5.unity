@@ -11929,7 +11929,7 @@ MonoBehaviour:
   verticalSpeed: 10
   rotate: 0
   changecolor: {fileID: 415265516}
-  MoveSpeed: 10
+  MoveSpeed: 7.5
   Gravity: 500
   MaxHealth: 25
   Health: 25
@@ -12025,7 +12025,7 @@ MonoBehaviour:
   stminstance: {fileID: 415265508}
   burp: {fileID: 268610905}
   burptime: 2
-  cooldown: 22
+  cooldown: 30
   deletethis: 0
 --- !u!114 &415265511
 MonoBehaviour:
@@ -12044,7 +12044,7 @@ MonoBehaviour:
   bomb: {fileID: 2056070051005514068, guid: c7ae53f913adde6468b79c015687c6e1, type: 3}
   canThrow: 1
   hand: {fileID: 760921007}
-  cooldown: 10
+  cooldown: 15
   audiosource: {fileID: 415265514}
   throwclip: {fileID: 8300000, guid: d5033e4d389da0c4481e764599a0d5ca, type: 3}
   deletethis: 0
@@ -12068,7 +12068,7 @@ MonoBehaviour:
   normalsword: {fileID: 281079444}
   redsword: {fileID: 263516447}
   isActive: 0
-  cooldown: 5
+  cooldown: 10
   deletethis: 0
 --- !u!114 &415265513
 MonoBehaviour:
@@ -12087,7 +12087,7 @@ MonoBehaviour:
   stminstance: {fileID: 415265508}
   skilltime: 2
   defaultspeed: 10
-  cooldown: 12
+  cooldown: 15
   timePassed: 0
   isActive: 0
   deletethis: 0
